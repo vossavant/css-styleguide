@@ -840,3 +840,38 @@ A little bitty guide to help us keep our code consistent and our heads clear. Un
   The styleguide uses iOS breakpoints as a starting point because they are convenient and tend to cover most use cases, but you should not feel compelled to stick to them.
     
   Using U.S. Army ranks _maintains a relationship_ between the breakpoints (i.e., you can tell which breakpoint is larger or smaller than any other breakpoint by knowing your Army ranks). You could easily use any other scaled naming convention.
+
+  <a href="#table-of-contents">⬆ Back to Top</a>
+
+- **<a href="#12.3">12.3 Ordering Your Media Queries</a><a name="user-content-12.3"></a>** To ensure that style rules are properly inherited, **breakpoints should always be ordered from largest to smallest.** Otherwise, smaller screens will inherit rules intended for larger screens, and you'll feel compelled to take an early lunch.
+
+  **Bad** _(major is outranked by colonel, and should come after)_
+  ```sass
+  h1 {
+    font-size: 36px;
+    
+    @include respond-to('major') {
+      font-size: 28px;
+    }
+    
+    @include respond-to('colonel') {
+      font-size: 32px;
+    }
+  }
+  ```
+
+  **Good** _(colonel is the higher rank, and properly comes first)_
+  ```sass
+  h1 {
+    font-size: 36px;
+    
+    @include respond-to('colonel') {
+      font-size: 32px;
+    }
+    
+    @include respond-to('major') {
+      font-size: 28px;
+    }
+  }
+  ```
+  <a href="#table-of-contents">⬆ Back to Top</a>
