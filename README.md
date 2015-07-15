@@ -75,44 +75,6 @@ A little bitty guide to help us keep our code consistent and our heads clear. Un
   - On dark backgrounds, headings should be pure white (`#fff`).  
   - Headings are always set in **Gotham**.
   
-  In sum:
-  ```sass
-  h1,
-  h2,
-  h3,
-  h4,
-  h5 {
-    color: $white-0;
-    font: normal 54px/1.2 "Gotham Book";
-    margin: 0;
-  }
-  
-  h1 {
-    font-family: "Gotham Medium";
-
-    + p {
-      margin-top: 1.5em;
-    }
-  }
-
-  h2 {
-    font-size: 32px;
-  }
-
-  h3 {
-    font-size: 24px;
-  }
-
-  h4 {
-    font-size: 20px;
-    text-transform: uppercase;
-  }
-
-  h5 {
-    font-size: 16px;
-  }
-  ```
-  
   <a href="http://gospotcheck.com/link-to-demo"><img height="17" src="http://www.gospotcheck.com/images/github-demo-button.png" title="See it in action"></a>
     
   **Margins**  
@@ -137,19 +99,6 @@ A little bitty guide to help us keep our code consistent and our heads clear. Un
   - Unless body text appears on a dark background, it should always be GSC Dark Gray (`#404040`).
   - On dark backgrounds, body text should be pure white (`#fff`).  
   - Body text is always set in **Helvetica**. If the user's OS supports it, the ideal font weight is `300` (equivalent to Helvetica Thin).
-  
-  In sum:
-  ```sass
-  body {
-    font: 300 16px Helvetica, Arial, sans-serif;
-  }
-  
-  li,
-  p {
-    color: $white-50;
-    line-height: 1.333;
-  }
-  ```
   
   <a href="http://gospotcheck.com/link-to-demo"><img height="17" src="http://www.gospotcheck.com/images/github-demo-button.png" title="See it in action"></a>
 
@@ -205,25 +154,6 @@ A little bitty guide to help us keep our code consistent and our heads clear. Un
 
   <a href="http://gospotcheck.com/link-to-demo"><img height="17" src="http://www.gospotcheck.com/images/github-demo-button.png" title="See it in action"></a>
 
-  **SASS** _(layout/_flexbox.scss)_
-  ```sass
-  [class*="flex"] {
-  	box-sizing: border-box;
-  	display: -ms-flexbox;
-  	display: -webkit-flex;
-  	display: flex;
-  	justify-content: space-between;
-  	padding: 20px;
-  	width: 100%;
-  	
-  	> * {
-  		box-sizing: border-box;
-  		padding: 0 20px;
-  	}
-	}
-  ```
-  
-  **HTML** 
   ```html
   <section class="flex"> ... </section>
   ```
@@ -248,42 +178,6 @@ A little bitty guide to help us keep our code consistent and our heads clear. Un
   - There is currently support for up to 5 children (since you generally won't need more than 5 columns in your layout)
   - You may get funky results if the number of children differs from _n_ in `-wrap-n`
   
-  **SASS**
-  ```sass
-  [class*="flex"] {
-    ...
-
-    &[class*="-wrap"] {
-      -ms-flex-wrap: wrap;
-      -webkit-flex-wrap: wrap;
-      flex-wrap: wrap;
-    }
-
-    &[class*="-wrap-1"] > * {
-      width: 100%;
-    }
-
-    &[class*="-wrap-2"] > * {
-      width: 50%;
-    }
-
-    &[class*="-wrap-3"] > * {
-      width: 33.33%;
-    }
-
-    &[class*="-wrap-4"] > * {
-      width: 25%;
-    }
-
-    &[class*="-wrap-5"] > * {
-      width: 20%;
-    }
-
-    ...
-  }
-  ```
-  
-  **HTML**
   ```html
   <!-- unlikely you will need to use this, but it's available -->
   <section class="flex-wrap-1">
@@ -329,34 +223,6 @@ A little bitty guide to help us keep our code consistent and our heads clear. Un
 
   <a href="http://gospotcheck.com/link-to-demo"><img height="17" src="http://www.gospotcheck.com/images/github-demo-button.png" title="See it in action"></a>
   
-  **SASS**
-  ```sass
-  [class*="flex"] {
-    ...
-
-    &[class*="-align-top"] {
-      -ms-flex-align: start;
-      -webkit-align-items: flex-start;
-      align-items: flex-start;
-    }
-
-    &[class*="-align-middle"] {
-      -ms-flex-align: center;
-      -webkit-align-items: center;
-      align-items: center;
-    }
-
-    &[class*="-align-bottom"] {
-      -webkit-align-items: flex-end;
-      -ms-flex-align: end;
-      align-items: flex-end;
-    }
-    
-    ...
-  }
-  ```
-  
-  **HTML**
   ```html
   <section class="flex-wrap-3-align-top">
     <div>Child elements</div>
@@ -382,7 +248,6 @@ A little bitty guide to help us keep our code consistent and our heads clear. Un
 
 - **<a href="#5.4">5.4 Using Flexbox with "Grid" Classes</a><a name="user-content-5.4"></a>** If you are using the `flex-wrap-` class, you will usually not need to specify the widths of your children with the special "grid" classes (for example, `width-50`, `width-33`). If all the child elements of a flexible container are the same width, you will not need to explicitly set a class on these child elements, because flexbox will take care of this for you.
 
-  **HTML**
   ```html
   <!-- in this example, the "width-33" classes are superfluous, since "flex-wrap-3"
        will set the width of all children to 33% -->
@@ -432,33 +297,6 @@ A little bitty guide to help us keep our code consistent and our heads clear. Un
 
   <a href="http://gospotcheck.com/link-to-demo"><img height="17" src="http://www.gospotcheck.com/images/github-demo-button.png" title="See it in action"></a>
 
-  **SASS** _(layout/_section.scss)_
-  ```sass
-  // target any element with class containing "height-"
-  [class*="height-"] {
-    background-size: cover;
-  
-    // full-screen hero
-    &[class*="-full"] {
-  	  height: 100%;
-  	}
-  
-    // half-screen hero
-  	&[class*="-half"] {
-  		height: 50%;
-  	}
-  
-  	&[class*="-third"] {
-  		height: 33.333%;
-  	}
-  
-  	&[class*="-quarter"] {
-  		height: 25%;
-  	}
-  }
-  ```
-
-  **HTML** 
   ```html
   <section class="height-full"> ... </section>
   <section class="height-half"> ... </section>
@@ -477,7 +315,6 @@ A little bitty guide to help us keep our code consistent and our heads clear. Un
 
   <a href="http://gospotcheck.com/link-to-demo"><img height="17" src="http://www.gospotcheck.com/images/github-demo-button.png" title="See it in action"></a>
 
-  **HTML** 
   ```html
   <!-- section with up-sloping angle -->
   <section class="angled-up">
@@ -502,7 +339,6 @@ A little bitty guide to help us keep our code consistent and our heads clear. Un
 
   <a href="http://gospotcheck.com/link-to-demo"><img height="17" src="http://www.gospotcheck.com/images/github-demo-button.png" title="See it in action"></a>
 
-  **HTML** 
   ```html
   <section class="testimonial">
     <div class="flex-wrap-2 width-full">
@@ -564,22 +400,6 @@ A little bitty guide to help us keep our code consistent and our heads clear. Un
 
   <a href="http://gospotcheck.com/link-to-demo"><img height="17" src="http://www.gospotcheck.com/images/github-demo-button.png" title="See it in action"></a>
   
-  **SASS** _(layout/_section.scss)_
-  ```sass
-  [class*="extra-padding"] {
-  	padding: $section-padding * 2 0;
-  
-  	&[class*="-bottom"] {
-  		padding: $section-padding 0 $section-padding * 2;
-  	}
-  
-  	&[class*="-top"] {
-  		padding: $section-padding * 2 0 $section-padding;
-  	}
-  }
-  ```
-  
-  **HTML**
   ```html
   <section class="extra-padding">
       <p>This section will have twice the normal padding on top and bottom.</p>
@@ -600,7 +420,6 @@ A little bitty guide to help us keep our code consistent and our heads clear. Un
 
   <a href="http://gospotcheck.com/link-to-demo"><img height="17" src="http://www.gospotcheck.com/images/github-demo-button.png" title="See it in action"></a>
   
-  **HTML**
   ```html
   <section class="no-padding">
       <p>This section will have no padding.</p>
@@ -640,18 +459,6 @@ A little bitty guide to help us keep our code consistent and our heads clear. Un
   <a href="#table-of-contents">⬆ Back to Top</a>
   
 - **<a href="#7.2">7.2 Styling</a><a name="user-content-7.2"></a>** Links should always be **bold** and colored <a href="#1.2">GSC Blue</a> (`#00bdff`). On hover, links should darken to GSC Dark Blue (`#0097d4`) and be underlined.
-  
-  ```sass
-  a {
-    color: $gsc-blue;
-    text-decoration: none;
-
-    &:hover {
-      color: $gsc-blue-dark;
-      text-decoration: underline;
-    }
-  }
-  ```
 
   <a href="http://gospotcheck.com/link-to-demo"><img height="17" src="http://www.gospotcheck.com/images/github-demo-button.png" title="See it in action"></a>
 
@@ -681,29 +488,8 @@ A little bitty guide to help us keep our code consistent and our heads clear. Un
 
   <a href="http://gospotcheck.com/link-to-demo"><img height="17" src="http://www.gospotcheck.com/images/github-demo-button.png" title="See it in action"></a>
   
-  **HTML**
   ```html
   <a class="button">Click Me</a>
-  ```
-  
-  **SASS**
-  ```sass
-  .button {
-    @include transition(background);
-    background: $gsc-blue;
-    border-radius: $height-button / 2;
-    color: $white-100;
-    display: inline-block;
-    font: 14px "Gotham Bold";
-    line-height: $height-button;
-    padding: 0 20px;
-    position: relative;
-    text-transform: uppercase;
-
-    &:hover {
-      background: $gsc-blue-dark;
-    }
-  }
   ```
 
   <a href="#table-of-contents">⬆ Back to Top</a>
@@ -712,26 +498,8 @@ A little bitty guide to help us keep our code consistent and our heads clear. Un
 
   <a href="http://gospotcheck.com/link-to-demo"><img height="17" src="http://www.gospotcheck.com/images/github-demo-button.png" title="See it in action"></a>
   
-  **HTML**
   ```html
   <a class="button light">Click Me</a>
-  ```
-  
-  **SASS**
-  ```sass
-  .button {
-    ...
- 
-     &.light {
-      background: $white-100;
-      color: $white-0;
-
-      &:hover {
-        background: $white-0;
-        color: $white-100;
-      }
-    }
-  }
   ```
   
   <a href="#table-of-contents">⬆ Back to Top</a>
@@ -740,28 +508,10 @@ A little bitty guide to help us keep our code consistent and our heads clear. Un
 
   <a href="http://gospotcheck.com/link-to-demo"><img height="17" src="http://www.gospotcheck.com/images/github-demo-button.png" title="See it in action"></a>
 
-  **HTML**
   ```html
   <a class="button clear">Click Me</a>
   ```
   
-  **SASS**
-  ```sass
-  .button {
-    ...
- 
-     &.clear {
-      background: $white-100;
-      box-shadow: inset 0 0 0 1px $gsc-blue;
-      color: $gsc-blue;
-
-      &:hover {
-        background: $gsc-blue;
-        color: $white-100;
-      }
-    }
-  }
-  ```
   <a href="#table-of-contents">⬆ Back to Top</a>
 
 ## <a name="alert-boxes"></a>Alert Boxes
