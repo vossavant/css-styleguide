@@ -729,7 +729,76 @@ A little bitty guide to help us keep our code consistent and our heads clear. Un
   <a href="#table-of-contents">⬆ Back to Top</a>
   
 ## <a name="responsive"></a>Responsive
-- **<a href="#12.1">12.1 Placement of Media Queries</a><a name="user-content-12.1"></a>** For placement of responsive style rules (i.e., _Media Queries_), there are three options, which we've given colorful names:
+- **<a href="#12.1">12.1 Naming Conventions for Breakpoints</a><a name="user-content-12.1"></a>** The styleguide currently comes stocked with 8 breakpoints, which are named after U.S. Army ranks. Most of the breakpoints coincide with iOS device widths:
+  
+  - `private` (320px)
+  - `corporal` (375px)
+  - `sergeant` (480px)
+  - `captain` (568px)
+  - `major` (667px)
+  - `lieutenant` (768px)
+  - `colonel` (1024px)
+  - `general` (~1200px)
+  
+  **Why Army Ranks?** 
+  The idea of using abstract names like U.S. Army ranks is driven by the notion that **breakpoints should not be device specific.** It is more important to tailor your breakpoints to your design and not to individual devices, because there are simply too many devices out there today; you can't possibly cater to them all.
+  
+  The styleguide uses iOS breakpoints as a starting point because they are convenient and tend to cover most use cases, but you should not feel compelled to stick to them.
+    
+  Using U.S. Army ranks _maintains a relationship_ between the breakpoints (i.e., you can tell which breakpoint is larger or smaller than any other breakpoint by knowing your Army ranks).
+  
+  **Note:** If you need to add additional breakpoints, consider adding <a href="http://www.militaryfactory.com/ranks/army_ranks.asp">additional ranks</a>.
+
+  <a href="#table-of-contents">⬆ Back to Top</a>
+
+- **<a href="#12.2">12.2 Range of Breakpoints</a><a name="user-content-12.2"></a>** The upper limit of your breakpoints should be determined by your design. The default upper limit in the styleguide is `general`, which corresponds to 1200px, and the lower limit is `private`, which corresponds to 320px.
+
+  **Note:** While the upper limit can vary, there is not _currently_ any reason to worry about sizes below 320px, though this may change in the near future (durned smartwatches...).
+
+  <a href="#table-of-contents">⬆ Back to Top</a>
+  
+- **<a href="#12.3">12.3 Special Mixin (rename me)</a><a name="user-content-12.3"></a>** A special mixin called `respond-to` allows you to use the rank naming convention to write your media queries like:
+
+  ```sass
+  footer {
+    position: relative;
+  
+    @include respond-to('lieutenant') {
+      position: static;
+    }
+  	
+    h4 {
+      font-size: 24px;
+
+      @include respond-to('lieutenant') {
+        font-size: 20px;
+      }
+
+      @include respond-to('sergeant') {
+        font-size: 18px;
+      }
+    }
+  }
+  ```
+  
+  It is the equivalent of setting `max-width`:
+  ```sass
+  // this...
+  h4 {
+    @include respond-to('sergeant') {
+      font-size: 20px;
+    }
+  }
+  
+  // ...converts to this
+  @media screen and (max-width: 480px) {
+    h4 {
+      font-size: 20px;
+    }
+  }
+  ```
+  
+- **<a href="#12.4">12.4 Placement of Media Queries</a><a name="user-content-12.4"></a>** For placement of responsive style rules (i.e., _Media Queries_), there are three options, which we've given colorful names:
 
   - **Monolithic:** All media queries for the entire project are placed in a single SASS file
   - **Chunked:** Media queries for individual SASS files are placed at the end of each file
@@ -800,52 +869,7 @@ A little bitty guide to help us keep our code consistent and our heads clear. Un
   
   <a href="#table-of-contents">⬆ Back to Top</a>
 
-- **<a href="#12.2">12.2 Naming Conventions for Breakpoints</a><a name="user-content-12.2"></a>** The styleguide currently comes stocked with 8 breakpoints, which are named after U.S. Army ranks. Most of the breakpoints coincide with iOS device widths:
-  
-  - `private` (320px)
-  - `corporal` (375px)
-  - `sergeant` (480px)
-  - `captain` (568px)
-  - `major` (667px)
-  - `lieutenant` (768px)
-  - `colonel` (1024px)
-  - `general` (~1200px)
-   
-  A special mixin called `respond-to` allows you to use this special naming convention to write your media queries like this:
-
-  ```sass
-  footer {
-    position: relative;
-  
-    @include respond-to('lieutenant') {
-      position: static;
-    }
-  	
-    h4 {
-      font-size: 24px;
-
-      @include respond-to('lieutenant') {
-        font-size: 20px;
-      }
-
-      @include respond-to('sergeant') {
-        font-size: 18px;
-      }
-    }
-  }
-  ```
-  
-  The idea of using abstract names like U.S. Army ranks is driven by the notion that **breakpoints should not be device specific.** It is more important to tailor your breakpoints to your design and not to individual devices, because there are simply too many devices out there today; you can't possibly cater to them all.
-  
-  The styleguide uses iOS breakpoints as a starting point because they are convenient and tend to cover most use cases, but you should not feel compelled to stick to them.
-    
-  Using U.S. Army ranks _maintains a relationship_ between the breakpoints (i.e., you can tell which breakpoint is larger or smaller than any other breakpoint by knowing your Army ranks).
-  
-  **Note:** If you need to add additional breakpoints, consider adding <a href="http://www.militaryfactory.com/ranks/army_ranks.asp">additional ranks</a>.
-
-  <a href="#table-of-contents">⬆ Back to Top</a>
-
-- **<a href="#12.3">12.3 Ordering Your Media Queries</a><a name="user-content-12.3"></a>** To ensure that style rules are properly inherited, **breakpoints should always be ordered from largest to smallest.** Otherwise, smaller screens will inherit rules intended for larger screens, and you'll feel compelled to take an early lunch.
+- **<a href="#12.5">12.5 Ordering Your Media Queries</a><a name="user-content-12.5"></a>** To ensure that style rules are properly inherited, **breakpoints should always be ordered from largest to smallest.** Otherwise, smaller screens will inherit rules intended for larger screens, and you'll feel compelled to take an early lunch.
 
   **Bad** _(major is outranked by colonel, and should come after)_
   ```sass
@@ -878,7 +902,3 @@ A little bitty guide to help us keep our code consistent and our heads clear. Un
   ```
   
   <a href="#table-of-contents">⬆ Back to Top</a>
-
-- **<a href="#12.4">12.4 Range of Breakpoints</a><a name="user-content-12.4"></a>** The upper limit of your breakpoints should be determined by your design. The default upper limit in the styleguide is `general`, which corresponds to 1200px, and the lower limit is `private`, which corresponds to 320px.
-
-While the upper limit can vary, there is not _currently_ any reason to worry about sizes below 320px, though this may change in the near future (durned smartwatches...).
