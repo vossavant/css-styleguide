@@ -839,7 +839,9 @@ A little bitty guide to help us keep our code consistent and our heads clear. Un
   
   The styleguide uses iOS breakpoints as a starting point because they are convenient and tend to cover most use cases, but you should not feel compelled to stick to them.
     
-  Using U.S. Army ranks _maintains a relationship_ between the breakpoints (i.e., you can tell which breakpoint is larger or smaller than any other breakpoint by knowing your Army ranks). You could easily use any other scaled naming convention.
+  Using U.S. Army ranks _maintains a relationship_ between the breakpoints (i.e., you can tell which breakpoint is larger or smaller than any other breakpoint by knowing your Army ranks).
+  
+  **Note:** If you need to add additional breakpoints, consider adding <a href="http://www.militaryfactory.com/ranks/army_ranks.asp">additional ranks</a>.
 
   <a href="#table-of-contents">⬆ Back to Top</a>
 
@@ -874,4 +876,9 @@ A little bitty guide to help us keep our code consistent and our heads clear. Un
     }
   }
   ```
+  
   <a href="#table-of-contents">⬆ Back to Top</a>
+
+- **<a href="#12.4">12.4 Range of Breakpoints</a><a name="user-content-12.4"></a>** The upper limit of your breakpoints should be determined by your design. The default upper limit in the styleguide is `general`, which corresponds to 1200px, and the lower limit is `private`, which corresponds to 320px.
+
+While the upper limit can vary, there is not _currently_ any reason to worry about sizes below 320px, though this may change in the near future (durned smartwatches...).
