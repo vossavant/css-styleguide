@@ -729,13 +729,17 @@ A little bitty guide to help us keep our code consistent and our heads clear. Un
   <a href="#table-of-contents">⬆ Back to Top</a>
   
 ## <a name="responsive"></a>Responsive
-- **<a href="#12.1">12.1 General Use</a><a name="user-content-12.1"></a>** For placement of responsive style rules (i.e., _Media Queries_), there are three options:
+- **<a href="#12.1">12.1 General Use</a><a name="user-content-12.1"></a>** For placement of responsive style rules (i.e., _Media Queries_), there are three options, which we've given colorful names:
 
-  - Placing all media queries in a separate SASS file
-  - "Chunking" media queries at the end of individual SASS files
-  - Adding media queries to individual selectors
+  - **Monolithic:** All media queries for the entire project are placed in a single SASS file (e.g., responsive.scss)
+  - **Chunked:** Media queries for individual SASS files are placed at the end of each file
+  - **Dispersed:** Media queries are added within the selectors they affect
    
-  The first method isn't modular and makes updating a chore. The second method, which chunks style rules within breakpoints, looks like this:
+  **Monolithic**  
+  Placing all of your project's responsive styles in the same file makes sense if you're writing plain CSS; however, with SASS, this method is the opposite of modular and makes updating code a chore.
+
+  **Chunked**  
+  The second method, which chunks style rules within breakpoints at the end of individual SASS files, looks like this:
   
   ```sass
   // default styles
@@ -767,31 +771,31 @@ A little bitty guide to help us keep our code consistent and our heads clear. Un
   
   The chunking method has the advantage of making it easier to modify styles at a particular breakpoint, but the disadvantage of creating additional instances of individual selectors, making it harder to track down, say, all `footer` styles.
   
-  The method GSC uses has the advantage of keeping all style rules for a particular selector in the same code block, so you can, for instance, see all style rules for `footer` in the same place. An example:
+  **Dispersed**  
+  This is the preferred method, and has the advantage of keeping all style rules for a particular selector in the same code block, so you can, for instance, see all styles for `footer` in the same place. An example:
 
   ```sass
   footer {
-	  position: relative;
-	  
-	  @media screen and (max-width: 768px) {
-  	  position: static;
-  	}
-  	
-  	h4 {
-  		font-size: 24px;
-  		
-  		@media screen and (max-width: 768px) {
-  			font-size: 20px;
-  		}
+    position: relative;
   
-  		@media screen and (max-width: 480px) {
-  			font-size: 18px;
-  		}
-  	}
+    @media screen and (max-width: 768px) {
+      position: static;
+    }
+  	
+    h4 {
+      font-size: 24px;
+
+      @media screen and (max-width: 768px) {
+        font-size: 20px;
+      }
+
+      @media screen and (max-width: 480px) {
+        font-size: 18px;
+      }
+    }
   }
   ```
   
-  **A note on performance**  
-  The preferred method can end up creating more selectors when the final CSS file is compiled; however, tests have shown that the effect on final file size is negligible.
+  _A note on performance:_ The "dispersed" method can end up creating more selectors when the final CSS file is compiled; however, <a href="http://benfrain.com/inline-or-combined-media-queries-in-sass-fight/">tests have shown</a> that the effect on final file size is negligible.
   
   <a href="#table-of-contents">⬆ Back to Top</a>
