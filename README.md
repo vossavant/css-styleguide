@@ -729,11 +729,11 @@ A little bitty guide to help us keep our code consistent and our heads clear. Un
   <a href="#table-of-contents">⬆ Back to Top</a>
   
 ## <a name="responsive"></a>Responsive
-- **<a href="#12.1">12.1 General Use</a><a name="user-content-12.1"></a>** For placement of responsive style rules (i.e., _Media Queries_), there are three options, which we've given colorful names:
+- **<a href="#12.1">12.1 Placement of Media Queries</a><a name="user-content-12.1"></a>** For placement of responsive style rules (i.e., _Media Queries_), there are three options, which we've given colorful names:
 
-  - **Monolithic:** All media queries for the entire project are placed in a single SASS file (e.g., responsive.scss)
+  - **Monolithic:** All media queries for the entire project are placed in a single SASS file
   - **Chunked:** Media queries for individual SASS files are placed at the end of each file
-  - **Dispersed:** Media queries are added within the selectors they affect
+  - **Inline:** Media queries are added within the selectors they affect
    
   **Monolithic**  
   Placing all of your project's responsive styles in the same file makes sense if you're writing plain CSS; however, with SASS, this method is the opposite of modular and makes updating code a chore.
@@ -771,8 +771,8 @@ A little bitty guide to help us keep our code consistent and our heads clear. Un
   
   The chunking method has the advantage of making it easier to modify styles at a particular breakpoint, but the disadvantage of creating additional instances of individual selectors, making it harder to track down, say, all `footer` styles.
   
-  **Dispersed**  
-  This is the preferred method, and has the advantage of keeping all style rules for a particular selector in the same code block, so you can, for instance, see all styles for `footer` in the same place. An example:
+  **Inline**  
+  _This is the preferred method_, and has the advantage of keeping all style rules for a particular selector in the same code block, so you can, for instance, see all styles for `footer` in the same place. An example:
 
   ```sass
   footer {
@@ -799,3 +799,44 @@ A little bitty guide to help us keep our code consistent and our heads clear. Un
   _A note on performance:_ The "dispersed" method can end up creating more selectors when the final CSS file is compiled; however, <a href="http://benfrain.com/inline-or-combined-media-queries-in-sass-fight/">tests have shown</a> that the effect on final file size is negligible.
   
   <a href="#table-of-contents">⬆ Back to Top</a>
+
+- **<a href="#12.2">12.2 Naming Conventions for Breakpoints</a><a name="user-content-12.2"></a>** The styleguide currently comes stocked with 8 breakpoints, which are named after U.S. Army ranks. Most of the breakpoints coincide with iOS device widths:
+  
+  - `private` (320px)
+  - `corporal` (375px)
+  - `sergeant` (480px)
+  - `captain` (568px)
+  - `major` (667px)
+  - `lieutenant` (768px)
+  - `colonel` (1024px)
+  - `general` (~1200px)
+   
+  A special mixin called `respond-to` allows you to use this special naming convention to write your media queries like this:
+
+  ```sass
+  footer {
+    position: relative;
+  
+    @include respond-to('lieutenant') {
+      position: static;
+    }
+  	
+    h4 {
+      font-size: 24px;
+
+      @include respond-to('lieutenant') {
+        font-size: 20px;
+      }
+
+      @include respond-to('sergeant') {
+        font-size: 18px;
+      }
+    }
+  }
+  ```
+  
+  The idea of using abstract names like U.S. Army ranks is driven by the notion that **breakpoints should not be device specific.** It is more important to tailor your breakpoints to your design and not to individual devices, because there are simply too many devices out there today; you can't possibly cater to them all.
+  
+  The styleguide uses iOS breakpoints as a starting point because they are convenient and tend to cover most use cases, but you should not feel compelled to stick to them.
+    
+  Using U.S. Army ranks _maintains a relationship_ between the breakpoints (i.e., you can tell which breakpoint is larger or smaller than any other breakpoint by knowing your Army ranks). You could easily use any other scaled naming convention.
