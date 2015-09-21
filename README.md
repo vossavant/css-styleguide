@@ -18,7 +18,8 @@ A little bitty guide whose humble purpose is to expedite front-end development b
 13. [Typography](#typography)
 14. [Hyperlinks](#hyperlinks)
 15. [Animations](#animations)
-16. [Utility Classes](#utility)
+16. [Material Icons](#icons)
+17. [Utility Classes](#utility)
 
 ## <a name="best-practices"></a>Best Practices
 - **<a href="#1.1">1.1 Indentation<a><a name="user-content-1.1"></a>** Call it a personal preference, but the primary author of this styleguide really adores tabs. The commonly-used double space, when combined with nested SASS selectors, can really make it hard to follow what is nested within what. The greater white space of a tab (4 spaces) is preferred.
@@ -897,9 +898,80 @@ A little bitty guide whose humble purpose is to expedite front-end development b
 	- If a field has a `label`, the _for_ attribute of the `label` must match the `id` of the field
 	- Each field should have a _name_ attribute for use with JavaScript
 	- Email fields should be of type _email_ and not of type _text_
-	- Be sure to use the `required` attribute to mark required fields
-	- Always include a honeypot to thwart spambots
+	- Be sure to use the `required` attribute to mark <a href="#user-content-6.3">required fields</a>
+	- Always include a <a href="#user-content-6.4">honeypot</a> to thwart spambots
   
+	<a href="#table-of-contents">⬆ Back to Top</a>
+
+- **<a href="#6.3">6.3 Required Fields</a><a name="user-content-6.3"></a>** If a field is required, use the HTML5 `required` flag to trigger browser validation. This will also give special styling to the field in webkit browers.
+
+  <a href="http://gospotcheck.com/link-to-demo"><img height="17" src="http://www.gospotcheck.com/images/github-demo-button.png" title="See it in action"></a>
+  
+  **Example**
+  ```html
+  <label for="email">Email Address</label>
+  <input id="email" name="email" placeholder="Enter your email" type="email" required>
+  ```
+  
+	<a href="#table-of-contents">⬆ Back to Top</a>
+	
+- **<a href="#6.4">6.4 Honeypots</a><a name="user-content-6.4"></a>** Spam bots are always out there harvesting emails and filling in forms, sending you useless data. A highly effective way to combat these bots is to include a special field called a **honeypot**. A honeypot is invisible to human users, but spam bots can't tell that it's a special field checked on the server side. If this field is filled out, the form submission fails.
+
+	The standard markup for a honeypot is shown below. The only pieces that can't be changed are `class="contact-other"` and `name="other"`; otherwise, feel free to omit the label or add other classes, etc.
+	
+	**Example**
+	```html
+	<div class="row contact-other">
+		<label for="other">Other Comments</label>
+		<input id="other" name="other">
+	</div>
+	```
+
+	By itself, the honeypot does nothing. The magic happens on the server side, where PHP checks to see if a field by the name of "other" is filled out. If so, silently reject the submission. Spambots will be none the wiser.
+  
+	<a href="#table-of-contents">⬆ Back to Top</a>
+	
+- **<a href="#6.5">6.5 Search Forms</a><a name="user-content-6.5"></a>** Drop in a search form by adding the markup below to your page. The framework looks for a submit button following an input with `type="search"` and styles and positions it appropriately.
+
+  <a href="http://gospotcheck.com/link-to-demo"><img height="17" src="http://www.gospotcheck.com/images/github-demo-button.png" title="See it in action"></a>
+  
+  **Example**
+  ```html
+  <form action="#" method="post">
+  	<input placeholder="Search GoSpotCheck" type="search">
+  	<button class="button" type="Submit" value="Search">Go <i class="material-icons">search</i></button>
+  </form>
+  ```
+  
+	<a href="#table-of-contents">⬆ Back to Top</a>
+	
+	
+	
+	
+
+
+- **<a href="#6.1">6.1 Introduction</a><a name="user-content-6.1"></a>** Blah
+
+  <a href="http://gospotcheck.com/link-to-demo"><img height="17" src="http://www.gospotcheck.com/images/github-demo-button.png" title="See it in action"></a>
+  
+	<a href="#table-of-contents">⬆ Back to Top</a>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ## <a name="typography"></a>Typography
 - **<a href="#3.1">3.1 Headings</a><a name="user-content-3.1"></a>** GoSpotCheck utilizes `<h1>` to `<h5>` tags. The `<h6>` tag isn’t used because it’s the HTML equivalent of a dewclaw. Generally speaking, each heading should be used as such:
 
