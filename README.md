@@ -5,15 +5,13 @@ A little bitty guide whose humble purpose is to expedite front-end development b
 ## <a name="table-of-contents"></a>Table of Contents
 1. [Best Practices](#best-practices)
 2. [Framework](#framework)
+3. [Responsive CSS](#responsive)
 3. [Typography](#typography)
-4. 
-6. [Modular Sections](#modular-sections)
+13. 
 7. [Hyperlinks](#hyperlinks)
 8. [Buttons](#buttons)
 9. [Alert Boxes](#alert-boxes)
-10. [Parallax](#parallax)
 11. [Animations](#animations)
-12. [Responsive CSS](#responsive)
 
 ## <a name="best-practices"></a>Best Practices
 - **<a href="#1.1">1.1 Indentation<a><a name="user-content-1.1"></a>** Call it a personal preference, but the primary author of this styleguide really adores tabs. The commonly-used double space, when combined with nested SASS selectors, can really make it hard to follow what is nested within what. The greater white space of a tab (4 spaces) is preferred.
@@ -214,6 +212,8 @@ A little bitty guide whose humble purpose is to expedite front-end development b
 - **<a href="#2.1">2.1 Introduction</a><a name="user-content-2.1"></a>** To ease development, we created our own humble CSS framework. A CSS framework is, at its core, a small set of rules that lets you create columns of content that fit nicely inside a wider parent, which ultimately lets you easily create an endless number of layouts.
 
   The framework is admittedly heavy on `<div>` tags, but no more so than other frameworks (I'm looking at _you_, Bootstrap). Ultimately, the extra `<div>` wrappers end up making it easier to create layouts; even though there is more markup than there would be in a custom layout, there is far less custom CSS.
+  
+  **Note:** The framework utilizes CSS flexbox vs. floats, so is not compatible with IE < 10.
 
 - **<a href="#2.2">2.2 Anatomy</a><a name="user-content-2.2"></a>** When building layouts with the framework, you will use three types of wrappers:
   
@@ -554,29 +554,199 @@ A little bitty guide whose humble purpose is to expedite front-end development b
 
   <a href="#table-of-contents">⬆ Back to Top</a>
   
-  
-  
-  
-  
-  
-  
-  
-  
-- **<a href="#4.2">4.2 Nesting Widths</a><a name="user-content-4.2"></a>** It can be very useful to "nest" widths inside of one another. Since width is always relative to the parent (and ultimately, to the viewport), it's easy to anticipate how wide something will be.
+- **<a href="#2.2.4.2">2.2.4.2 Responsive</a><a name="user-content-2.2.4.2"></a>** A word of caution to those who want to use what I'll call "non-standard" column widths together. The columns will probably look bad on smaller screens. Presently, the framework only supports responsive for the following column "pairs":
 
-  <a href="http://gospotcheck.com/link-to-demo"><img height="17" src="http://www.gospotcheck.com/images/github-demo-button.png" title="See it in action"></a>
-  
-  ```html
-  <body>
-    <!-- this section is 75% width of the viewport -->
-    <section class="width-75">
-      <div class="width-75">This child element is 75% width of the section</div>
-      <div class="width-25">This child element is 25% width of the section</div>
-    </section>
-  </body>
-  ```
+  - 25/75
+  - 33/66
+  - 50/50
+
+  These are the overwhelming majority of cases, but we may add responsive support for other columns pairs (e.g., 15/85) if required. You can, of course, always add your own rules on a per-project basis. Speaking of responsive...
 
   <a href="#table-of-contents">⬆ Back to Top</a>
+  
+## <a name="responsive"></a>Responsive
+- **<a href="#3.1">3.1 Naming Conventions for Breakpoints</a><a name="user-content-3.1"></a>** The styleguide currently comes stocked with 8 breakpoints, which are named after U.S. Army ranks. Most of the breakpoints coincide with iOS device widths:
+  
+  - `private` (320px)
+  - `corporal` (375px)
+  - `sergeant` (480px)
+  - `captain` (568px)
+  - `major` (667px)
+  - `lieutenant` (768px)
+  - `colonel` (1024px)
+  - `general` (~1200px)
+  
+  **Why Army Ranks?** 
+  The idea of using abstract names like U.S. Army ranks is driven by the notion that **breakpoints should not be device specific.** It is more important to tailor your breakpoints to your design and not to individual devices, because there are simply too many devices out there today; you can't possibly cater to them all.
+  
+  The styleguide uses iOS breakpoints as a starting point because they are convenient and tend to cover most use cases, but you should not feel compelled to stick to them.
+    
+  Using U.S. Army ranks _maintains a relationship_ between the breakpoints (i.e., you can tell which breakpoint is larger or smaller than any other breakpoint by knowing your Army ranks).
+  
+  **Note:** If you need to add additional breakpoints, consider adding <a href="http://www.militaryfactory.com/ranks/army_ranks.asp">additional ranks</a>.
+
+  <a href="#table-of-contents">⬆ Back to Top</a>
+
+- **<a href="#3.2">3.2 Range of Breakpoints</a><a name="user-content-3.2"></a>** The upper limit of your breakpoints should be determined by your design. The default upper limit in the styleguide is `general`, which corresponds to 1200px, and the lower limit is `private`, which corresponds to 320px.
+
+  **Note:** While the upper limit can vary, there is not _currently_ any reason to worry about sizes below 320px, though this may change in the near future (durned smartwatches...).
+
+  <a href="#table-of-contents">⬆ Back to Top</a>
+  
+- **<a href="#3.3">3.3 Special Mixin (rename me)</a><a name="user-content-3.3"></a>** A special mixin called `respond-to` allows you to use the rank naming convention to write your media queries like:
+
+  ```sass
+  footer {
+    position: relative;
+  
+    @include respond-to('lieutenant') {
+      position: static;
+    }
+  	
+    h4 {
+      font-size: 24px;
+
+      @include respond-to('lieutenant') {
+        font-size: 20px;
+      }
+
+      @include respond-to('sergeant') {
+        font-size: 18px;
+      }
+    }
+  }
+  ```
+  
+  It is the equivalent of setting `max-width`:
+  ```sass
+  // this...
+  h4 {
+    @include respond-to('sergeant') {
+      font-size: 20px;
+    }
+  }
+  
+  // ...converts to this
+  @media screen and (max-width: 480px) {
+    h4 {
+      font-size: 20px;
+    }
+  }
+  ```
+  
+- **<a href="#3.4">3.4 Placement of Media Queries</a><a name="user-content-3.4"></a>** For placement of responsive style rules (i.e., _Media Queries_), there are three options, which we've given colorful names:
+
+  - **Monolithic:** All media queries for the entire project are placed in a single SASS file
+  - **Chunked:** Media queries for individual SASS files are placed at the end of each file
+  - **Inline:** Media queries are added within the selectors they affect
+   
+  **Monolithic**  
+  Placing all of your project's responsive styles in the same file makes sense if you're writing plain CSS; however, with SASS, this method is the opposite of modular and makes updating code a chore.
+
+  **Chunked**  
+  The second method, which chunks style rules within breakpoints at the end of individual SASS files, looks like this:
+  
+  ```sass
+  // default styles
+  footer {
+    position: relative;
+    
+    h4 {
+      font-size: 24px;
+    }
+  }
+  
+  // responsive styles (at end of file)
+  @media screen and (max-width: 768px) {
+    footer {
+      position: static;
+    
+      h4 {
+        font-size: 20px;
+      }
+    }
+  }
+  
+  @media screen and (max-width: 480px) {
+    footer h4 {
+      font-size: 18px;
+    }
+  }
+  ```
+  
+  The chunking method has the advantage of making it easier to modify styles at a particular breakpoint, but the disadvantage of creating additional instances of individual selectors, making it harder to track down, say, all `footer` styles.
+  
+  **Inline**  
+  _This is the preferred method_, and has the advantage of keeping all style rules for a particular selector in the same code block, so you can, for instance, see all styles for `footer` in the same place. An example:
+
+  ```sass
+  footer {
+    position: relative;
+  
+    @media screen and (max-width: 768px) {
+      position: static;
+    }
+  	
+    h4 {
+      font-size: 24px;
+
+      @media screen and (max-width: 768px) {
+        font-size: 20px;
+      }
+
+      @media screen and (max-width: 480px) {
+        font-size: 18px;
+      }
+    }
+  }
+  ```
+  
+  _A note on performance:_ The "dispersed" method can end up creating more selectors when the final CSS file is compiled; however, <a href="http://benfrain.com/inline-or-combined-media-queries-in-sass-fight/">tests have shown</a> that the effect on final file size is negligible.
+  
+  <a href="#table-of-contents">⬆ Back to Top</a>
+
+- **<a href="#3.5">3.5 Ordering Your Media Queries</a><a name="user-content-3.5"></a>** To ensure that style rules are properly inherited, **breakpoints should always be ordered from largest to smallest.** Otherwise, smaller screens will inherit rules intended for larger screens, and you'll feel compelled to take an early lunch.
+
+  **Bad** _(major is outranked by colonel, and should come after)_
+  ```sass
+  h1 {
+    font-size: 36px;
+    
+    @include respond-to('major') {
+      font-size: 28px;
+    }
+    
+    @include respond-to('colonel') {
+      font-size: 32px;
+    }
+  }
+  ```
+
+  **Good** _(colonel is the higher rank, and properly comes first)_
+  ```sass
+  h1 {
+    font-size: 36px;
+    
+    @include respond-to('colonel') {
+      font-size: 32px;
+    }
+    
+    @include respond-to('major') {
+      font-size: 28px;
+    }
+  }
+  ```
+  
+  <a href="#table-of-contents">⬆ Back to Top</a>
+
+
+
+
+
+
+  
+  
+  
 
 ## <a name="typography"></a>Typography
 - **<a href="#2.1">2.1 Headings</a><a name="user-content-2.1"></a>** GoSpotCheck utilizes `<h1>` to `<h5>` tags. The `<h6>` tag isn’t used because it’s the HTML equivalent of a dewclaw. Generally speaking, each heading should be used as such:
@@ -1199,177 +1369,3 @@ A little bitty guide whose humble purpose is to expedite front-end development b
   
   <a href="#table-of-contents">⬆ Back to Top</a>
   
-## <a name="responsive"></a>Responsive
-- **<a href="#12.1">12.1 Naming Conventions for Breakpoints</a><a name="user-content-12.1"></a>** The styleguide currently comes stocked with 8 breakpoints, which are named after U.S. Army ranks. Most of the breakpoints coincide with iOS device widths:
-  
-  - `private` (320px)
-  - `corporal` (375px)
-  - `sergeant` (480px)
-  - `captain` (568px)
-  - `major` (667px)
-  - `lieutenant` (768px)
-  - `colonel` (1024px)
-  - `general` (~1200px)
-  
-  **Why Army Ranks?** 
-  The idea of using abstract names like U.S. Army ranks is driven by the notion that **breakpoints should not be device specific.** It is more important to tailor your breakpoints to your design and not to individual devices, because there are simply too many devices out there today; you can't possibly cater to them all.
-  
-  The styleguide uses iOS breakpoints as a starting point because they are convenient and tend to cover most use cases, but you should not feel compelled to stick to them.
-    
-  Using U.S. Army ranks _maintains a relationship_ between the breakpoints (i.e., you can tell which breakpoint is larger or smaller than any other breakpoint by knowing your Army ranks).
-  
-  **Note:** If you need to add additional breakpoints, consider adding <a href="http://www.militaryfactory.com/ranks/army_ranks.asp">additional ranks</a>.
-
-  <a href="#table-of-contents">⬆ Back to Top</a>
-
-- **<a href="#12.2">12.2 Range of Breakpoints</a><a name="user-content-12.2"></a>** The upper limit of your breakpoints should be determined by your design. The default upper limit in the styleguide is `general`, which corresponds to 1200px, and the lower limit is `private`, which corresponds to 320px.
-
-  **Note:** While the upper limit can vary, there is not _currently_ any reason to worry about sizes below 320px, though this may change in the near future (durned smartwatches...).
-
-  <a href="#table-of-contents">⬆ Back to Top</a>
-  
-- **<a href="#12.3">12.3 Special Mixin (rename me)</a><a name="user-content-12.3"></a>** A special mixin called `respond-to` allows you to use the rank naming convention to write your media queries like:
-
-  ```sass
-  footer {
-    position: relative;
-  
-    @include respond-to('lieutenant') {
-      position: static;
-    }
-  	
-    h4 {
-      font-size: 24px;
-
-      @include respond-to('lieutenant') {
-        font-size: 20px;
-      }
-
-      @include respond-to('sergeant') {
-        font-size: 18px;
-      }
-    }
-  }
-  ```
-  
-  It is the equivalent of setting `max-width`:
-  ```sass
-  // this...
-  h4 {
-    @include respond-to('sergeant') {
-      font-size: 20px;
-    }
-  }
-  
-  // ...converts to this
-  @media screen and (max-width: 480px) {
-    h4 {
-      font-size: 20px;
-    }
-  }
-  ```
-  
-- **<a href="#12.4">12.4 Placement of Media Queries</a><a name="user-content-12.4"></a>** For placement of responsive style rules (i.e., _Media Queries_), there are three options, which we've given colorful names:
-
-  - **Monolithic:** All media queries for the entire project are placed in a single SASS file
-  - **Chunked:** Media queries for individual SASS files are placed at the end of each file
-  - **Inline:** Media queries are added within the selectors they affect
-   
-  **Monolithic**  
-  Placing all of your project's responsive styles in the same file makes sense if you're writing plain CSS; however, with SASS, this method is the opposite of modular and makes updating code a chore.
-
-  **Chunked**  
-  The second method, which chunks style rules within breakpoints at the end of individual SASS files, looks like this:
-  
-  ```sass
-  // default styles
-  footer {
-    position: relative;
-    
-    h4 {
-      font-size: 24px;
-    }
-  }
-  
-  // responsive styles (at end of file)
-  @media screen and (max-width: 768px) {
-    footer {
-      position: static;
-    
-      h4 {
-        font-size: 20px;
-      }
-    }
-  }
-  
-  @media screen and (max-width: 480px) {
-    footer h4 {
-      font-size: 18px;
-    }
-  }
-  ```
-  
-  The chunking method has the advantage of making it easier to modify styles at a particular breakpoint, but the disadvantage of creating additional instances of individual selectors, making it harder to track down, say, all `footer` styles.
-  
-  **Inline**  
-  _This is the preferred method_, and has the advantage of keeping all style rules for a particular selector in the same code block, so you can, for instance, see all styles for `footer` in the same place. An example:
-
-  ```sass
-  footer {
-    position: relative;
-  
-    @media screen and (max-width: 768px) {
-      position: static;
-    }
-  	
-    h4 {
-      font-size: 24px;
-
-      @media screen and (max-width: 768px) {
-        font-size: 20px;
-      }
-
-      @media screen and (max-width: 480px) {
-        font-size: 18px;
-      }
-    }
-  }
-  ```
-  
-  _A note on performance:_ The "dispersed" method can end up creating more selectors when the final CSS file is compiled; however, <a href="http://benfrain.com/inline-or-combined-media-queries-in-sass-fight/">tests have shown</a> that the effect on final file size is negligible.
-  
-  <a href="#table-of-contents">⬆ Back to Top</a>
-
-- **<a href="#12.5">12.5 Ordering Your Media Queries</a><a name="user-content-12.5"></a>** To ensure that style rules are properly inherited, **breakpoints should always be ordered from largest to smallest.** Otherwise, smaller screens will inherit rules intended for larger screens, and you'll feel compelled to take an early lunch.
-
-  **Bad** _(major is outranked by colonel, and should come after)_
-  ```sass
-  h1 {
-    font-size: 36px;
-    
-    @include respond-to('major') {
-      font-size: 28px;
-    }
-    
-    @include respond-to('colonel') {
-      font-size: 32px;
-    }
-  }
-  ```
-
-  **Good** _(colonel is the higher rank, and properly comes first)_
-  ```sass
-  h1 {
-    font-size: 36px;
-    
-    @include respond-to('colonel') {
-      font-size: 32px;
-    }
-    
-    @include respond-to('major') {
-      font-size: 28px;
-    }
-  }
-  ```
-  
-  <a href="#table-of-contents">⬆ Back to Top</a>
