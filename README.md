@@ -211,55 +211,81 @@ A little bitty guide whose humble purpose is to expedite front-end development b
   <a href="#table-of-contents">⬆ Back to Top</a>
 
 ## <a name="framework"></a>The Framework
-- **<a href="#3.1">3.1 Introduction</a><a name="user-content-3.1"></a>** To ease development, we created our own humble CSS framework. A CSS framework is, at its core, a small set of rules that lets you create columns of content that fit nicely inside a wider parent, which ultimately lets you easily create an endless number of layouts.
+- **<a href="#2.1">2.1 Introduction</a><a name="user-content-2.1"></a>** To ease development, we created our own humble CSS framework. A CSS framework is, at its core, a small set of rules that lets you create columns of content that fit nicely inside a wider parent, which ultimately lets you easily create an endless number of layouts.
 
   The framework is admittedly heavy on `<div>` tags, but no more so than other frameworks (I'm looking at _you_, Bootstrap). Ultimately, the extra `<div>` wrappers end up making it easier to create layouts; even though there is more markup than there would be in a custom layout, there is far less custom CSS.
-  
-  When building layouts with the framework, you will need three types of wrappers:
+
+- **<a href="#2.2">2.2 Anatomy</a><a name="user-content-2.2"></a>** When building layouts with the framework, you will use three types of wrappers:
   
   - The outer wrapper
   - An inner "row" wrapper
   - Column wrappers
+
+  There is also an optional fourth "section" wrapper, which lets you create full-width bands of content.
   
   **Example**
   ```html
-  <div class="wrap">
-      <div class="row">
-          <div class="width-50">
-              <p>This column takes up half the width of the row.</p>
-          </div>
-          <div class="width-50">
-              <p>This column also takes up half the width of the row.</p>
+  <div class="section">
+      <div class="wrap">
+          <div class="row">
+              <div class="width-50">
+                  <p>This column takes up half the width of the row.</p>
+              </div>
+              <div class="width-50">
+                  <p>This column also takes up half the width of the row.</p>
+              </div>
           </div>
       </div>
-  </div>
+  </div> <!-- // section -->
   ```
 
   <a href="http://gospotcheck.com/link-to-demo"><img height="17" src="http://www.gospotcheck.com/images/github-demo-button.png" title="See it in action"></a>
   
-  You can specify a relative width for any container by adding the class `width-X`, where _X_ is a percentage. For now, there are thirteen widths that you can use:
-  
+  <a href="#table-of-contents">⬆ Back to Top</a>
+
+- **<a href="#2.2.1">2.2.1 Sections</a><a name="user-content-2.2.1"></a>** The outermost wrapper, while not required for the framework to do its thing, is widely used on the current GSC marketing site. It will take a class of `section` and, by itself, just adds some top and bottom padding:
+
   ```html
-  <section>
-    <div class="width-20">This element is 20% the width of the parent.</div>
-    <div class="width-25">This element is 25% the width of the parent.</div>
-    <div class="width-33">This element is 33% the width of the parent.</div>
-    <div class="width-40">This element is 40% the width of the parent.</div>
-    <div class="width-50">This element is 50% the width of the parent.</div>
-    <div class="width-60">This element is 60% the width of the parent.</div>
-    <div class="width-66">This element is 66% the width of the parent.</div>
-    <div class="width-75">This element is 75% the width of the parent.</div>
-    <div class="width-80">This element is 80% the width of the parent.</div>
-    <div class="width-100">This element is 100% the width of the parent.</div>
-    <div class="width-125">This element is 125% the width of the parent.</div>
-    <div class="width-full">This element is the full width of the default container (960px).</div>
-    <div class="width-full-125">This element is 125% the width of the default container.</div>
-  </section>
+  <div class="section"> ... </div>
   ```
   
-  Two things to note:
-  - Applying class `width-` to any element will center it with `margin: 0 auto`
-  - Use of `width-100` is useful for giving full width to elements with `position: fixed`
+  There are several classes you can give `section` to alter its appearance:
+  - <a href="#user-content-2.2.1.1">angled-up</a>
+  - <a href="#user-content-2.2.1.1">angled-down</a>
+  - <a href="#user-content-2.2.1.2">dark</a>
+  - gradient
+  - hero
+  - off-white
+  - orange
+  - primary-cta
+  - topo
+
+- **<a href="#2.2.1.1">2.2.1.1 Angled Sections</a><a name="user-content-2.2.1.1"></a>** While somewhat buggy (text can appear blurry in some browsers), this type of section yields some cool visual effects. If you're tired of straight lines, try some angles.
+
+  **Examples**
+  ```html
+  <div class="section angled-down">
+      <div class="wrap">
+          <div class="row">
+              <div class="width-100">
+                  <p>The top edge of this section will have an angle sloping down from left to right.</p>
+              </div>
+          </div>
+      </div>
+  </div> <!-- // angled-down -->
+  
+  <div class="section angled-up">
+      <div class="wrap">
+          <div class="row">
+              <div class="width-100">
+                  <p>The top edge of this section will have an angle sloping up from left to right.</p>
+              </div>
+          </div>
+      </div>
+  </div> <!-- // angled-up -->
+  ```
+  
+  <a href="http://gospotcheck.com/link-to-demo"><img height="17" src="http://www.gospotcheck.com/images/github-demo-button.png" title="See it in action"></a>
 
   <a href="#table-of-contents">⬆ Back to Top</a>
 
