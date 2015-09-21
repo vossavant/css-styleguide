@@ -981,7 +981,9 @@ A little bitty guide whose humble purpose is to expedite front-end development b
   <a href="#table-of-contents">⬆ Back to Top</a>
 
 ## <a name="alerts"></a>Alert Boxes
-- **<a href="#8.1">8.1 General Use</a><a name="user-content-8.1"></a>** Alert boxes are limited in scope on the GSC marketing site, but are more widespread in the admin application. Their purpose is to alert the user to an event, whether it was successful or went horribly wrong. Use common sense when adding alert boxes; rare is the case when more than one need be on screen at once.
+- **<a href="#8.1">8.1 General Use</a><a name="user-content-8.1"></a>** Alert boxes are limited in scope on the GSC marketing site, but are more widespread in the admin application. Their purpose is to alert the user to an event, whether it was successful or went horribly wrong.
+
+	Alert boxes should be `<p>` unless a special case warrants otherwise. Use common sense when adding alert boxes; rare is the case when more than one need be on screen at once.
 
   <a href="#table-of-contents">⬆ Back to Top</a>
 
@@ -997,12 +999,43 @@ A little bitty guide whose humble purpose is to expedite front-end development b
   
   **Examples**
   ```html
-  
+  <p class="message">Hey, I'm a boring ol' message.</p>
+  <p class="message info">Be sure to enter your email to receive our special offers.</p>
+  <p class="message success">Thanks, your message is on its way.</p>
+  <p class="message warning">Our site will be down this weekend for routine maintenance.</p>
+  <p class="message error">There was a problem saving your data.</p>
   ```
   
 	<a href="#table-of-contents">⬆ Back to Top</a>
 
+- **<a href="#8.3">8.3 Persistent Alerts</a><a name="user-content-8.3"></a>** Alerts are hidden by default, then shown when needed with a little bit of JavaScript. You can have an alert persist (always show) by adding `class="visible"`.
 
+	**Example**
+	```html
+	<p class="message info visible">Be sure to enter your email to receive our special offers</p>
+	```
+
+  <a href="http://gospotcheck.com/link-to-demo"><img height="17" src="http://www.gospotcheck.com/images/github-demo-button.png" title="See it in action"></a>
+  
+	<a href="#table-of-contents">⬆ Back to Top</a>
+
+- **<a href="#8.4">8.4 Other Styles</a><a name="user-content-8.4"></a>** Alerts are not only hidden, but also quite plain by default. Jazz 'em up by adding one of three classes:
+
+	- gradient
+	- icon
+	- no-border
+
+  <a href="http://gospotcheck.com/link-to-demo"><img height="17" src="http://www.gospotcheck.com/images/github-demo-button.png" title="See it in action"></a>
+  
+  **Example**
+	```html
+	<p class="message gradient">I have a subtle gradient background</p>
+	<p class="message info icon">I have a snazzy info icon to the left</p>
+	<p class="message no-border">I don't have any border</p>
+	<p class="message no-border gradient">I combined multiple classes to really jazz things up</p>
+	```
+	
+	<a href="#table-of-contents">⬆ Back to Top</a>
 
 
 
