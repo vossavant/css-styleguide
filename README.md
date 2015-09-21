@@ -776,27 +776,30 @@ A little bitty guide whose humble purpose is to expedite front-end development b
   **Behold, an Example**
   ```html
   <article class="box">
-	  <h3>What is GoSpotCheck?</h3>
+  	<h3>What is GoSpotCheck?</h3>
 	  <p>GoSpotCheck is enterprise software for field-based teams.</p>
 	</article>
 	```
 
   <a href="#table-of-contents">⬆ Back to Top</a>		
 
-- **<a href="#4.2">4.2 Post Boxes</a><a name="user-content-4.2"></a>** A variation on the theme of box is the post box, which is intended to showcase blog posts. Drop in the markup below where you need blog posts.
+- **<a href="#4.2">4.2 Post Box</a><a name="user-content-4.2"></a>** A variation on the theme of box is the "post box", which is intended to showcase blog posts. Drop in the markup below where you need blog posts.
 
+  <a href="http://gospotcheck.com/link-to-demo"><img height="17" src="http://www.gospotcheck.com/images/github-demo-button.png" title="See it in action"></a>
+
+  **Example**
 	```html
   <article class="post box">
 			<div class="width-100 padding-none">
-		  		<figure>
-		    			<a href="#"><img src="box-sample.png"></a>
-		  		</figure>
+				<figure>
+						<a href="#"><img src="box-sample.png"></a>
+				</figure>
 			</div>
 			<div class="width-100 padding">
-		  		<h3><a href="#">An Ode to Small Towns</a></h3>
-		  		<p class="meta">by <a href="#">Sam Adams</a> on September 2, 2015 in <a href="#">Urban Planning</a></p>
-		  		<p>Blog post synopsis goes here, yo.</p>
-		  		<a href="#" class="button outline">Full Article <i class="material-icons">chevron_right</i></a>
+				<h3><a href="#">An Ode to Small Towns</a></h3>
+				<p class="meta">by <a href="#">Sam Adams</a> on September 2, 2015 in <a href="#">Urban Planning</a></p>
+				<p>Blog post synopsis goes here, yo.</p>
+				<a href="#" class="button outline">Full Article <i class="material-icons">chevron_right</i></a>
 			</div>
 	</article>
   ```
@@ -805,9 +808,31 @@ A little bitty guide whose humble purpose is to expedite front-end development b
 
   <a href="#table-of-contents">⬆ Back to Top</a>
 
+- **<a href="#4.3">4.3 Author Meta Box</a><a name="user-content-4.3"></a>** Another variation on the theme of box is the author meta box, which is intended to showcase an author at the end of a blog post.
 
+  <a href="http://gospotcheck.com/link-to-demo"><img height="17" src="http://www.gospotcheck.com/images/github-demo-button.png" title="See it in action"></a>
+  
+  **Example**
+  ```html
+  <div class="meta box">
+		<div class="width-15 align-center padding-none-right">
+			<img class="round" src="avatar.png">
+		</div>
+		<div class="width-85">
+			<h4>Written by <a href="#">Joey Alfano</a></h4>
+			<p>Joey likes golf and Chipotle.</p>
+		</div>
+	</div>
+  ```
 
+  <a href="#table-of-contents">⬆ Back to Top</a>
 
+## <a name="galleries"></a>Galleries
+- **<a href="#5.1">5.1 Introduction</a><a name="user-content-5.1"></a>** Galleries are neat...
+
+  <a href="http://gospotcheck.com/link-to-demo"><img height="17" src="http://www.gospotcheck.com/images/github-demo-button.png" title="See it in action"></a>
+  
+  <a href="#table-of-contents">⬆ Back to Top</a>
 
 ## <a name="typography"></a>Typography
 - **<a href="#3.1">3.1 Headings</a><a name="user-content-3.1"></a>** GoSpotCheck utilizes `<h1>` to `<h5>` tags. The `<h6>` tag isn’t used because it’s the HTML equivalent of a dewclaw. Generally speaking, each heading should be used as such:
