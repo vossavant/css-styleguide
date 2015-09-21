@@ -767,36 +767,41 @@ A little bitty guide whose humble purpose is to expedite front-end development b
   <a href="#table-of-contents">⬆ Back to Top</a>
  
 ## <a name="boxes"></a>Boxes
-- **<a href="#3.1">3.1 Introduction</a><a name="user-content-3.1"></a>** "Boxes" is the creative term given to a stylized box of content. They are primarily used to jazz up an otherwise boring part of the page, and serve well to delineate repeating content, like blog posts.
+- **<a href="#4.1">4.1 Introduction</a><a name="user-content-4.1"></a>** "Boxes" is the creative term given to a stylized box of content. They are primarily used to jazz up an otherwise boring part of the page, and serve well to delineate repeating content, like blog posts.
   
-  The markup of the box is important; be sure to follow it closely to reproduce the look in the demo. In other words, it's not as simple as adding `class="box"` to an empty div.
+  The markup of the box is important; be sure to follow it closely to reproduce the look in the demos (in other words, it's not as simple as adding `class="box"` to an empty `div`).
   
   <a href="http://gospotcheck.com/link-to-demo"><img height="17" src="http://www.gospotcheck.com/images/github-demo-button.png" title="See it in action"></a>
+
   **Behold, an Example**
   ```html
   <article class="box">
-		  <h3>What is GoSpotCheck?</h3>
-	  	<p>GoSpotCheck is enterprise software for field-based teams.</p>
+	  <h3>What is GoSpotCheck?</h3>
+	  <p>GoSpotCheck is enterprise software for field-based teams.</p>
 	</article>
+	```
 
   <a href="#table-of-contents">⬆ Back to Top</a>		
 
+- **<a href="#4.2">4.2 Post Boxes</a><a name="user-content-4.2"></a>** A variation on the theme of box is the post box, which is intended to showcase blog posts. Drop in the markup below where you need blog posts.
+
+	```html
   <article class="post box">
-		<div class="width-100 padding-none">
-		  <figure>
-		    <a href="#"><img src="box-sample.png"></a>
-		  </figure>
-		</div>
-		<div class="width-100 padding">
-		  <h3><a href="#">An Ode to Small Towns</a></h3>
-		  <p class="meta">by <a href="#">Sam Adams</a> on September 2, 2015 in <a href="#">Urban Planning</a></p>
-		  <p>Flexitarian occupy cred Pitchfork meh, bitters tilde readymade direct trade. Church-key wayfarers cray irony retro semiotics seitan banjo, paleo gluten-free readymade.</p>
-		  <a href="#" class="button outline">Full Article <i class="material-icons">chevron_right</i></a>
-		</div>
+			<div class="width-100 padding-none">
+		  		<figure>
+		    			<a href="#"><img src="box-sample.png"></a>
+		  		</figure>
+			</div>
+			<div class="width-100 padding">
+		  		<h3><a href="#">An Ode to Small Towns</a></h3>
+		  		<p class="meta">by <a href="#">Sam Adams</a> on September 2, 2015 in <a href="#">Urban Planning</a></p>
+		  		<p>Blog post synopsis goes here, yo.</p>
+		  		<a href="#" class="button outline">Full Article <i class="material-icons">chevron_right</i></a>
+			</div>
 	</article>
   ```
 
-  The example above introduces some new elements, like <a href="#buttons">buttons</a> and <a href="#utility">utility classes</a>.
+  **Note:** The example above introduces some new elements, like <a href="#buttons">buttons</a> and <a href="#utility">utility classes</a>.
 
   <a href="#table-of-contents">⬆ Back to Top</a>
 
