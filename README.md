@@ -445,12 +445,84 @@ A little bitty guide whose humble purpose is to expedite front-end development b
 
   <a href="#table-of-contents">⬆ Back to Top</a>
   
+- **<a href="#2.2.2">2.2.2 Wrapper</a><a name="user-content-2.2.2"></a>** Whether or not you use the `section` classes just described, you will need to wrap your row and columns inside an outer wrapper:
+
+  ```html
+  <div class="wrap"> ... </div>
+  ```
   
+  This will center your content and give it a maximum width (default is 960px but can be adjusted in your SASS variables file). You can extend this width to 125% of the default by adding a class of `wide`, like so:
   
+  ```html
+  <div class="wrap wide"> ... </div>
+  ```
+
+  <a href="http://gospotcheck.com/link-to-demo"><img height="17" src="http://www.gospotcheck.com/images/github-demo-button.png" title="See it in action"></a>
+
+  <a href="#table-of-contents">⬆ Back to Top</a>
   
+- **<a href="#2.2.3">2.2.3 Row</a><a name="user-content-2.2.3"></a>** The `row` wrapper is always nested within the outer `wrap` wrapper. Its purpose is to pull the inner columns to the edges of the outer wrapper by using a negative left/right margin.
+
+  ```html
+  <div class="wrap">
+      <div class="row"> ... </div>
+  </div>
+  ```
   
+  While `row` does not have any row-specific classes, you may sometimes wish to align content in one row and not another, like so:
   
+  ```html
+  <div class="wrap">
+      <div class="row align-center"> ... </div>
+      <div class="row"> ... </div>
+  </div>
+  ```
   
+  The example above uses the `align-center` utility class, which is discussed in <a href="#">Utility Classes</a>.
+
+  <a href="http://gospotcheck.com/link-to-demo"><img height="17" src="http://www.gospotcheck.com/images/github-demo-button.png" title="See it in action"></a>
+
+  <a href="#table-of-contents">⬆ Back to Top</a>
+  
+- **<a href="#2.2.4">2.2.4 Columns</a><a name="user-content-2.2.4"></a>** The final, most versatile piece of the framework are the columns. You can specify any width for your column between 5 and 100 (in increments of 5%) by adding the `width-` class and a number. Two extra widths are also available: `width-33` and `width-66`.
+
+  **Note:** your column widths should always add up to 100, and that each row should never have more than 100 in it (otherwise, you may get funky results).
+
+  **Good**
+  ```html
+  <div class="wrap">
+      <div class="row">
+          <div class="width-100">
+              <h1>The full width column is the most commonly used</h1>
+          </div>
+      </div>
+      <div class="row">
+          <div class="width-25">
+              <img src="logo.svg">
+          </div>
+          <div class="width-75">
+              <p>But other widths are also ok!</p>
+          </div>
+      </div>
+  </div>
+  ```
+
+  **Bad**
+  ```html
+  <div class="wrap">
+      <div class="row">
+          <div class="width-50">
+              <h2>Fun with half-widths</h2>
+          </div>
+          <div class="width-50">
+              <h2>Fun with half-widths</h2>
+          </div>
+          <div class="width-25">
+              <p>Not a good idea since we now have more than 100% in this row.</p>
+          </div>
+      </div>
+  </div>
+  ```
   
   
   
