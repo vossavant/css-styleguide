@@ -1042,7 +1042,7 @@ A little bitty guide whose humble purpose is to expedite front-end development b
 
   <a href="http://gospotcheck.com/link-to-demo"><img height="17" src="http://www.gospotcheck.com/images/github-demo-button.png" title="See it in action"></a>
   
-  **Sample Markup**
+  **Example**
   ```html
 	<div data-animation="fadeIn" id="kicker">
 		<span class="close">
@@ -1077,9 +1077,71 @@ A little bitty guide whose humble purpose is to expedite front-end development b
   
 	<a href="#table-of-contents">⬆ Back to Top</a>
 
+## <a name="lists"></a>Lists
+- **<a href="#10.1">10.1 Types of Lists</a><a name="user-content-3.1"></a>** Default lists are bulleted and have a bit of indentation, but are otherwise tragically un-sexy. Dress up your lists with one of three classes:
 
+	- bulleted
+	- icon
+	- stacked
 
+  <a href="http://gospotcheck.com/link-to-demo"><img height="17" src="http://www.gospotcheck.com/images/github-demo-button.png" title="See it in action"></a>
+  
+  **Example**
+  ```html
+  <ul class="stacked">
+  	<li>Goats make delicious cheese</li>
+  	<li>Technically, they make delicious milk</li>
+  	<li>Which is then turned into delicious cheese</li>
+  </ul>
+  ```
+  
+	<a href="#table-of-contents">⬆ Back to Top</a>
 
+## <a name="tables"></a>Tables
+- **<a href="#11.1">11.1 Best Practices</a><a name="user-content-11.1"></a>** Tables are a great way to show lots of data in an easy-to-digest format. They're used extensively on the web app, but very little on the marketing site. When creating a table, be sure to follow these rules:
+
+	- Never use a table for laying out a page
+	- Always include the `<thead>` and `<tbody>` elements
+	- Use `<th>` instead of `<td>` in the `<thead>`
+	- Use `<th>` instead of `<td>` in the first cell of a row in the `<tbody>`
+	- Keep columns to a minimum (preferably less than 7)
+
+  <a href="http://gospotcheck.com/link-to-demo"><img height="17" src="http://www.gospotcheck.com/images/github-demo-button.png" title="See it in action"></a>
+  
+  **Example**
+  ```html
+  <table>
+  	<thead>
+  		<tr>
+  			<th>Rank</th>
+  			<th>Name</th>
+  			<th>Points</th>
+  		</tr>
+  	</thead>
+  	<tbody>
+  		<tr>
+  			<th>1</th>
+  			<td>Batman</td>
+  			<td>1,308</td>
+  		</tr>
+  		...
+  	</tbody>
+  </table>
+  ```
+  
+	<a href="#table-of-contents">⬆ Back to Top</a>
+
+- **<a href="#11.2">11.2 Table with Fixed Header</a><a name="user-content-11.2"></a>** For all but the smallest tables, you'll probably want a header that doesn't scroll with the page. A fixed header makes it easier to read the data and know what columns are what. With a bit of extra markup, you can transform any regular ol' table into a super table with a fixed header.
+
+  <a href="http://gospotcheck.com/link-to-demo"><img height="17" src="http://www.gospotcheck.com/images/github-demo-button.png" title="See it in action"></a>
+  
+  **Example**
+  ```html
+  <table>
+  </table>
+  ```
+  
+	<a href="#table-of-contents">⬆ Back to Top</a>
 
 
 
