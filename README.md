@@ -957,7 +957,7 @@ A little bitty guide whose humble purpose is to expedite front-end development b
 
   <a href="#table-of-contents">⬆ Back to Top</a>
   
-- **<a href="#8.2">8.2 Types of Buttons</a><a name="user-content-8.2"></a>** There are more buttons than you can shake a selfie stick at; check the demo page for all of 'em. Here's a complete list of class names you can use; the most commonly used ones are in **bold**:
+- **<a href="#7.2">7.2 Types of Buttons</a><a name="user-content-7.2"></a>** There are more buttons than you can shake a selfie stick at; check the demo page for all of 'em. Here's a complete list of class names you can use; the most commonly used ones are in **bold**:
 
 	- **clear**
 	- **dark**
@@ -979,7 +979,7 @@ A little bitty guide whose humble purpose is to expedite front-end development b
   ```
   
   <a href="#table-of-contents">⬆ Back to Top</a>
-	
+
 	
 	
 
