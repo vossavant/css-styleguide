@@ -1,7 +1,9 @@
 # GSC Styleguide
-A little bitty guide to help us keep our code consistent and our heads clear. Unless there's beer involved. That can't be helped.
+#### For CSS/HTML
+A little bitty guide whose humble purpose is to expedite front-end development by providing a frequently updated repository of code snippets.
 
 ## <a name="table-of-contents"></a>Table of Contents
+1. [Best Practices](#best-practices)
 1. [Colors](#colors)
 2. [Typography](#typography)
 3. TBD
@@ -14,6 +16,195 @@ A little bitty guide to help us keep our code consistent and our heads clear. Un
 10. [Parallax](#parallax)
 11. [Animations](#animations)
 12. [Responsive CSS](#responsive)
+
+## <a name="best-practices"></a>Best Practices
+- **<a href="#1.1">1.1 Indentation<a><a name="user-content-1.1"></a>** Call it a personal preference, but the primary author of this styleguide really adores tabs. The commonly-used double space, when combined with nested SASS selectors, can really make it hard to follow what is nested within what. The greater white space of a tab (4 spaces) is preferred.
+
+  **Bad**
+  ```sass
+  .sunshine {
+    .is-good {
+      .for-you {
+        color: yellow;
+      }
+    }
+  }
+  ```
+  
+  **Good**
+  ```sass
+  .sunshine {
+      .is-good {
+          .for-you {
+            color: yellow;
+          }
+      }
+  }
+  ```
+  
+  <a href="#table-of-contents">⬆ Back to Top</a>
+
+- **<a href="#1.2">1.2 Order of Selectors<a><a name="user-content-1.2"></a>** When writing good SASS, ordering selectors is of paramount importance. It makes things easier to find, which saves oodles of time. The preferred order of selectors is as follows:
+
+  - Standard HTML selectors
+  - Responsive styles
+  - Pseudo elements
+  - References to parent selector
+  - Class names
+  - ID names
+
+This order should be repeated for every nested level of selectors.
+
+  **A Complete Example**
+  ```sass
+  // Standard Parent Elements in Alphabetical Order
+  article {
+      margin: 20px 0;
+  }
+  
+  p {
+      margin: 1em 0;
+      
+      &:last-of-type {
+          margin-bottom: 0;
+      }
+  }
+  
+  section {
+      background: white;
+      margin: 40px 0;
+      
+      // Responsive
+      @media screen and (max-width: 568px) {
+          margin: 20px 0;
+      }
+      
+      // Pseudo Elements
+      &:hover {
+          background: #eee;
+      }
+      
+      // References to Parent
+      &.primary {
+          background: #333;
+          color: white;
+      }
+      
+      // Standard Child Elements in Alphabetical Order
+      a {
+          color: orange;
+          
+          &:hover {
+              color: blue;  // yuck
+          }
+      }
+      
+      p {
+          font-weight: 500;
+      }
+      
+      // Classes
+      .author-meta {
+          color: gray;
+      }
+      
+      // IDs
+      #social-list {
+          position: absolute;
+      }
+  }
+  ```
+
+  Standard HTML elements should always come first, either in alphabetical order (80% of use cases), or in sequential order (as with tables).
+
+  **Pseudo elements**
+  **References to the parent selector**
+  
+  **Alphabetical** should be used most of the time, when the order of selectors isn't related to their heirarchy on the page (see the _sequential_ example below, with tables).
+  ```sass
+  a {
+      color: blue;
+  }
+  
+  blockquote {
+      margin: 0;
+  }
+  
+  cite {
+      font-style: normal;
+  }
+  ```
+  
+  **Sequential** should be used when the selectors are dependent on each other, as with HTML tables. Although `thead` comes before `tbody` in a table, it comes later in the alphabet.
+  ```sass
+  table {
+      width: 100%;
+  }
+  
+  thead {
+      th {
+          font-weight: normal;
+      }
+  }
+  
+  tbody {
+      td,
+      th {
+          background: #eee;
+      }
+  }
+  ```
+  
+  **Classes** should follow standard selectors in the order they appear on the page:
+  
+  ```sass
+  article {
+      margin-top: 20px;
+      
+      p {
+          margin: 0;
+      }
+      
+      .headline {
+          font-weight: bold;
+      }
+      
+      .caption {
+          background: #eee;
+      }
+      
+      .footer-links {
+          position: relative;
+      }
+  }
+  ```
+  
+  **IDs** should appear last, after classes, also in the order they appear on the page:
+  
+  ```sass
+  .footer-links {
+      position: relative;
+  }
+  
+  #social-links {
+      position: absolute;
+  }
+  
+  #end-of-page-thing {
+      display: none;
+  }
+  ```
+
+  <a href="#table-of-contents">⬆ Back to Top</a>
+
+- **<a href="#1.3">1.3 Comments<a><a name="user-content-1.3"></a>** Blah
+
+  <a href="#table-of-contents">⬆ Back to Top</a>
+
+
+
+
+
 
 ## <a name="colors"></a>Colors
 - **<a href="#1.1">1.1 Primary Colors</a><a name="user-content-1.1"></a>** GoSpotCheck (GSC) has two primary colors: black and orange. Yep, Halloween is our favorite holiday.
