@@ -1037,6 +1037,55 @@ A little bitty guide whose humble purpose is to expedite front-end development b
 	
 	<a href="#table-of-contents">⬆ Back to Top</a>
 
+## <a name="kickers"></a>Kickers
+- **<a href="#9.1">9.1 Introduction</a><a name="user-content-9.1"></a>** A **kicker** is a promotional CTA that appears at page bottom when a user scrolls a certain point down the page. The idea is to appeal to visitors once they've finished (or are about to finish) reading, say, a blog article.
+
+  <a href="http://gospotcheck.com/link-to-demo"><img height="17" src="http://www.gospotcheck.com/images/github-demo-button.png" title="See it in action"></a>
+  
+  **Sample Markup**
+  ```html
+	<div data-animation="fadeIn" id="kicker">
+		<span class="close">
+			<i class="material-icons">clear</i>
+		</span>
+		<img src="kicker.jpg">
+		<h3>1,000,000 Mission Responses!</h3>
+		<p>We just reached one million mission responses!</p>
+		<a class="fancybox fancybox.iframe button secondary" href="#">Watch Video</a>
+	</div>
+  ```
+	<a href="#table-of-contents">⬆ Back to Top</a>
+
+- **<a href="#9.2">9.2 Persistent Kicker</a><a name="user-content-9.2"></a>** A kicker is hidden at first and appears, via JavaScript, once the user hits a certain scroll point. You can have the kicker always appear by removing the _data-animation_ attribute.
+
+	**Example**
+	```html
+	<!-- always visible -->
+	<div id="kicker"> ... </div>
+	
+	<!-- fades in -->
+	<div data-animation="fadeIn" id="kicker"> ... </div>
+	```
+
+  <a href="http://gospotcheck.com/link-to-demo"><img height="17" src="http://www.gospotcheck.com/images/github-demo-button.png" title="See it in action"></a>
+
+	<a href="#table-of-contents">⬆ Back to Top</a>
+
+- **<a href="#9.3">9.3 Animated Kicker</a><a name="user-content-9.3"></a>** You can animate your kicker by using any of the <a href="#user-content-15.2">supported animations</a>. Add the animation name you want to use as a _data-animation_ attribute to your kicker.
+
+  <a href="http://gospotcheck.com/link-to-demo"><img height="17" src="http://www.gospotcheck.com/images/github-demo-button.png" title="See it in action"></a>
+  
+	<a href="#table-of-contents">⬆ Back to Top</a>
+
+
+
+
+
+
+
+
+
+
 
 
 
