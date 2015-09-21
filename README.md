@@ -944,7 +944,41 @@ A little bitty guide whose humble purpose is to expedite front-end development b
   ```
   
 	<a href="#table-of-contents">⬆ Back to Top</a>
-	
+
+## <a name="buttons"></a>Buttons
+- **<a href="#7.1">7.1 General Use</a><a name="user-content-7.1"></a>** Buttons, or calls to action (CTAs) should be used sparingly (no more than one per section). Their purpose is to attract attention and compel the visitor to take action. Avoid having buttons adjacent to each other, as this confuses the user.
+
+	Either `<a>` or `<button>` is acceptable. The general rule here is that you should use `<button>` if there is no logical destination for the `<a>`. In other words, if there is no _href_ attribute for the `<a>`, use a `<button>`.
+
+	**Basic Button**
+	```html
+	<a class="button" href="landing-page.php">Learn More</a>
+	```
+
+  <a href="#table-of-contents">⬆ Back to Top</a>
+  
+- **<a href="#8.2">8.2 Types of Buttons</a><a name="user-content-8.2"></a>** There are more buttons than you can shake a selfie stick at; check the demo page for all of 'em. Here's a complete list of class names you can use; the most commonly used ones are in **bold**:
+
+	- **clear**
+	- **dark**
+	- disabled
+	- gradient
+	- large
+	- **light**
+	- outline
+	- **secondary**
+	- shadow
+	- small
+	- text-shadow
+
+  <a href="http://gospotcheck.com/link-to-demo"><img height="17" src="http://www.gospotcheck.com/images/github-demo-button.png" title="See it in action"></a>
+  
+  **Note:** you can also combine multiple styles; here is an extreme example:
+  ```html
+  <a class="button large secondary gradient" href="landing-page.php">Start Today</a>
+  ```
+  
+  <a href="#table-of-contents">⬆ Back to Top</a>
 	
 	
 	
@@ -1046,41 +1080,6 @@ A little bitty guide whose humble purpose is to expedite front-end development b
   
   <a href="http://gospotcheck.com/link-to-demo"><img height="17" src="http://www.gospotcheck.com/images/github-demo-button.png" title="See it in action"></a>
 
-  <a href="#table-of-contents">⬆ Back to Top</a>
-
-## <a name="buttons"></a>Buttons
-- **<a href="#8.1">8.1 General Use</a><a name="user-content-8.1"></a>** Buttons should be used sparingly, to draw attention to an action that should be taken. Avoid having buttons adjacent to each other (especially when they look the same), as this confuses the user. Avoid using the HTML `<button>` element in favor of `<a>`.
-
-  <a href="#table-of-contents">⬆ Back to Top</a>
-  
-- **<a href="#8.2">8.2 Default Button</a><a name="user-content-8.2"></a>** The default button is blue with white text, and is ideal for most applications.
-
-  <a href="http://gospotcheck.com/link-to-demo"><img height="17" src="http://www.gospotcheck.com/images/github-demo-button.png" title="See it in action"></a>
-  
-  ```html
-  <a class="button">Click Me</a>
-  ```
-
-  <a href="#table-of-contents">⬆ Back to Top</a>
-  
-- **<a href="#8.3">8.3 Light Button</a><a name="user-content-8.3"></a>** For those times you have a dark background and just can't seem to find a button that works... Voilà! The "light" button practically pops off the page with white on black.
-
-  <a href="http://gospotcheck.com/link-to-demo"><img height="17" src="http://www.gospotcheck.com/images/github-demo-button.png" title="See it in action"></a>
-  
-  ```html
-  <a class="button light">Click Me</a>
-  ```
-  
-  <a href="#table-of-contents">⬆ Back to Top</a>
-  
-- **<a href="#8.4">8.4 Clear Button</a><a name="user-content-8.4"></a>** A sort of inverse to the default button, the "clear" button has no background with a blue border and blue text, and fills in on hover.
-
-  <a href="http://gospotcheck.com/link-to-demo"><img height="17" src="http://www.gospotcheck.com/images/github-demo-button.png" title="See it in action"></a>
-
-  ```html
-  <a class="button clear">Click Me</a>
-  ```
-  
   <a href="#table-of-contents">⬆ Back to Top</a>
 
 ## <a name="alert-boxes"></a>Alert Boxes
