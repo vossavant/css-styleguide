@@ -869,8 +869,28 @@ A little bitty guide whose humble purpose is to expedite front-end development b
 	```
 	
   <a href="#table-of-contents">⬆ Back to Top</a>
+
+## <a name="forms"></a>Forms
+- **<a href="#6.1">6.1 Introduction</a><a name="user-content-6.1"></a>** Neither forms nor their inputs require any special classes to look good; simply drop in your fields and go. You can easily have side-by-side inputs by using the framework rows and columns.
+
+  <a href="http://gospotcheck.com/link-to-demo"><img height="17" src="http://www.gospotcheck.com/images/github-demo-button.png" title="See it in action"></a>
   
+	**Example**
+	```html
+	<form action="" method="post">
+		<div class="row">
+			<div class="width-50">
+				<input name="firstname" placeholder="First name" required type="text">
+			</div>
+			<div class="width-50">
+				<input name="lastname" placeholder="Last name" required type="text">
+			</div>
+		</div>
+		...
+	</form>
+	```
   
+    <a href="#table-of-contents">⬆ Back to Top</a>
 ## <a name="typography"></a>Typography
 - **<a href="#3.1">3.1 Headings</a><a name="user-content-3.1"></a>** GoSpotCheck utilizes `<h1>` to `<h5>` tags. The `<h6>` tag isn’t used because it’s the HTML equivalent of a dewclaw. Generally speaking, each heading should be used as such:
 
