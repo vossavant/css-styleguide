@@ -815,30 +815,62 @@ A little bitty guide whose humble purpose is to expedite front-end development b
   **Example**
   ```html
   <div class="meta box">
-		<div class="width-15 align-center padding-none-right">
-			<img class="round" src="avatar.png">
-		</div>
-		<div class="width-85">
-			<h4>Written by <a href="#">Joey Alfano</a></h4>
-			<p>Joey likes golf and Chipotle.</p>
-		</div>
-	</div>
+  	<div class="width-15 align-center padding-none-right">
+  		<img class="round" src="avatar.png">
+  	</div>
+  	<div class="width-85">
+  		<h4>Written by <a href="#">Joey Alfano</a></h4>
+  		<p>Joey likes golf and Chipotle</p>
+  	</div>
+  </div>
   ```
 
   <a href="#table-of-contents">⬆ Back to Top</a>
 
 ## <a name="galleries"></a>Galleries
-- **<a href="#5.1">5.1 Introduction</a><a name="user-content-5.1"></a>** Galleries probably require no introduction. They're great for adding a grid of similar content, like a photo gallery or list of related blog posts. You can specify the number of items per row (between 2 and 4) by adjusting the class to be either `gallery-2`, `gallery-3`, or `gallery-4`.
+- **<a href="#5.1">5.1 Introduction</a><a name="user-content-5.1"></a>** Galleries probably require no introduction. They're great for adding a grid of similar content, like a photo gallery or list of related blog posts. You can specify the number of items per row (between 2 and 5) by adjusting the class to be either `gallery-2`, `gallery-3`, `gallery-4`, or `gallery-5`.
 
-	**Por Ejemplo**
-	```html
-	
-	```
+	Special thanks to Eric Suzanne, creator of the <a href="http://susy.oddbird.net/">Susy framework</a>, for the basis of this code.
 
   <a href="http://gospotcheck.com/link-to-demo"><img height="17" src="http://www.gospotcheck.com/images/github-demo-button.png" title="See it in action"></a>
   
+	**Example**
+	```html
+	<div class="gallery-3">
+		<article>
+			<figure>
+				<img src="photo-1.jpg">
+				<figcaption>I bet you wish you took this photo</figcaption>
+			</figure>
+			...
+		</article>
+	</div>
+	```
+  
   <a href="#table-of-contents">⬆ Back to Top</a>
 
+- **<a href="#5.2">5.2 Captions Outside</a><a name="user-content-5.2"></a>** The example above had captions overlaying the photos. If you don't want this, you can have captions outside (or not at all).
+
+  <a href="http://gospotcheck.com/link-to-demo"><img height="17" src="http://www.gospotcheck.com/images/github-demo-button.png" title="See it in action"></a>
+
+	**Por Ejemplo**
+	```html
+	<div class="gallery-3">
+		<article>
+			<figure>
+				<div>
+					<img src="photo-1.jpg">
+				</div>
+				<figcaption>I bet you wish you took this photo</figcaption>
+			</figure>
+			...
+		</article>
+	</div>
+	```
+	
+  <a href="#table-of-contents">⬆ Back to Top</a>
+  
+  
 ## <a name="typography"></a>Typography
 - **<a href="#3.1">3.1 Headings</a><a name="user-content-3.1"></a>** GoSpotCheck utilizes `<h1>` to `<h5>` tags. The `<h6>` tag isn’t used because it’s the HTML equivalent of a dewclaw. Generally speaking, each heading should be used as such:
 
