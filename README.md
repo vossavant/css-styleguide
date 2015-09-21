@@ -828,7 +828,12 @@ A little bitty guide whose humble purpose is to expedite front-end development b
   <a href="#table-of-contents">⬆ Back to Top</a>
 
 ## <a name="galleries"></a>Galleries
-- **<a href="#5.1">5.1 Introduction</a><a name="user-content-5.1"></a>** Galleries are neat...
+- **<a href="#5.1">5.1 Introduction</a><a name="user-content-5.1"></a>** Galleries probably require no introduction. They're great for adding a grid of similar content, like a photo gallery or list of related blog posts. You can specify the number of items per row (between 2 and 4) by adjusting the class to be either `gallery-2`, `gallery-3`, or `gallery-4`.
+
+	**Por Ejemplo**
+	```html
+	
+	```
 
   <a href="http://gospotcheck.com/link-to-demo"><img height="17" src="http://www.gospotcheck.com/images/github-demo-button.png" title="See it in action"></a>
   
