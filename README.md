@@ -57,7 +57,8 @@ A little bitty guide whose humble purpose is to expedite front-end development b
 
   **A Complete Example**
   ```sass
-  // Standard Parent Elements in Alphabetical Order
+  // Standard Parent Elements (in Alphabetical Order)
+  
   article {
       margin: 20px 0;
   }
@@ -74,7 +75,9 @@ A little bitty guide whose humble purpose is to expedite front-end development b
       background: white;
       margin: 40px 0;
       
-      // Responsive
+      
+      // Responsive (Largest Breakpoint to Smallest)
+      
       @media screen and (max-width: 768px) {
           margin: 30px 0;
       }
@@ -83,7 +86,9 @@ A little bitty guide whose humble purpose is to expedite front-end development b
           margin: 20px 0;
       }
       
-      // Pseudo Elements
+      
+      // Pseudo Elements (in Alphabetical Order)
+      
       &:first-of-type {
           background: #eee;
       }
@@ -92,13 +97,17 @@ A little bitty guide whose humble purpose is to expedite front-end development b
           background: #ddd;
       }
       
-      // References to Parent
+      
+      // References to Parent (in Alphabetical Order)
+      
       &.primary {
           background: #333;
           color: white;
       }
       
-      // Standard Child Elements in Alphabetical Order
+      
+      // Standard Child Elements (in Alphabetical Order)
+      
       a {
           color: orange;
           
@@ -115,12 +124,16 @@ A little bitty guide whose humble purpose is to expedite front-end development b
           }
       }
       
-      // Classes
+      
+      // Classes (in Alphabetical Order)
+      
       .author-meta {
           color: gray;
       }
       
-      // IDs
+      
+      // IDs (in Alphabetical Order)
+      
       #social-list {
           position: absolute;
       }
@@ -147,7 +160,40 @@ A little bitty guide whose humble purpose is to expedite front-end development b
 
   <a href="#table-of-contents">⬆ Back to Top</a>
 
-- **<a href="#1.3">1.3 Comments<a><a name="user-content-1.3"></a>** Blah
+- **<a href="#1.3">1.3 Comments<a><a name="user-content-1.3"></a>** Due to the straightforward nature of SASS and HTML, comments should be pretty limited. When adding comments, use these 5 rules:
+
+  - Always add a brief comment at the top of your SASS file describing the purpose of the file
+  - Use them to organize your SASS; e.g., as headings to blocks of style rules
+  - Use common sense and add them when the purpose of a selector may not be clear
+  - Comments should be preceded with `//` and two line breaks
+  - A line break should follow every comment
+  
+  **Examples**
+  ```sass
+  /**
+   *  GoSpotCheck Styleguide
+   *  Base Selectors - this file has styles for default HTML selectors
+   */
+  
+  
+  // Headings
+  
+  h1,
+  h2,
+  h3 {
+      font-weight: bold;
+  }
+  
+  
+  // Removes default quote marks
+  
+  q {
+      &:after,
+      &:before {
+          content: "";
+      }
+  }
+  ```
 
   <a href="#table-of-contents">⬆ Back to Top</a>
 
