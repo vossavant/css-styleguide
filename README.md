@@ -53,7 +53,7 @@ A little bitty guide whose humble purpose is to expedite front-end development b
   - Class names
   - ID names
 
-This order should be repeated for every nested level of selectors.
+  This order should be repeated for every nested level of selectors.
 
   **A Complete Example**
   ```sass
@@ -75,13 +75,21 @@ This order should be repeated for every nested level of selectors.
       margin: 40px 0;
       
       // Responsive
+      @media screen and (max-width: 768px) {
+          margin: 30px 0;
+      }
+      
       @media screen and (max-width: 568px) {
           margin: 20px 0;
       }
       
       // Pseudo Elements
-      &:hover {
+      &:first-of-type {
           background: #eee;
+      }
+      
+      &:hover {
+          background: #ddd;
       }
       
       // References to Parent
@@ -101,6 +109,10 @@ This order should be repeated for every nested level of selectors.
       
       p {
           font-weight: 500;
+          
+          @media screen and (max-width: 568px) {
+              font-size: 12p;x
+          }
       }
       
       // Classes
@@ -115,85 +127,23 @@ This order should be repeated for every nested level of selectors.
   }
   ```
 
-  Standard HTML elements should always come first, either in alphabetical order (80% of use cases), or in sequential order (as with tables).
+  **Standard HTML Elements**  
+  Should always come first, either in alphabetical order (80% of use cases), or in the order they naturally appear in the markup (as with tables, where `thead` comes first in the markup but after `tbody` in the alphabet).
+  
+  **Responsive Styles**  
+  Should immediately follow any styles on the parent element, and be listed from largest breakpoint to smallest (see <a href="#">Responsive</a> for a more detailed discussion).
 
-  **Pseudo elements**
-  **References to the parent selector**
+  **Pseudo Elements**  
+  Like `:hover` and `:first-of-type` should come next, and in alphabetical order. Pseudo elements are always preceded by an ampersand (`&`).
   
-  **Alphabetical** should be used most of the time, when the order of selectors isn't related to their heirarchy on the page (see the _sequential_ example below, with tables).
-  ```sass
-  a {
-      color: blue;
-  }
+  **References to the Parent Selector**  
+  Should follow pseudo elements. A parent reference is used whenever you need a more specific reference to the parent, and is also always preceded by an ampersand.
   
-  blockquote {
-      margin: 0;
-  }
+  **Classes**  
+  Should follow parent references and should also be in alphabetical order.
   
-  cite {
-      font-style: normal;
-  }
-  ```
-  
-  **Sequential** should be used when the selectors are dependent on each other, as with HTML tables. Although `thead` comes before `tbody` in a table, it comes later in the alphabet.
-  ```sass
-  table {
-      width: 100%;
-  }
-  
-  thead {
-      th {
-          font-weight: normal;
-      }
-  }
-  
-  tbody {
-      td,
-      th {
-          background: #eee;
-      }
-  }
-  ```
-  
-  **Classes** should follow standard selectors in the order they appear on the page:
-  
-  ```sass
-  article {
-      margin-top: 20px;
-      
-      p {
-          margin: 0;
-      }
-      
-      .headline {
-          font-weight: bold;
-      }
-      
-      .caption {
-          background: #eee;
-      }
-      
-      .footer-links {
-          position: relative;
-      }
-  }
-  ```
-  
-  **IDs** should appear last, after classes, also in the order they appear on the page:
-  
-  ```sass
-  .footer-links {
-      position: relative;
-  }
-  
-  #social-links {
-      position: absolute;
-  }
-  
-  #end-of-page-thing {
-      display: none;
-  }
-  ```
+  **Finally, IDs**  
+  Should be listed in alphabetical order.
 
   <a href="#table-of-contents">⬆ Back to Top</a>
 
