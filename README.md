@@ -4,11 +4,9 @@ A little bitty guide whose humble purpose is to expedite front-end development b
 
 ## <a name="table-of-contents"></a>Table of Contents
 1. [Best Practices](#best-practices)
-1. [Colors](#colors)
-2. [Typography](#typography)
-3. TBD
-4. [Grid](#grid)
-5. [Flexbox](#flexbox)
+2. [Framework](#framework)
+3. [Typography](#typography)
+4. 
 6. [Modular Sections](#modular-sections)
 7. [Hyperlinks](#hyperlinks)
 8. [Buttons](#buttons)
@@ -159,12 +157,27 @@ A little bitty guide whose humble purpose is to expedite front-end development b
   Should be listed in alphabetical order.
 
   <a href="#table-of-contents">⬆ Back to Top</a>
+ 
+- **<a href="#1.3">1.3 Order of Declarations<a><a name="user-content-1.3"></a>** Declarations are the individual styles under a selector (e.g., `margin: 0`). These should be in alphabetical order; the sole exception is that mixins should precede selectors, and also be in alphabetical order.
 
-- **<a href="#1.3">1.3 Comments<a><a name="user-content-1.3"></a>** Due to the straightforward nature of SASS and HTML, comments should be pretty limited. When adding comments, use these 5 rules:
+  **Example**
+  ```sass
+  a {
+      @include awesomeMixin();
+      @include snazzyMixin();
+      color: black;
+      padding: 5px;
+      text-decoration: none;
+  }
+  ```
+  
+  <a href="#table-of-contents">⬆ Back to Top</a>
+  
+- **<a href="#1.4">1.4 Comments<a><a name="user-content-1.4"></a>** Due to the straightforward nature of SASS and HTML, comments should be pretty limited. When adding comments, follow these 5 rules:
 
   - Always add a brief comment at the top of your SASS file describing the purpose of the file
-  - Use them to organize your SASS; e.g., as headings to blocks of style rules
-  - Use common sense and add them when the purpose of a selector may not be clear
+  - Use comments to organize your SASS; e.g., as headings to blocks of style rules
+  - Use common sense and add comments when the purpose of a selector may not be clear
   - Comments should be preceded with `//` and two line breaks
   - A line break should follow every comment
   
@@ -197,100 +210,30 @@ A little bitty guide whose humble purpose is to expedite front-end development b
 
   <a href="#table-of-contents">⬆ Back to Top</a>
 
+## <a name="framework"></a>The Framework
+- **<a href="#3.1">3.1 Introduction</a><a name="user-content-3.1"></a>** To ease development, we created our own humble CSS framework. A CSS framework is, at its core, a small set of rules that lets you create columns of content that fit nicely inside a wider parent, which ultimately lets you easily create an endless number of layouts.
 
-
-
-
-
-## <a name="colors"></a>Colors
-- **<a href="#1.1">1.1 Primary Colors</a><a name="user-content-1.1"></a>** GoSpotCheck (GSC) has two primary colors: black and orange. Yep, Halloween is our favorite holiday.
-
-  <a href="http://gospotcheck.com/link-to-demo"><img height="17" src="http://www.gospotcheck.com/images/github-demo-button.png" title="See it in action"></a>
+  The framework is admittedly heavy on `<div>` tags, but no more so than other frameworks (I'm looking at _you_, Bootstrap). Ultimately, the extra `<div>` wrappers end up making it easier to create layouts; even though there is more markup than there would be in a custom layout, there is far less custom CSS.
   
-  **Orange**
-  - _Primary: `#ff9800`_
-  - Light Orange: `#ffb600`
-  - Dark Orange: `#ff7900`
+  When building layouts with the framework, you will need three types of wrappers:
   
-  **Black**
-  - _Primary: `#000000`_
-  - Dark Gray: `#404040`
-  - Medium Gray: `#808080`
-  - Light Gray: `#bfbfbf`
-  - Lighter Gray: `#f7f7f7`
-
-  <a href="#table-of-contents">⬆ Back to Top</a>
-
-- **<a href="#1.2">1.2 Secondary Colors</a><a name="user-content-1.2"></a>** Occasionally, shades of blue may be used, primarily for links and buttons.
-
-  <a href="http://gospotcheck.com/link-to-demo"><img height="17" src="http://www.gospotcheck.com/images/github-demo-button.png" title="See it in action"></a>
+  - The outer wrapper
+  - An inner "row" wrapper
+  - Column wrappers
   
-  **Blue**
-  - _Primary: `#00bdff`_
-  - Light Blue: `#39daff`
-  - Dark Blue: `#0097d4`
-
-  <a href="#table-of-contents">⬆ Back to Top</a>
-
-- **<a href="#1.3">1.3 Tertiary Colors</a><a name="user-content-1.3"></a>** Finally, there are two tertiary colors (pink and green) that should be used only sparingly.
-
-  <a href="http://gospotcheck.com/link-to-demo"><img height="17" src="http://www.gospotcheck.com/images/github-demo-button.png" title="See it in action"></a>
-  
-  **Green**
-  - _Primary: `#00d833`_
-  - Light Green: `#00ff42`
-  - Dark Green: `#00ad2d`
-
-  **Pink**
-  - _Primary: `#ff008c`_
-  - Light Pink: `#ff66ba`
-  - Dark Pink: `#ce0241`
-
-  <a href="#table-of-contents">⬆ Back to Top</a>
-
-## <a name="typography"></a>Typography
-- **<a href="#2.1">2.1 Headings</a><a name="user-content-2.1"></a>** GoSpotCheck utilizes `<h1>` to `<h5>` tags. The `<h6>` tag isn’t used because it’s the HTML equivalent of a dewclaw. Generally speaking, each heading should be used in the following ways:
-
-  - **H1** Introduces the entire page. There should only be one `<h1>` per page.
-  - **H2** Introduces a major section of content.
-  - **H3** Introduces a minor section of content.
-  - **H4** Usually used stylistically (i.e., because it looks best) and to introduce sidebar sections or minor bits of content.
-  - **H5** Since a block of text almost never requires this level of detail, the `<h5>` tag is rarely used.
-
-  **Default Styling**  
-  - Unless a heading appears on a dark background, it should always be GSC Black (`#000`).
-  - On dark backgrounds, headings should be pure white (`#fff`).  
-  - Headings are always set in **Gotham**.
-  
-  <a href="http://gospotcheck.com/link-to-demo"><img height="17" src="http://www.gospotcheck.com/images/github-demo-button.png" title="See it in action"></a>
-    
-  **Margins**  
-  Since the default margins are usually overkill, we remove them and add them back in using the sibling selector, such that headings always gain a top margin:
-  
-  ```sass
-  * + h2,
-  * + h3,
-  * + h4,
-  * + h5 {
-    margin-top: 1.5em;
-  }
+  **Example**
+  ```html
+  <div class="wrap">
+      <div class="row">
+          <div class="width-50">
+              <p>This column takes up half the width of the row.</p>
+          </div>
+          <div class="width-50">
+              <p>This column also takes up half the width of the row.</p>
+          </div>
+      </div>
+  </div>
   ```
-
-  <a href="http://gospotcheck.com/link-to-demo"><img height="17" src="http://www.gospotcheck.com/images/github-demo-button.png" title="See it in action"></a>
-  
-  <a href="#table-of-contents">⬆ Back to Top</a>
-
-- **<a href="#2.2">2.2 Body Text</a><a name="user-content-2.2"></a>** Body text includes any non-heading text (e.g., paragraphs and lists).
-
-  **Default Styling**
-  - Unless body text appears on a dark background, it should always be GSC Dark Gray (`#404040`).
-  - On dark backgrounds, body text should be pure white (`#fff`).  
-  - Body text is always set in **Helvetica**. If the user's OS supports it, the ideal font weight is `300` (equivalent to Helvetica Thin).
-  
-  <a href="http://gospotcheck.com/link-to-demo"><img height="17" src="http://www.gospotcheck.com/images/github-demo-button.png" title="See it in action"></a>
-
-## <a name="grid"></a>Grid Classes
-- **<a href="#4.1">4.1 The "Grid"</a><a name="user-content-4.1"></a>** The word "grid" is a bit misleading, because it implies that we're working inside a fixed box. In reality, the styles here use the width of the parent as a starting point, and allow you to set the widths of child containers as a percentage of the width of the parent.
 
   <a href="http://gospotcheck.com/link-to-demo"><img height="17" src="http://www.gospotcheck.com/images/github-demo-button.png" title="See it in action"></a>
   
@@ -335,6 +278,48 @@ A little bitty guide whose humble purpose is to expedite front-end development b
   ```
 
   <a href="#table-of-contents">⬆ Back to Top</a>
+
+## <a name="typography"></a>Typography
+- **<a href="#2.1">2.1 Headings</a><a name="user-content-2.1"></a>** GoSpotCheck utilizes `<h1>` to `<h5>` tags. The `<h6>` tag isn’t used because it’s the HTML equivalent of a dewclaw. Generally speaking, each heading should be used as such:
+
+  - `<h1>` Introduces the entire page. There should only be one `<h1>` per page.
+  - `<h2>` Introduces a major section of content.
+  - `<h3>` Introduces a minor section of content.
+  - `<h4>` Usually used stylistically (i.e., because it looks best) and to introduce sidebar sections or minor bits of content.
+  - `<h5>` Since a block of text almost never requires this level of detail, the `<h5>` tag is rarely used.
+
+  **Default Styling**  
+  - Unless a heading appears on a dark background, it should always be GSC Black (`#000`).
+  - On dark backgrounds, headings should be pure white (`#fff`).  
+  - Headings are always set in **Gotham**.
+  
+  <a href="http://gospotcheck.com/link-to-demo"><img height="17" src="http://www.gospotcheck.com/images/github-demo-button.png" title="See it in action"></a>
+    
+  **Margins**  
+  Since the default margins are usually overkill, we remove them and add them back in using the sibling selector, such that headings always gain a top margin:
+  
+  ```sass
+  * + h2,
+  * + h3,
+  * + h4,
+  * + h5 {
+      margin-top: 1.5em;
+  }
+  ```
+
+  <a href="http://gospotcheck.com/link-to-demo"><img height="17" src="http://www.gospotcheck.com/images/github-demo-button.png" title="See it in action"></a>
+  
+  <a href="#table-of-contents">⬆ Back to Top</a>
+
+- **<a href="#2.2">2.2 Body Text</a><a name="user-content-2.2"></a>** Body text includes any non-heading text (e.g., paragraphs and lists).
+
+  **Default Styling**
+  - Unless body text appears on a dark background, it should be `#666`.
+  - On dark backgrounds, body text should be pure white (`#fff`).  
+  - Body text is always set in **Helvetica**. If the user's OS supports it, the ideal font weight is `300` (equivalent to Helvetica Thin).
+  
+  <a href="http://gospotcheck.com/link-to-demo"><img height="17" src="http://www.gospotcheck.com/images/github-demo-button.png" title="See it in action"></a>
+
 
 ## <a name="flexbox"></a>Flexbox
 - **<a href="#5.1">5.1 Base Class</a><a name="user-content-5.1"></a>** Whenever possible, you should use flexible containers (flexboxes) instead of traditional floats, since the code required to create a layout with flexboxes is simpler, cleaner, and easier to understand. You can make any element a flexbox by adding the `flex` class to it.  By itself, the `flex` class doesn't do much beyond add some padding; the real magic happens when you add child elements and special helper classes (see <a href="#5.2">5.2</a>, <a href="#5.3">5.3</a>, and <a href="#5.4">5.4</a>).
