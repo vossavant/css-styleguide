@@ -486,7 +486,7 @@ A little bitty guide whose humble purpose is to expedite front-end development b
   
 - **<a href="#2.2.4">2.2.4 Columns</a><a name="user-content-2.2.4"></a>** The final, most versatile piece of the framework are the columns. You can specify any width for your column between 5 and 100 (in increments of 5%) by adding the `width-` class and a number. Two extra widths are also available: `width-33` and `width-66`.
 
-  **Note:** your column widths should always add up to 100, and that each row should never have more than 100 in it (otherwise, you may get funky results).
+  **Note:** your column widths should always add up to 100, and each row should never have more than 100 in it (otherwise, you may get funky results).
 
   **Good**
   ```html
@@ -523,6 +523,37 @@ A little bitty guide whose humble purpose is to expedite front-end development b
       </div>
   </div>
   ```
+  
+  <a href="http://gospotcheck.com/link-to-demo"><img height="17" src="http://www.gospotcheck.com/images/github-demo-button.png" title="See it in action"></a>
+
+  <a href="#table-of-contents">⬆ Back to Top</a>
+  
+- **<a href="#2.2.4.1">2.2.4.1 Nesting Columns</a><a name="user-content-2.2.4.1"></a>** There will be times you'll want to have columns within columns. This can be done by adding an extra row inside of your column, then adding columns inside that row.
+
+  **Example**
+  ```html
+  <div class="wrap">
+      <div class="row">
+          <div class="width-100">
+              <h1>Pirates Arrrr Great</h1>
+              
+              <div class="row">
+                  <div class="width-20">
+                      <img src="jolly-roger.png">
+                  </div>
+                  <div class="width-80">
+                      <p>The Jolly Roger is one of the most recognizable flags in the world.</p>
+                  </div>
+              </div> <!-- // row -->
+          </div>
+      </div> <!-- // row -->
+  </div>
+  ```
+  
+  <a href="http://gospotcheck.com/link-to-demo"><img height="17" src="http://www.gospotcheck.com/images/github-demo-button.png" title="See it in action"></a>
+
+  <a href="#table-of-contents">⬆ Back to Top</a>
+  
   
   
   
