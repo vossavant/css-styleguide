@@ -878,10 +878,9 @@ A little bitty guide whose humble purpose is to expedite front-end development b
 ## <a name="animations"></a>CSS Animations
 - **<a href="#11.1">11.1 Introduction</a><a name="user-content-11.1"></a>** A whole boatload of CSS animations are built into this framework, ready to use, by simply adding a couple of classes. The great majority of the animations are lifted from Daniel Eden's <a href="https://daneden.github.io/animate.css/">Animate.css</a>. Some of the less-likely-to-be-used animations are stripped out, and other custom animations added in, but the bulk of the _Animate.css_ animations are available.
 
-  <a href="https://daneden.github.io/animate.css/"><img height="17" src="http://www.gospotcheck.com/images/github-demo-button.png" title="See it in action"></a>
-
   <a href="#table-of-contents">⬆ Back to Top</a>
-- **<a href="#11.2">11.2 General Use</a><a name="user-content-11.2"></a>** To animate anything, simply add the class `animated` to it, along with one of the following classes, which corresponds to a particular animation:
+
+- **<a href="#11.2">11.2 Animations</a><a name="user-content-11.2"></a>** To animate anything, simply add the class `animated` to it, along with one of the following classes, which corresponds to a particular animation:
 
   - `bounce`
   - `flash`
@@ -951,6 +950,8 @@ A little bitty guide whose humble purpose is to expedite front-end development b
   <a href="#table-of-contents">⬆ Back to Top</a>
 
 - **<a href="#11.2">11.2 Looping Animations</a><a name="user-content-11.2"></a>** By default, the animation will run once. You can set it to run endlessly by adding the `infinite` class.
+
+  <a href="https://daneden.github.io/animate.css/"><img height="17" src="http://www.gospotcheck.com/images/github-demo-button.png" title="See it in action"></a>
   
   **Example**
   ```html
