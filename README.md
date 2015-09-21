@@ -6,12 +6,19 @@ A little bitty guide whose humble purpose is to expedite front-end development b
 1. [Best Practices](#best-practices)
 2. [Framework](#framework)
 3. [Responsive](#responsive)
-4. [Typography](#typography)
-13. 
-7. [Hyperlinks](#hyperlinks)
-8. [Buttons](#buttons)
-9. [Alert Boxes](#alert-boxes)
-11. [Animations](#animations)
+4. [Boxes](#boxes)
+5. [Galleries](#galleries)
+6. [Forms](#forms)
+7. [Buttons](#buttons)
+8. [Alert Boxes](#alert-boxes)
+9. [Kickers](#kickers)
+10. [Lists](#lists)
+11. [Tables](#tables)
+12. [Pagers](#pagers)
+13. [Typography](#typography)
+14. [Hyperlinks](#hyperlinks)
+15. [Animations](#animations)
+16. [Utility Classes](#utility)
 
 ## <a name="best-practices"></a>Best Practices
 - **<a href="#1.1">1.1 Indentation<a><a name="user-content-1.1"></a>** Call it a personal preference, but the primary author of this styleguide really adores tabs. The commonly-used double space, when combined with nested SASS selectors, can really make it hard to follow what is nested within what. The greater white space of a tab (4 spaces) is preferred.
@@ -758,6 +765,44 @@ A little bitty guide whose humble purpose is to expedite front-end development b
   ```
   
   <a href="#table-of-contents">⬆ Back to Top</a>
+ 
+## <a name="boxes"></a>Boxes
+- **<a href="#3.1">3.1 Introduction</a><a name="user-content-3.1"></a>** "Boxes" is the creative term given to a stylized box of content. They are primarily used to jazz up an otherwise boring part of the page, and serve well to delineate repeating content, like blog posts.
+  
+  The markup of the box is important; be sure to follow it closely to reproduce the look in the demo. In other words, it's not as simple as adding `class="box"` to an empty div.
+  
+  <a href="http://gospotcheck.com/link-to-demo"><img height="17" src="http://www.gospotcheck.com/images/github-demo-button.png" title="See it in action"></a>
+  **Behold, an Example**
+  ```html
+  <article class="box">
+		  <h3>What is GoSpotCheck?</h3>
+	  	<p>GoSpotCheck is enterprise software for field-based teams.</p>
+	</article>
+
+  <a href="#table-of-contents">⬆ Back to Top</a>		
+
+  <article class="post box">
+		<div class="width-100 padding-none">
+		  <figure>
+		    <a href="#"><img src="box-sample.png"></a>
+		  </figure>
+		</div>
+		<div class="width-100 padding">
+		  <h3><a href="#">An Ode to Small Towns</a></h3>
+		  <p class="meta">by <a href="#">Sam Adams</a> on September 2, 2015 in <a href="#">Urban Planning</a></p>
+		  <p>Flexitarian occupy cred Pitchfork meh, bitters tilde readymade direct trade. Church-key wayfarers cray irony retro semiotics seitan banjo, paleo gluten-free readymade.</p>
+		  <a href="#" class="button outline">Full Article <i class="material-icons">chevron_right</i></a>
+		</div>
+	</article>
+  ```
+
+  The example above introduces some new elements, like <a href="#buttons">buttons</a> and <a href="#utility">utility classes</a>.
+
+  <a href="#table-of-contents">⬆ Back to Top</a>
+
+
+
+
 
 ## <a name="typography"></a>Typography
 - **<a href="#3.1">3.1 Headings</a><a name="user-content-3.1"></a>** GoSpotCheck utilizes `<h1>` to `<h5>` tags. The `<h6>` tag isn’t used because it’s the HTML equivalent of a dewclaw. Generally speaking, each heading should be used as such:
