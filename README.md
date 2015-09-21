@@ -890,7 +890,16 @@ A little bitty guide whose humble purpose is to expedite front-end development b
 	</form>
 	```
   
-    <a href="#table-of-contents">⬆ Back to Top</a>
+	<a href="#table-of-contents">⬆ Back to Top</a>
+  
+- **<a href="#6.2">6.2 Best Practices</a><a name="user-content-6.2"></a>** It's easiest to grab the demo code sample and build your form from that; otherwise, be sure to follow these guidelines when adding new fields:
+
+	- If a field has a `label`, the _for_ attribute of the `label` must match the `id` of the field
+	- Each field should have a _name_ attribute for use with JavaScript
+	- Email fields should be of type _email_ and not of type _text_
+	- Be sure to use the `required` attribute to mark required fields
+	- Always include a honeypot to thwart spambots
+  
 ## <a name="typography"></a>Typography
 - **<a href="#3.1">3.1 Headings</a><a name="user-content-3.1"></a>** GoSpotCheck utilizes `<h1>` to `<h5>` tags. The `<h6>` tag isn’t used because it’s the HTML equivalent of a dewclaw. Generally speaking, each heading should be used as such:
 
