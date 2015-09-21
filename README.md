@@ -250,15 +250,14 @@ A little bitty guide whose humble purpose is to expedite front-end development b
   ```
   
   There are several classes you can give `section` to alter its appearance:
-  - <a href="#user-content-2.2.1.1">angled-up</a>
-  - <a href="#user-content-2.2.1.1">angled-down</a>
+  - <a href="#user-content-2.2.1.1">angled-up/down</a>
   - <a href="#user-content-2.2.1.2">dark</a>
-  - gradient
-  - hero
-  - off-white
-  - orange
-  - primary-cta
-  - topo
+  - <a href="#user-content-2.2.1.3">gradient</a>
+  - <a href="#user-content-2.2.1.4">hero</a>
+  - <a href="#user-content-2.2.1.5">off-white</a>
+  - <a href="#user-content-2.2.1.6">orange</a>
+  - <a href="#user-content-2.2.1.7">primary-cta</a>
+  - <a href="#user-content-2.2.1.8">topo</a>
 
 - **<a href="#2.2.1.1">2.2.1.1 Angled Sections</a><a name="user-content-2.2.1.1"></a>** While somewhat buggy (text can appear blurry in some browsers), this type of section yields some cool visual effects. If you're tired of straight lines, try some angles.
 
@@ -268,7 +267,7 @@ A little bitty guide whose humble purpose is to expedite front-end development b
       <div class="wrap">
           <div class="row">
               <div class="width-100">
-                  <p>The top edge of this section will have an angle sloping down from left to right.</p>
+                  <p>The top edge of this section has an angle sloping down from left to right.</p>
               </div>
           </div>
       </div>
@@ -278,7 +277,7 @@ A little bitty guide whose humble purpose is to expedite front-end development b
       <div class="wrap">
           <div class="row">
               <div class="width-100">
-                  <p>The top edge of this section will have an angle sloping up from left to right.</p>
+                  <p>The top edge of this section has an angle sloping up from left to right.</p>
               </div>
           </div>
       </div>
@@ -289,6 +288,177 @@ A little bitty guide whose humble purpose is to expedite front-end development b
 
   <a href="#table-of-contents">⬆ Back to Top</a>
 
+- **<a href="#2.2.1.2">2.2.1.2 Dark Section</a><a name="user-content-2.2.1.2"></a>** Creates a section with a dark background and light text. Can also be combined with `class="gradient"` to create a dark gradient.
+
+  **Examples**
+  ```html
+  <div class="section dark">
+      <div class="wrap">
+          <div class="row">
+              <div class="width-100">
+                  <p>This section has a dark background and light text.</p>
+              </div>
+          </div>
+      </div>
+  </div> <!-- // dark -->
+  ```
+  
+  <a href="http://gospotcheck.com/link-to-demo"><img height="17" src="http://www.gospotcheck.com/images/github-demo-button.png" title="See it in action"></a>
+
+  <a href="#table-of-contents">⬆ Back to Top</a>
+  
+- **<a href="#2.2.1.3">2.2.1.3 Gradient Section</a><a name="user-content-2.2.1.3"></a>** Creates a section with a subtle, gray gradient background. Can also be combined with `class="dark"` to create a dark gradient.
+
+  **Examples**
+  ```html
+  <div class="section gradient">
+      <div class="wrap">
+          <div class="row">
+              <div class="width-100">
+                  <p>This section has a subtle gradient background.</p>
+              </div>
+          </div>
+      </div>
+  </div> <!-- // gradient -->
+  ```
+  
+  <a href="http://gospotcheck.com/link-to-demo"><img height="17" src="http://www.gospotcheck.com/images/github-demo-button.png" title="See it in action"></a>
+
+  <a href="#table-of-contents">⬆ Back to Top</a>
+  
+- **<a href="#2.2.1.4">2.2.1.4 Hero Sections</a><a name="user-content-2.2.1.4"></a>** Creates a hero section, which should be used to introduce a page. The default hero takes up the full height of the viewport, though you can specify varying heights (as a % of the viewport):
+
+  - three-quarter
+  - two-third
+  - half
+  - third
+  - quarter
+  - fifth
+
+  **Examples**
+  ```html
+  <div class="section hero">
+      <div class="wrap">
+          <div class="row">
+              <div class="width-100">
+                  <h1>Welcome to My Page</h1>
+                  <p>This section takes up the full screen.</p>
+              </div>
+          </div>
+      </div>
+  </div> <!-- // hero -->
+  
+  <div class="section hero third">
+      <div class="wrap">
+          <div class="row">
+              <div class="width-100">
+                  <h1>Slightly Less Prominent Hero</h1>
+                  <p>This section takes up a third of the screen.</p>
+              </div>
+          </div>
+      </div>
+  </div> <!-- // hero third -->
+  ```
+  
+  <a href="http://gospotcheck.com/link-to-demo"><img height="17" src="http://www.gospotcheck.com/images/github-demo-button.png" title="See it in action"></a>
+
+  <a href="#table-of-contents">⬆ Back to Top</a>
+  
+- **<a href="#2.2.1.5">2.2.1.5 Off-White Section</a><a name="user-content-2.2.1.5"></a>** Creates a section with an off-white background.
+
+  **Examples**
+  ```html
+  <div class="section off-white">
+      <div class="wrap">
+          <div class="row">
+              <div class="width-100">
+                  <p>This section has a slightly gray-ish background.</p>
+              </div>
+          </div>
+      </div>
+  </div> <!-- // off-white -->
+  ```
+  
+  <a href="http://gospotcheck.com/link-to-demo"><img height="17" src="http://www.gospotcheck.com/images/github-demo-button.png" title="See it in action"></a>
+
+  <a href="#table-of-contents">⬆ Back to Top</a>
+
+- **<a href="#2.2.1.6">2.2.1.6 Orance Section</a><a name="user-content-2.2.1.6"></a>** Creates a section with an orange background and light text. This name will eventually be changed to `secondary` since orange is the secondary GSC color (after blue).
+
+  **Examples**
+  ```html
+  <div class="section orange">
+      <div class="wrap">
+          <div class="row">
+              <div class="width-100">
+                  <p>This section has an orange background and light text.</p>
+              </div>
+          </div>
+      </div>
+  </div> <!-- // dark -->
+  ```
+  
+  <a href="http://gospotcheck.com/link-to-demo"><img height="17" src="http://www.gospotcheck.com/images/github-demo-button.png" title="See it in action"></a>
+
+  <a href="#table-of-contents">⬆ Back to Top</a>
+  
+- **<a href="#2.2.1.7">2.2.1.7 Primary CTA Section</a><a name="user-content-2.2.1.7"></a>** Creates a section with a blue background and light text. The idea is that this color really pops and is ideal for showcasing CTAs. This name will eventually be changed to `primary` since blue is the primary GSC color.
+
+  **Examples**
+  ```html
+  <div class="section primary-cta">
+      <div class="wrap">
+          <div class="row">
+              <div class="width-25">
+                  <img src="cta.jpg">
+              </div>
+              <div class="width-75">
+                  <h3>You Should Buy Our Stuff</h3>
+                  <p>Riches and glory will certainly be yours if ye do.</p>
+                  <a class="button" href="cta-landing-page.html">Buy Now</a>
+              </div>
+          </div>
+      </div>
+  </div> <!-- // primary-cta -->
+  ```
+  
+  <a href="http://gospotcheck.com/link-to-demo"><img height="17" src="http://www.gospotcheck.com/images/github-demo-button.png" title="See it in action"></a>
+
+  <a href="#table-of-contents">⬆ Back to Top</a>
+  
+- **<a href="#2.2.1.8">2.2.1.8 Topo Section</a><a name="user-content-2.2.1.8"></a>** Creates a section with a subtle topography background pattern. Useful for adding visual interest where simple color variations won't do.
+
+  **Examples**
+  ```html
+  <div class="section topo">
+      <div class="wrap">
+          <div class="row">
+              <div class="width-100">
+                  <p>This section has a neat topo pattern background.</p>
+              </div>
+          </div>
+      </div>
+  </div> <!-- // topo -->
+  ```
+  
+  <a href="http://gospotcheck.com/link-to-demo"><img height="17" src="http://www.gospotcheck.com/images/github-demo-button.png" title="See it in action"></a>
+
+  <a href="#table-of-contents">⬆ Back to Top</a>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
 - **<a href="#4.2">4.2 Nesting Widths</a><a name="user-content-4.2"></a>** It can be very useful to "nest" widths inside of one another. Since width is always relative to the parent (and ultimately, to the viewport), it's easy to anticipate how wide something will be.
 
   <a href="http://gospotcheck.com/link-to-demo"><img height="17" src="http://www.gospotcheck.com/images/github-demo-button.png" title="See it in action"></a>
