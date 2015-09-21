@@ -5,8 +5,8 @@ A little bitty guide whose humble purpose is to expedite front-end development b
 ## <a name="table-of-contents"></a>Table of Contents
 1. [Best Practices](#best-practices)
 2. [Framework](#framework)
-3. [Responsive CSS](#responsive)
-3. [Typography](#typography)
+3. [Responsive](#responsive)
+4. [Typography](#typography)
 13. 
 7. [Hyperlinks](#hyperlinks)
 8. [Buttons](#buttons)
@@ -16,7 +16,7 @@ A little bitty guide whose humble purpose is to expedite front-end development b
 ## <a name="best-practices"></a>Best Practices
 - **<a href="#1.1">1.1 Indentation<a><a name="user-content-1.1"></a>** Call it a personal preference, but the primary author of this styleguide really adores tabs. The commonly-used double space, when combined with nested SASS selectors, can really make it hard to follow what is nested within what. The greater white space of a tab (4 spaces) is preferred.
 
-  **Bad**
+  **Less Than Ideal**
   ```sass
   .sunshine {
     .is-good {
@@ -27,12 +27,12 @@ A little bitty guide whose humble purpose is to expedite front-end development b
   }
   ```
   
-  **Good**
+  **Preferred**
   ```sass
   .sunshine {
       .is-good {
           .for-you {
-            color: yellow;
+              color: yellow;
           }
       }
   }
@@ -40,7 +40,27 @@ A little bitty guide whose humble purpose is to expedite front-end development b
   
   <a href="#table-of-contents">⬆ Back to Top</a>
 
-- **<a href="#1.2">1.2 Order of Selectors<a><a name="user-content-1.2"></a>** When writing good SASS, ordering selectors is of paramount importance. It makes things easier to find, which saves oodles of time. The preferred order of selectors is as follows:
+- **<a href="#1.2">1.2 Line Breaks<a><a name="user-content-1.2"></a>** To improve legibility, always add a line break after a comma-separated list of selectors.
+
+  **Muy Mal**
+  ```sass
+  h1, h2, h3 {
+      color: red;
+  }
+  ```
+  
+  **Excellente**
+  ```sass
+  h1,
+  h2,
+  h3 {
+      color: red;
+  }
+  ```
+  
+  <a href="#table-of-contents">⬆ Back to Top</a>
+
+- **<a href="#1.3">1.3 Order of Selectors<a><a name="user-content-1.3"></a>** When writing good SASS, ordering selectors is of paramount importance. It makes things easier to find, which saves oodles of time. The preferred order of selectors is as follows:
 
   - Standard HTML selectors
   - Responsive styles
@@ -140,7 +160,7 @@ A little bitty guide whose humble purpose is to expedite front-end development b
   Should always come first, either in alphabetical order (80% of use cases), or in the order they naturally appear in the markup (as with tables, where `thead` comes first in the markup but after `tbody` in the alphabet).
   
   **Responsive Styles**  
-  Should immediately follow any styles on the parent element, and be listed from largest breakpoint to smallest (see <a href="#">Responsive</a> for a more detailed discussion).
+  Should immediately follow any styles on the parent element, and be listed from largest breakpoint to smallest (see <a href="#user-content-3.1">Responsive</a> for a more detailed discussion).
 
   **Pseudo Elements**  
   Like `:hover` and `:first-of-type` should come next, and in alphabetical order. Pseudo elements are always preceded by an ampersand (`&`).
@@ -156,7 +176,7 @@ A little bitty guide whose humble purpose is to expedite front-end development b
 
   <a href="#table-of-contents">⬆ Back to Top</a>
  
-- **<a href="#1.3">1.3 Order of Declarations<a><a name="user-content-1.3"></a>** Declarations are the individual styles under a selector (e.g., `margin: 0`). These should be in alphabetical order; the sole exception is that mixins should precede selectors, and also be in alphabetical order.
+- **<a href="#1.4">1.4 Order of Declarations<a><a name="user-content-1.4"></a>** Declarations are the individual styles under a selector (e.g., `margin: 0`). These should be in alphabetical order; the sole exception is that mixins should precede selectors, and also be in alphabetical order.
 
   **Example**
   ```sass
@@ -171,7 +191,7 @@ A little bitty guide whose humble purpose is to expedite front-end development b
   
   <a href="#table-of-contents">⬆ Back to Top</a>
   
-- **<a href="#1.4">1.4 Comments<a><a name="user-content-1.4"></a>** Due to the straightforward nature of SASS and HTML, comments should be pretty limited. When adding comments, follow these 5 rules:
+- **<a href="#1.5">1.5 Comments<a><a name="user-content-1.5"></a>** Due to the straightforward nature of SASS and HTML, comments should be pretty limited. When adding comments, follow these 5 rules:
 
   - Always add a brief comment at the top of your SASS file describing the purpose of the file
   - Use comments to organize your SASS; e.g., as headings to blocks of style rules
@@ -701,7 +721,7 @@ A little bitty guide whose humble purpose is to expedite front-end development b
   }
   ```
   
-  _A note on performance:_ The "dispersed" method can end up creating more selectors when the final CSS file is compiled; however, <a href="http://benfrain.com/inline-or-combined-media-queries-in-sass-fight/">tests have shown</a> that the effect on final file size is negligible.
+  _A note on performance:_ The "inline" method can end up creating more selectors when the final CSS file is compiled; however, <a href="http://benfrain.com/inline-or-combined-media-queries-in-sass-fight/">tests have shown</a> that the effect on final file size is negligible.
   
   <a href="#table-of-contents">⬆ Back to Top</a>
 
@@ -739,17 +759,8 @@ A little bitty guide whose humble purpose is to expedite front-end development b
   
   <a href="#table-of-contents">⬆ Back to Top</a>
 
-
-
-
-
-
-  
-  
-  
-
 ## <a name="typography"></a>Typography
-- **<a href="#2.1">2.1 Headings</a><a name="user-content-2.1"></a>** GoSpotCheck utilizes `<h1>` to `<h5>` tags. The `<h6>` tag isn’t used because it’s the HTML equivalent of a dewclaw. Generally speaking, each heading should be used as such:
+- **<a href="#3.1">3.1 Headings</a><a name="user-content-3.1"></a>** GoSpotCheck utilizes `<h1>` to `<h5>` tags. The `<h6>` tag isn’t used because it’s the HTML equivalent of a dewclaw. Generally speaking, each heading should be used as such:
 
   - `<h1>` Introduces the entire page. There should only be one `<h1>` per page.
   - `<h2>` Introduces a major section of content.
@@ -758,7 +769,7 @@ A little bitty guide whose humble purpose is to expedite front-end development b
   - `<h5>` Since a block of text almost never requires this level of detail, the `<h5>` tag is rarely used.
 
   **Default Styling**  
-  - Unless a heading appears on a dark background, it should always be GSC Black (`#000`).
+  - Unless a heading appears on a dark background, it should always be black (`#000`).
   - On dark backgrounds, headings should be pure white (`#fff`).  
   - Headings are always set in **Gotham**.
   
@@ -780,7 +791,7 @@ A little bitty guide whose humble purpose is to expedite front-end development b
   
   <a href="#table-of-contents">⬆ Back to Top</a>
 
-- **<a href="#2.2">2.2 Body Text</a><a name="user-content-2.2"></a>** Body text includes any non-heading text (e.g., paragraphs and lists).
+- **<a href="#3.2">3.2 Body Text</a><a name="user-content-3.2"></a>** Body text includes any non-heading text (e.g., paragraphs and lists).
 
   **Default Styling**
   - Unless body text appears on a dark background, it should be `#666`.
@@ -788,6 +799,9 @@ A little bitty guide whose humble purpose is to expedite front-end development b
   - Body text is always set in **Helvetica**. If the user's OS supports it, the ideal font weight is `300` (equivalent to Helvetica Thin).
   
   <a href="http://gospotcheck.com/link-to-demo"><img height="17" src="http://www.gospotcheck.com/images/github-demo-button.png" title="See it in action"></a>
+
+
+
 
 
 ## <a name="flexbox"></a>Flexbox
