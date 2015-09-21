@@ -10,7 +10,7 @@ A little bitty guide whose humble purpose is to expedite front-end development b
 5. [Galleries](#galleries)
 6. [Forms](#forms)
 7. [Buttons](#buttons)
-8. [Alert Boxes](#alert-boxes)
+8. [Alert Boxes](#alerts)
 9. [Kickers](#kickers)
 10. [Lists](#lists)
 11. [Tables](#tables)
@@ -980,8 +980,35 @@ A little bitty guide whose humble purpose is to expedite front-end development b
   
   <a href="#table-of-contents">⬆ Back to Top</a>
 
-	
-	
+## <a name="alerts"></a>Alert Boxes
+- **<a href="#8.1">8.1 General Use</a><a name="user-content-8.1"></a>** Alert boxes are limited in scope on the GSC marketing site, but are more widespread in the admin application. Their purpose is to alert the user to an event, whether it was successful or went horribly wrong. Use common sense when adding alert boxes; rare is the case when more than one need be on screen at once.
+
+  <a href="#table-of-contents">⬆ Back to Top</a>
+
+- **<a href="#8.2">8.2 Types of Alerts</a><a name="user-content-8.2"></a>** There are five general "states" that would warrant an alert box:
+
+	- Normal (a subtle FYI)
+	- Info (a more obvious heads up)
+	- Success (something went well)
+	- Warning (something could go wrong)
+	- Error (something went poorly)
+
+  <a href="http://gospotcheck.com/link-to-demo"><img height="17" src="http://www.gospotcheck.com/images/github-demo-button.png" title="See it in action"></a>
+  
+  **Examples**
+  ```html
+  
+  ```
+  
+	<a href="#table-of-contents">⬆ Back to Top</a>
+
+
+
+
+
+
+
+
 
 
 - **<a href="#6.1">6.1 Introduction</a><a name="user-content-6.1"></a>** Blah
