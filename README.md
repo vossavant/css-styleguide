@@ -1390,6 +1390,8 @@ A little bitty guide whose humble purpose is to expedite front-end development b
 - **<a href="#16.1">16.1 Introduction</a><a name="user-content-16.1"></a>** With the introduction of this framework, we moved away from Font Awesome to <a href="https://www.google.com/design/icons/">Google's Material Icon font</a>. One of the primary reasons was aesthetic: we felt the Google icons looked a bit more mature. Another was implementation: the markup used by Material Icons was more flexible and semantic, eschewing empty `<i>` tags in favor of `<i>` tags with text in them. 
 	The only downside to the Material Icon set thus far is its lack of support for social media, which means we have to create social media icons separately.
 
+	<a href="#table-of-contents">⬆ Back to Top</a>
+
 - **<a href="#16.2">16.2 Implementation</a><a name="user-content-16.2"></a>** You can add an icon practically anywhere with a short bit of code. The wrapper need not be an `<i>` tag, but that is the standard. The icon font relies on the `material-icons` class to load up the base styles, and then uses jiggery pokery (i.e., <a href="http://google.github.io/material-design-icons/#using-the-icons-in-html">_ligatures_</a>) to convert the text within the `<i>` tags to an icon.
 
 	**Load the Stylesheet**
@@ -1426,26 +1428,25 @@ A little bitty guide whose humble purpose is to expedite front-end development b
 <a href="#table-of-contents">⬆ Back to Top</a>
 
 ## <a name="utility"></a>Utility Classes
-- **<a href="#16.1">16.1 Utility Classes</a><a name="user-content-16.1"></a>** This framework comes with a handful of "utility" classes that can be applied pretty much anywhere to add a bit of extra ad hoc styling. Here is a current list:
+- **<a href="#17.1">17.1 Utility Classes</a><a name="user-content-17.1"></a>** This framework comes with a handful of "utility" classes that can be applied pretty much anywhere to add a bit of extra ad hoc styling. Here is a current list:
 
-	- align-bottom
-	- align-center
-	- align-left
-	- align-middle
-	- align-right
-	- align-top
-	- bg-cover
-	- caps
-	- caption
-	- flex
-	- float-right
-	- hidden
-	- intro-p
-	- light-text
-	- relative
-	- subtitle
-	- subtle
-	- visible
+	- <a href="#17.1.1">align-bottom</a>
+	- <a href="#17.1.2">align-center</a>
+	- <a href="#17.1.3">align-left</a>
+	- <a href="#17.1.4">align-middle</a>
+	- <a href="#17.1.5">align-right</a>
+	- <a href="#17.1.6">align-top</a>
+	- <a href="#17.1.7">bg-cover</a>
+	- <a href="#17.1.8">caps</a>
+	- <a href="#17.1.9">caption</a>
+	- <a href="#17.1.10">flex</a>
+	- <a href="#17.1.11">float-right</a>
+	- <a href="#17.1.12">hidden</a>
+	- <a href="#17.1.13">intro-p</a>
+	- <a href="#17.1.14">light-text</a>
+	- <a href="#17.1.15">relative</a>
+	- <a href="#17.1.16">subtitle</a>
+	- <a href="#17.1.17">visible</a>
 
 - **<a href="#17.1.1">17.1.1 Align Bottom</a><a name="user-content-17.1.1"></a>** Applies only to a flexbox (i.e., a container with `display: flex`). Aligns child content to the bottom of the parent.
 
@@ -1501,12 +1502,49 @@ A little bitty guide whose humble purpose is to expedite front-end development b
   
 	<a href="#table-of-contents">⬆ Back to Top</a>
 
+- **<a href="#17.1.10">17.1.10 Flex</a><a name="user-content-17.1.10"></a>** Gives an element `display: flex`. Rarely needed, but occasionally very helpful.
 
+  <a href="http://gospotcheck.com/link-to-demo"><img height="17" src="http://www.gospotcheck.com/images/github-demo-button.png" title="See it in action"></a>
+  
+	<a href="#table-of-contents">⬆ Back to Top</a>
 
+- **<a href="#17.1.11">17.1.11 Float Right</a><a name="user-content-17.1.11"></a>** Floats an element to the right.
 
+  <a href="http://gospotcheck.com/link-to-demo"><img height="17" src="http://www.gospotcheck.com/images/github-demo-button.png" title="See it in action"></a>
+  
+	<a href="#table-of-contents">⬆ Back to Top</a>
 
+- **<a href="#17.1.12">17.1.12 Hidden</a><a name="user-content-17.1.12"></a>** Hides an element by giving it `display: none`. Opposite of <a href="#17.1.17">visible</a>.
 
-- **<a href="#17.1.1">17.1.1 Align Bottom</a><a name="user-content-17.1.1"></a>** Applies only to a flexible box (i.e., a container with `display: flex`). Aligns child content to the bottom of the parent.
+  <a href="http://gospotcheck.com/link-to-demo"><img height="17" src="http://www.gospotcheck.com/images/github-demo-button.png" title="See it in action"></a>
+  
+	<a href="#table-of-contents">⬆ Back to Top</a>
+	
+- **<a href="#17.1.13">17.1.13 Intro Paragraph</a><a name="user-content-17.1.13"></a>** When applied to a parent element, gives the first paragraph within it a larger font-size.
+
+  <a href="http://gospotcheck.com/link-to-demo"><img height="17" src="http://www.gospotcheck.com/images/github-demo-button.png" title="See it in action"></a>
+  
+	<a href="#table-of-contents">⬆ Back to Top</a>
+	
+- **<a href="#17.1.14">17.1.14 Light Text</a><a name="user-content-17.1.14"></a>** Changes the text color of an element to white. When applied to a parent element, changes the text color of headings and paragraphs within to white, and adds a subtle text shadow.
+
+  <a href="http://gospotcheck.com/link-to-demo"><img height="17" src="http://www.gospotcheck.com/images/github-demo-button.png" title="See it in action"></a>
+  
+	<a href="#table-of-contents">⬆ Back to Top</a>
+	
+- **<a href="#17.1.15">17.1.15 Relative Positioning</a><a name="user-content-17.1.15"></a>** Gives an element `position: relative`.
+
+  <a href="http://gospotcheck.com/link-to-demo"><img height="17" src="http://www.gospotcheck.com/images/github-demo-button.png" title="See it in action"></a>
+  
+	<a href="#table-of-contents">⬆ Back to Top</a>
+
+- **<a href="#17.1.16">17.1.16 Subtitle</a><a name="user-content-17.1.16"></a>** Enlarges the font of an element. Useful for giving visual emphasis to a paragraph following a main heading.
+
+  <a href="http://gospotcheck.com/link-to-demo"><img height="17" src="http://www.gospotcheck.com/images/github-demo-button.png" title="See it in action"></a>
+  
+	<a href="#table-of-contents">⬆ Back to Top</a>
+
+- **<a href="#17.1.17">17.1.17 Visible</a><a name="user-content-17.1.17"></a>** Shows an element by giving it `display: inherit`. Opposite of <a href="#17.1.12">hidden</a>.
 
   <a href="http://gospotcheck.com/link-to-demo"><img height="17" src="http://www.gospotcheck.com/images/github-demo-button.png" title="See it in action"></a>
   
