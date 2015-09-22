@@ -332,7 +332,7 @@ A little bitty guide whose humble purpose is to expedite front-end development b
 
   The framework is admittedly heavy on `<div>` tags, but no more so than other frameworks (I'm looking at _you_, Bootstrap). Ultimately, the extra `<div>` wrappers end up making it easier to create layouts; even though there is more markup than there would be in a custom layout, there is far less custom CSS.
   
-  **Note: The framework is heavily dependent on CSS flexbox, which is not compatible with IE < 10.**
+  **Note: The framework is dependent on CSS flexbox, which is incompatible with IE 8/9.**
 
 - **<a href="#2.2">2.2 Anatomy</a><a name="user-content-2.2"></a>** When building layouts with the framework, you will use three types of wrappers:
   
@@ -1649,7 +1649,7 @@ A little bitty guide whose humble purpose is to expedite front-end development b
 
   <a href="http://gospotcheck.com/link-to-demo"><img height="17" src="http://www.gospotcheck.com/images/github-demo-button.png" title="See it in action"></a>
   
-	While this will be changed in the next version to be more sensible, for now, the base unit is twice the <a href="#2.2.5">gutter width</a> (instead of equal to it). That is, `margin-top` will apply `margin-top: 40px`, while `margin-half-top` will apply `margin-top: 20px`.
+	While this will be changed in the next version to be more sensible, for now, the base unit is twice the <a href="#2.2.4.2">gutter width</a> (instead of equal to it). That is, `margin-top` will apply `margin-top: 40px`, while `margin-half-top` will apply `margin-top: 20px`.
 	
 	**Apply the Gutter Width to Any Element**
 	- margin-half-bottom
@@ -1660,7 +1660,7 @@ A little bitty guide whose humble purpose is to expedite front-end development b
 	- padding-half-left
 	- padding-half-right
 	- padding-half-top
-	
+
 	**Apply Twice the Gutter Width to Any Element**
 	- margin-bottom
 	- margin-left
@@ -1670,7 +1670,7 @@ A little bitty guide whose humble purpose is to expedite front-end development b
 	- padding-left
 	- padding-right
 	- padding-top
-	
+
 	**Apply 4x the Gutter Width to Any Element**
 	- margin-double-bottom
 	- margin-double-left
@@ -1680,7 +1680,7 @@ A little bitty guide whose humble purpose is to expedite front-end development b
 	- padding-double-left
 	- padding-double-right
 	- padding-double-top
-	
+
 	**Remove Spacing From Any Element**
 	- margin-none
 	- margin-none-bottom
@@ -1692,7 +1692,7 @@ A little bitty guide whose humble purpose is to expedite front-end development b
 	- padding-none-left
 	- padding-none-right
 	- padding-none-top
-	
+
 	**Example**
 	```html
 	<div class="padding-double-top margin-none-right">...</div>
