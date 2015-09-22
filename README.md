@@ -1041,7 +1041,7 @@ A little bitty guide whose humble purpose is to expedite front-end development b
 	<a href="#table-of-contents">⬆ Back to Top</a>
 
 ## <a name="buttons"></a>Buttons
-- **<a href="#7.1">7.1 General Use</a><a name="user-content-7.1"></a>** Buttons, or calls to action (CTAs) should be used sparingly (no more than one per section). Their purpose is to attract attention and compel the visitor to take action. Avoid having buttons adjacent to each other, as this confuses the user.
+- **<a href="#7.1">7.1 General Use</a><a name="user-content-7.1"></a>** Buttons, or calls to action (CTAs) should be used sparingly (no more than one per section). Their purpose is to attract attention and compel the visitor to take action. Avoid having buttons adjacent to each other, as this can confuse the user.
 
 	Either `<a>` or `<button>` is acceptable. The general rule here is that you should use `<button>` if there is no logical destination for the `<a>`. In other words, if there is no _href_ attribute for the `<a>`, use a `<button>`.
 
@@ -1076,19 +1076,19 @@ A little bitty guide whose humble purpose is to expedite front-end development b
   <a href="#table-of-contents">⬆ Back to Top</a>
 
 ## <a name="alerts"></a>Alert Boxes
-- **<a href="#8.1">8.1 General Use</a><a name="user-content-8.1"></a>** Alert boxes are limited in scope on the GSC marketing site, but are more widespread in the admin application. Their purpose is to alert the user to an event, whether it was successful or went horribly wrong.
+- **<a href="#8.1">8.1 General Use</a><a name="user-content-8.1"></a>** Alert boxes are limited in scope on the GSC marketing site, but are more widespread in the web application. Their purpose is to alert the user to an event, or to the state of the page.
 
-	Alert boxes should be `<p>` unless a special case warrants otherwise. Use common sense when adding alert boxes; rare is the case when more than one need be on screen at once.
+	Alert boxes should be `<p>` unless a special case warrants otherwise. Use common sense when adding alert boxes; rare is the case when more than one is needed on screen at once.
 
   <a href="#table-of-contents">⬆ Back to Top</a>
 
 - **<a href="#8.2">8.2 Types of Alerts</a><a name="user-content-8.2"></a>** There are five general "states" that would warrant an alert box:
 
-	- Normal (a subtle FYI)
-	- Info (a more obvious heads up)
-	- Success (something went well)
-	- Warning (something could go wrong)
-	- Error (something went poorly)
+	- **Normal** (a subtle FYI)
+	- **Info** (a more obvious heads up)
+	- **Success** (something went well)
+	- **Warning** (something could go wrong)
+	- **Error** (something went poorly)
 
   <a href="http://gospotcheck.com/link-to-demo"><img height="17" src="http://www.gospotcheck.com/images/github-demo-button.png" title="See it in action"></a>
   
@@ -1127,13 +1127,13 @@ A little bitty guide whose humble purpose is to expedite front-end development b
 	<p class="message gradient">I have a subtle gradient background</p>
 	<p class="message info icon">I have a snazzy info icon to the left</p>
 	<p class="message no-border">I don't have any border</p>
-	<p class="message no-border gradient">I combined multiple classes to really jazz things up</p>
+	<p class="message no-border gradient">I am so totally jazzed up</p>
 	```
 	
 	<a href="#table-of-contents">⬆ Back to Top</a>
 
 ## <a name="kickers"></a>Kickers
-- **<a href="#9.1">9.1 Introduction</a><a name="user-content-9.1"></a>** A **kicker** is a promotional CTA that appears at page bottom when a user scrolls a certain point down the page. The idea is to appeal to visitors once they've finished (or are about to finish) reading, say, a blog article.
+- **<a href="#9.1">9.1 Introduction</a><a name="user-content-9.1"></a>** A **kicker** is a promotional CTA that appears in the bottom right of the viewport when a user scrolls to a point on the page. The idea is to appeal to visitors once they're nearing the end of a page, and compel them to further explore the site.
 
   <a href="http://gospotcheck.com/link-to-demo"><img height="17" src="http://www.gospotcheck.com/images/github-demo-button.png" title="See it in action"></a>
   
@@ -1151,7 +1151,7 @@ A little bitty guide whose humble purpose is to expedite front-end development b
   ```
 	<a href="#table-of-contents">⬆ Back to Top</a>
 
-- **<a href="#9.2">9.2 Persistent Kicker</a><a name="user-content-9.2"></a>** A kicker is hidden at first and appears, via JavaScript, once the user hits a certain scroll point. You can have the kicker always appear by removing the _data-animation_ attribute.
+- **<a href="#9.2">9.2 Persistent Kicker</a><a name="user-content-9.2"></a>** A kicker is hidden at first and appears, via JavaScript, once the user hits a certain scroll point. You can have the kicker always appear by removing the `data-animation` attribute.
 
 	**Example**
 	```html
@@ -1166,7 +1166,7 @@ A little bitty guide whose humble purpose is to expedite front-end development b
 
 	<a href="#table-of-contents">⬆ Back to Top</a>
 
-- **<a href="#9.3">9.3 Animated Kicker</a><a name="user-content-9.3"></a>** You can animate your kicker by using any of the <a href="#user-content-15.2">supported animations</a>. Add the animation name you want to use as a _data-animation_ attribute to your kicker.
+- **<a href="#9.3">9.3 Animated Kicker</a><a name="user-content-9.3"></a>** You can animate your kicker by using any of the <a href="#user-content-15.2">supported animations</a>. Add the animation name you want to use as a `data-animation` attribute to your kicker.
 
   <a href="http://gospotcheck.com/link-to-demo"><img height="17" src="http://www.gospotcheck.com/images/github-demo-button.png" title="See it in action"></a>
   
@@ -1195,7 +1195,7 @@ A little bitty guide whose humble purpose is to expedite front-end development b
 ## <a name="tables"></a>Tables
 - **<a href="#11.1">11.1 Best Practices</a><a name="user-content-11.1"></a>** Tables are a great way to show lots of data in an easy-to-digest format. They're used extensively on the web app, but very little on the marketing site. When creating a table, be sure to follow these rules:
 
-	- Never use a table for laying out a page
+	- Never use a `<table>` for laying out a page
 	- Always include the `<thead>` and `<tbody>` elements
 	- Use `<th>` instead of `<td>` in the `<thead>`
 	- Use `<th>` instead of `<td>` in the first cell of a row in the `<tbody>`
@@ -1226,7 +1226,7 @@ A little bitty guide whose humble purpose is to expedite front-end development b
   
 	<a href="#table-of-contents">⬆ Back to Top</a>
 
-- **<a href="#11.2">11.2 Table with Fixed Header</a><a name="user-content-11.2"></a>** For all but the smallest tables, you'll probably want a header that doesn't scroll with the page. A fixed header makes it easier to read the data and know what columns are what. With a bit of extra markup, you can transform any regular ol' table into a super table with a fixed header.
+- **<a href="#11.2">11.2 Table with Fixed Header</a><a name="user-content-11.2"></a>** For all but the smallest tables, you'll probably want a header that doesn't scroll with the page. A fixed header makes it easier to read the data and know what columns are what.
 
   <a href="http://gospotcheck.com/link-to-demo"><img height="17" src="http://www.gospotcheck.com/images/github-demo-button.png" title="See it in action"></a>
   
@@ -1250,7 +1250,7 @@ A little bitty guide whose humble purpose is to expedite front-end development b
 	<a href="#table-of-contents">⬆ Back to Top</a>
 
 ## <a name="pagers"></a>Pagers
-- **<a href="#12.1">12.1 Previous / Next Pager</a><a name="user-content-12.1"></a>** This pager is most commonly used on the marketing site (specifically, within the blog) to navigate between pages of blog posts. Aesthetically, they are identical to buttons, but rely instead on a default WordPress class for styling.
+- **<a href="#12.1">12.1 Previous / Next Pager</a><a name="user-content-12.1"></a>** Most commonly used on the marketing site (specifically, within the blog) to navigate between pages of blog posts. Aesthetically, they are identical to buttons, but rely instead on a default WordPress class for styling.
 
   <a href="http://gospotcheck.com/link-to-demo"><img height="17" src="http://www.gospotcheck.com/images/github-demo-button.png" title="See it in action"></a>
   
@@ -1268,7 +1268,7 @@ A little bitty guide whose humble purpose is to expedite front-end development b
   
 	<a href="#table-of-contents">⬆ Back to Top</a>
 
-- **<a href="#12.2">12.2 Hero / Carousel Pager</a><a name="user-content-12.1"></a>** Used primarily in hero section on the marketing site (currently, to navigate between features). The style is also used on homepage carousels, but the markup is quite different from the demo linked to below since those carousels rely on a 3rd party JS plugin and are not strictly CSS.
+- **<a href="#12.2">12.2 Hero / Carousel Pager</a><a name="user-content-12.1"></a>** Used primarily in the hero section on the marketing site (currently, to navigate between features).
 
 	**Example**
 	```html
@@ -1294,16 +1294,16 @@ A little bitty guide whose humble purpose is to expedite front-end development b
 ## <a name="typography"></a>Typography
 - **<a href="#13.1">13.1 Headings</a><a name="user-content-13.1"></a>** GoSpotCheck utilizes `<h1>` to `<h5>` tags. The `<h6>` tag isn’t used because it’s the HTML equivalent of a dewclaw. Generally speaking, each heading should be used as such:
 
-  - `<h1>` Introduces the entire page. There should only be one `<h1>` per page.
-  - `<h2>` Introduces a major section of content.
-  - `<h3>` Introduces a minor section of content.
-  - `<h4>` Usually used stylistically (i.e., because it looks best) and to introduce sidebar sections or minor bits of content.
-  - `<h5>` Since a block of text almost never requires this level of detail, the `<h5>` tag is rarely used.
+  - `<h1>` Introduces the entire page (there should only be one `<h1>` per page)
+  - `<h2>` Introduces a major section of content
+  - `<h3>` Introduces a minor section of content
+  - `<h4>` Introduces sidebar sections or minor bits of content
+  - `<h5>` Rarely used
 
   **Default Styling**  
-  - Unless a heading appears on a dark background, it should always be black (`#000`).
-  - On dark backgrounds, headings should be pure white (`#fff`).  
-  - Headings are always set in **Gotham**.
+  - Unless a heading appears on a dark background, it should always be black (`#000`)
+  - On dark backgrounds, headings should be pure white (`#fff`)
+  - Headings should always be set in **Gotham**
   
   <a href="http://gospotcheck.com/link-to-demo"><img height="17" src="http://www.gospotcheck.com/images/github-demo-button.png" title="See it in action"></a>
     
@@ -1326,16 +1326,16 @@ A little bitty guide whose humble purpose is to expedite front-end development b
 - **<a href="#13.2">13.2 Body Text</a><a name="user-content-13.2"></a>** Body text includes any non-heading text (e.g., paragraphs and lists).
 
   **Default Styling**
-  - Unless body text appears on a dark background, it should be `#666`.
-  - On dark backgrounds, body text should be pure white (`#fff`).  
-  - Body text is always set in **Helvetica**. If the user's OS supports it, the ideal font weight is `300` (equivalent to Helvetica Thin).
+  - Unless body text appears on a dark background, it should be `#666`
+  - On dark backgrounds, body text should be pure white (`#fff`)
+  - Body text should always be set in **Helvetica** with a weight of `300`
   
   <a href="http://gospotcheck.com/link-to-demo"><img height="17" src="http://www.gospotcheck.com/images/github-demo-button.png" title="See it in action"></a>
 
 <a href="#table-of-contents">⬆ Back to Top</a>
 
 ## <a name="hyperlinks"></a>Hyperlinks
-- **<a href="#14.1">14.1 Linked Text</a><a name="user-content-14.1"></a>** When adding a hyperlink to the page, be sure to highlight the appropriate text in your link. A link should make sense by itself; that is, if you only knew the link text and did not have any of the surrounding sentence, you could guess where the link would take you.
+- **<a href="#14.1">14.1 Linked Text</a><a name="user-content-14.1"></a>** A link should make sense by itself; i.e., if you could only see the link text and didn't have context, you could guess where the link would take you.
 
   **Bad** _(standing alone, the linked text is vague)_
   ```html
@@ -1348,9 +1348,9 @@ A little bitty guide whose humble purpose is to expedite front-end development b
   ```
   <a href="#table-of-contents">⬆ Back to Top</a>
   
-- **<a href="#14.2">14.2 Styling</a><a name="user-content-14.2"></a>** In general, links should be **bold** and colored GSC Blue (`#00bdff`). On hover, links should darken to GSC Dark Blue (`#0097d4`) and be underlined, or otherwise have some visible change that clearly indicates the text is a clickable link. One popular alternative is to give the link a subtle background color on hover.
+- **<a href="#14.2">14.2 Styling</a><a name="user-content-14.2"></a>** In general, links should be **bold** and colored GSC Blue (`#00bdff`). On hover, links should darken to GSC Dark Blue (`#0097d4`) and be underlined, or otherwise have some visible change that clearly indicates the text is a clickable link.
 
-	These guidelines can be adjusted ad hoc; for example, sometimes you want to link a header, and it would look better to leave the header a dark color. This is fine, provided there is a clear hover effect. When in doubt, remember that it's best to only link things that users would expect to be linked (titles to blog posts, for instance).
+	These guidelines can be adjusted ad hoc; e.g., sometimes you want to link a header, and it would look better to leave the header a dark color. This is fine, provided there is a clear hover effect. When in doubt, remember that it's best to only link things that users would expect to be linked (titles to blog posts, for instance).
 
   <a href="http://gospotcheck.com/link-to-demo"><img height="17" src="http://www.gospotcheck.com/images/github-demo-button.png" title="See it in action"></a>
 
@@ -1358,8 +1358,8 @@ A little bitty guide whose humble purpose is to expedite front-end development b
   
 - **<a href="#14.3">14.3 Opening in a New Tab</a><a name="user-content-14.3"></a>** With few exceptions, **a link should never open in a new tab**. This behavior takes control away from the user, which is usually not a good idea. There are two allowed exceptions:
   
-  - When linking directly to a file (almost never applicable, since the browser handles file downloads).
-  - When following the link would interrupt an ongoing process (e.g., linking to the privacy policy inside of a lightbox where a user is completing a form).
+  - When linking directly to a file (which is almost never applicable, since modern browsers handle file downloads)
+  - When following the link would interrupt an ongoing process (e.g., linking to the privacy policy inside of a lightbox where a user is completing a form)
   
   To open a link a new tab, simply add `target="_blank"` to your anchor tag; the CSS will take care of the rest and add a visual indicator that the link will open elsewhere:
   
@@ -1372,11 +1372,11 @@ A little bitty guide whose humble purpose is to expedite front-end development b
   <a href="#table-of-contents">⬆ Back to Top</a>
 
 ## <a name="animations"></a>Animations
-- **<a href="#15.1">15.1 Introduction</a><a name="user-content-15.1"></a>** A whole boatload of CSS animations are built into this framework, ready to use, by simply adding a couple of classes. The great majority of the animations are lifted from <a href="https://daneden.github.io/animate.css/">Daniel Eden's Animate.css</a>. Some of the less-likely-to-be-used animations are stripped out, and other custom animations added in, but the bulk of the _Animate.css_ animations are available.
+- **<a href="#15.1">15.1 Introduction</a><a name="user-content-15.1"></a>** A whole boatload of ready-to-use CSS animations are built into this framework. The great majority of the animations are lifted from <a href="https://daneden.github.io/animate.css/">Daniel Eden's Animate.css</a>. Some of the less-likely-to-be-used animations are stripped out, and other custom animations added in, but the bulk of the _Animate.css_ animations are available.
 
   <a href="#table-of-contents">⬆ Back to Top</a>
 
-- **<a href="#15.2">15.2 Animations</a><a name="user-content-15.2"></a>** To animate anything, simply add the class `animated` to it, along with one of the following classes, which corresponds to a particular animation:
+- **<a href="#15.2">15.2 Animations</a><a name="user-content-15.2"></a>** To animate anything, simply add two classes to it: `animated`, plus one of the following:
 
   - `bounce`
   - `flash`
@@ -1458,12 +1458,12 @@ A little bitty guide whose humble purpose is to expedite front-end development b
 
   <a href="#table-of-contents">⬆ Back to Top</a>
 
-- **<a href="#15.4">15.4 Animating on Scroll</a><a name="user-content-15.4"></a>** If you don't want your CSS animation to run right away, you can add a special class, `animate-on-scroll`, to any element. This will cause the animation to be delayed until the element is scrolled into view.
+- **<a href="#15.4">15.4 Animating on Scroll</a><a name="user-content-15.4"></a>** If you don't want your CSS animation to run right away, you can add a special class, `animate-on-scroll`, to any element. This will cause the animation to be delayed until the element is scrolled into view (with the help of JavaScript, of course).
 
   <a href="https://daneden.github.io/animate.css/"><img height="17" src="http://www.gospotcheck.com/images/github-demo-button.png" title="See it in action"></a>
   
   **Specifying Animations**  
-  The element to be animated should _not_ have the `animated` class on it; this is added by JavaScript when the element is scrolled into view. You _will_, however, need to add a `data-animation` attribute, specifying which animation to run. The animation should be set to one of the animation names <a href="#15.2">listed above</a>
+  The element to be animated should _not_ have the `animated` class on it; this is added by JavaScript when the element is scrolled into view. You _will_, however, need to add a `data-animation` attribute, specifying which animation to run. The animation should be set to one of the animation names <a href="#15.2">listed above</a>.
   
   **Delaying Animations**  
   If you want to delay the animation, you can add a `data-animation-delay` attribute. This attribute should be specified in milliseconds (1000ms = 1 second).
@@ -1482,19 +1482,19 @@ A little bitty guide whose humble purpose is to expedite front-end development b
   <a href="#table-of-contents">⬆ Back to Top</a>
   
 ## <a name="material-icons"></a>Material Icons
-- **<a href="#16.1">16.1 Introduction</a><a name="user-content-16.1"></a>** With the introduction of this framework, we moved away from Font Awesome to <a href="https://www.google.com/design/icons/">Google's Material Icon font</a>. One of the primary reasons was aesthetic: we felt the Google icons looked a bit more mature. Another was implementation: the markup used by Material Icons was more flexible and semantic, eschewing empty `<i>` tags in favor of `<i>` tags with text in them. 
-	The only downside to the Material Icon set thus far is its lack of support for social media, which means we have to create social media icons separately.
+- **<a href="#16.1">16.1 Introduction</a><a name="user-content-16.1"></a>** With the introduction of this framework, we moved away from Font Awesome to <a href="https://www.google.com/design/icons/">Google's Material Icon font</a>. The reason was twofold: (1) we prefer the aesthetic and (2) the markup is more semantic. 
+	One downside to the Material Icon set is its lack of support for social media, which means you'll need to load any social media icons separately.
 
 	<a href="#table-of-contents">⬆ Back to Top</a>
 
-- **<a href="#16.2">16.2 Implementation</a><a name="user-content-16.2"></a>** You can add an icon practically anywhere with a short bit of code. The wrapper need not be an `<i>` tag, but that is the standard. The icon font relies on the `material-icons` class to load up the base styles, and then uses jiggery pokery (i.e., <a href="http://google.github.io/material-design-icons/#using-the-icons-in-html">_ligatures_</a>) to convert the text within the `<i>` tags to an icon.
+- **<a href="#16.2">16.2 Implementation</a><a name="user-content-16.2"></a>** You can add an icon practically anywhere with a short bit of code. The wrapper need not be an `<i>` tag, but that is the standard. The icon font relies on the `material-icons` class to load up the base styles, and then uses jiggery pokery (i.e., <a href="http://google.github.io/material-design-icons/#using-the-icons-in-html">_ligatures_</a>) to convert the text within the `<i>` tags to a glyph.
 
-	**Load the Stylesheet**
+	**First, Load the Styles**
 	```html
 	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 	```
 	
-	**Add an Icon**
+	**Then, Add an Icon**
 	```html
 	<i class="material-icons">chevron_right</i>
 	```
@@ -1507,7 +1507,7 @@ A little bitty guide whose humble purpose is to expedite front-end development b
 
 	**Examples**
 	```html
-	<!-- changes icon size to 18px -->
+	<!-- changes icon size to 18px (default is 24px) -->
 	<i class="material-icons md-18">face</i>
 	
 	<!-- darkens icon (for use on light background -->
@@ -1516,7 +1516,7 @@ A little bitty guide whose humble purpose is to expedite front-end development b
 	<!-- lightens icon (for use on dark background -->
 	<i class="material-icons md-light">face</i>
 	
-	<!-- lightly fades icon, so it appears disabled -->
+	<!-- fades icon, so it appears disabled -->
 	<i class="material-icons md-dark md-inactive">face</i>
 	```
 
@@ -1555,7 +1555,7 @@ A little bitty guide whose humble purpose is to expedite front-end development b
   
 	<a href="#table-of-contents">⬆ Back to Top</a>
 
-- **<a href="#17.1.3">17.1.3 Align Left</a><a name="user-content-17.1.3"></a>** This class has two applications: (1) for normal containers, aligns content to the left. (2) For flexbox containers such as `<div class="row">`, aligns child elements to the left (by default, if children of a flexbox parent don't take up the full width of the parent, they will stretch to fill the space).
+- **<a href="#17.1.3">17.1.3 Align Left</a><a name="user-content-17.1.3"></a>** This class has two applications: (1) for normal containers, aligns content to the left; (2) for flexbox containers such as `<div class="row">`, pulls child elements to the left (by default, if children of a flexbox don't take up the full width of the parent, they will stretch to fill the space).
 
   <a href="http://gospotcheck.com/link-to-demo"><img height="17" src="http://www.gospotcheck.com/images/github-demo-button.png" title="See it in action"></a>
   
@@ -1567,31 +1567,31 @@ A little bitty guide whose humble purpose is to expedite front-end development b
   
 	<a href="#table-of-contents">⬆ Back to Top</a>
 
-- **<a href="#17.1.5">17.1.5 Align Right</a><a name="user-content-17.1.5"></a>** Just like `align-left`, this class has two applications: (1) for normal containers, aligns content to the right. (2) For flexbox containers such as `<div class="row">`, aligns child elements to the right.
+- **<a href="#17.1.5">17.1.5 Align Right</a><a name="user-content-17.1.5"></a>** Just like `align-left`, this class has two applications: (1) for normal containers, aligns content to the right; (2) for flexbox containers such as `<div class="row">`, pulls child elements to the right.
 
   <a href="http://gospotcheck.com/link-to-demo"><img height="17" src="http://www.gospotcheck.com/images/github-demo-button.png" title="See it in action"></a>
   
 	<a href="#table-of-contents">⬆ Back to Top</a>
 
-- **<a href="#17.1.6">17.1.6 Align Top</a><a name="user-content-17.1.6"></a>** Applies only to a flexible box (i.e., a container with `display: flex`). Aligns child content to the top of the parent.
+- **<a href="#17.1.6">17.1.6 Align Top</a><a name="user-content-17.1.6"></a>** Applies only to a flexbox (i.e., a container with `display: flex`). Aligns child content to the top of the parent.
 
   <a href="http://gospotcheck.com/link-to-demo"><img height="17" src="http://www.gospotcheck.com/images/github-demo-button.png" title="See it in action"></a>
   
 	<a href="#table-of-contents">⬆ Back to Top</a>
 
-- **<a href="#17.1.7">17.1.7 Background Cover</a><a name="user-content-17.1.7"></a>** Background images on an element with this class will have `background-size: cover`.
+- **<a href="#17.1.7">17.1.7 Background Cover</a><a name="user-content-17.1.7"></a>** Gives an element `background-size: cover`.
 
   <a href="http://gospotcheck.com/link-to-demo"><img height="17" src="http://www.gospotcheck.com/images/github-demo-button.png" title="See it in action"></a>
   
 	<a href="#table-of-contents">⬆ Back to Top</a>
 
-- **<a href="#17.1.8">17.1.8 Capitalize</a><a name="user-content-17.1.8"></a>** Text inside an element with this class will be capitalized.
+- **<a href="#17.1.8">17.1.8 Capitalize</a><a name="user-content-17.1.8"></a>** Capitalizes text within an element.
 
   <a href="http://gospotcheck.com/link-to-demo"><img height="17" src="http://www.gospotcheck.com/images/github-demo-button.png" title="See it in action"></a>
   
 	<a href="#table-of-contents">⬆ Back to Top</a>
 
-- **<a href="#17.1.9">17.1.9 Caption</a><a name="user-content-17.1.9"></a>** Text inside an element with this class is lightly grayed and italicized to mimic a photo caption.
+- **<a href="#17.1.9">17.1.9 Caption</a><a name="user-content-17.1.9"></a>** Italicizes and lightly grays text within an element, to mimic a photo caption.
 
   <a href="http://gospotcheck.com/link-to-demo"><img height="17" src="http://www.gospotcheck.com/images/github-demo-button.png" title="See it in action"></a>
   
@@ -1615,7 +1615,7 @@ A little bitty guide whose humble purpose is to expedite front-end development b
   
 	<a href="#table-of-contents">⬆ Back to Top</a>
 	
-- **<a href="#17.1.13">17.1.13 Intro Paragraph</a><a name="user-content-17.1.13"></a>** When applied to a parent element, gives the first paragraph within it a larger font-size.
+- **<a href="#17.1.13">17.1.13 Intro Paragraph</a><a name="user-content-17.1.13"></a>** Gives the first paragraph within an element a larger font-size.
 
   <a href="http://gospotcheck.com/link-to-demo"><img height="17" src="http://www.gospotcheck.com/images/github-demo-button.png" title="See it in action"></a>
   
@@ -1647,9 +1647,9 @@ A little bitty guide whose humble purpose is to expedite front-end development b
 
 - **<a href="#17.2">17.2 Additional Spacing</a><a name="user-content-17.2"></a>** In addition to the utility classes above, the framework includes a number of special "spacing" classes that allow you to apply incremental amounts of margin and padding to any element. There are also some classes that remove margin and padding from elements that have them by default.
 
-	While this will be changed in the next version to be more sensible, for now, the base unit is twice the <a href="#2.2.5">gutter width</a> (defaults to `40px`). That is, `margin-top` will apply `margin-top: 40px`, while `margin-half-top` will apply `margin-top: 20px`.
-
-	A complete list of available classes:
+  <a href="http://gospotcheck.com/link-to-demo"><img height="17" src="http://www.gospotcheck.com/images/github-demo-button.png" title="See it in action"></a>
+  
+	While this will be changed in the next version to be more sensible, for now, the base unit is twice the <a href="#2.2.5">gutter width</a> (instead of equal to it). That is, `margin-top` will apply `margin-top: 40px`, while `margin-half-top` will apply `margin-top: 20px`.
 	
 	**Apply the Gutter Width to Any Element**
 	- margin-half-bottom
@@ -1697,3 +1697,5 @@ A little bitty guide whose humble purpose is to expedite front-end development b
 	```html
 	<div class="padding-double-top margin-none-right">...</div>
 	```
+
+	<a href="#table-of-contents">⬆ Back to Top</a>
