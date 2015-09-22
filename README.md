@@ -1137,15 +1137,29 @@ A little bitty guide whose humble purpose is to expedite front-end development b
   
   **Example**
   ```html
-  <table>
-  </table>
+  <div class="fixed-table-wrap">
+  	<div class="header-bg"></div>
+  		<div class="inner">
+  			<table>
+  				<thead>
+  					<tr>
+  						<th><span>Rank</span></th>
+  						<th><span>Name</span></th>
+  						<th><span>Points</span></th>
+  					</tr>
+  				</thead>
+  				<tbody>
+  					...
   ```
   
 	<a href="#table-of-contents">⬆ Back to Top</a>
 
+## <a name="pagers"></a>Pagers
+- **<a href="#12.1">12.1 Introduction</a><a name="user-content-12.1"></a>** Pagers
 
-
-
+  <a href="http://gospotcheck.com/link-to-demo"><img height="17" src="http://www.gospotcheck.com/images/github-demo-button.png" title="See it in action"></a>
+  
+	<a href="#table-of-contents">⬆ Back to Top</a>
 
 
 
