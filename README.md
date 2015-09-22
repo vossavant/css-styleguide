@@ -1386,3 +1386,41 @@ A little bitty guide whose humble purpose is to expedite front-end development b
   
   <a href="#table-of-contents">⬆ Back to Top</a>
   
+## <a name="material-icons"></a>Material Icons
+- **<a href="#16.1">16.1 Introduction</a><a name="user-content-16.1"></a>** With the introduction of this framework, we moved away from Font Awesome to <a href="https://www.google.com/design/icons/">Google's Material Icon font</a>. One of the primary reasons was aesthetic: we felt the Google icons looked a bit more mature. Another was implementation: the markup used by Material Icons was more flexible and semantic, eschewing empty `<i>` tags in favor of `<i>` tags with text in them. 
+	The only downside to the Material Icon set thus far is its lack of support for social media, which means we have to create social media icons separately.
+
+- **<a href="#16.2">16.2 Implementation</a><a name="user-content-16.2"></a>** You can add an icon practically anywhere with a short bit of code. The wrapper need not be an `<i>` tag, but that is the standard. The icon font relies on the `material-icons` class to load up the base styles, and then uses jiggery pokery (i.e., <a href="http://google.github.io/material-design-icons/#using-the-icons-in-html">_ligatures_</a>) to convert the text within the `<i>` tags to an icon.
+
+	**Load the Stylesheet**
+	```html
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	```
+	
+	**Add an Icon**
+	```html
+	<i class="material-icons">chevron_right</i>
+	```
+	
+	You can see a complete list of icons by visiting the <a href="https://www.google.com/design/icons/">Material Icons page</a>. If an icon name is more than one word, be sure to replace spaces with underscores, as in the example above.
+
+	<a href="#table-of-contents">⬆ Back to Top</a>
+
+- **<a href="#16.3">16.3 Further Styling</a><a name="user-content-16.3"></a>** You can further style your icons by taking advantage of additional classes that come bundled with the default icon stylesheet. Visit the <a href="http://google.github.io/material-design-icons/">Google Material Icons docs</a> for an exhaustive overview. 
+
+	**Examples**
+	```html
+	<!-- changes icon size to 18px -->
+	<i class="material-icons md-18">face</i>
+	
+	<!-- darkens icon (for use on light background -->
+	<i class="material-icons md-dark">face</i>
+	
+	<!-- lightens icon (for use on dark background -->
+	<i class="material-icons md-light">face</i>
+	
+	<!-- lightly fades icon, so it appears disabled -->
+	<i class="material-icons md-dark md-inactive">face</i>
+	```
+
+<a href="#table-of-contents">⬆ Back to Top</a>
