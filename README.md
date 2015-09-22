@@ -688,7 +688,7 @@ A little bitty guide whose humble purpose is to expedite front-end development b
   <a href="#table-of-contents">⬆ Back to Top</a>
   
 ## <a name="responsive"></a>Responsive
-- **<a href="#3.1">3.1 Naming Conventions for Breakpoints</a><a name="user-content-3.1"></a>** The styleguide currently comes stocked with 8 breakpoints, which are named after U.S. Army ranks. Most of the breakpoints coincide with iOS device widths:
+- **<a href="#3.1">3.1 Naming Conventions for Breakpoints</a><a name="user-content-3.1"></a>** The styleguide currently comes stocked with 8 breakpoints, which follow U.S. Army ranks. Most of the breakpoints coincide with iOS device widths:
   
   - `private` (320px)
   - `corporal` (375px)
@@ -704,19 +704,19 @@ A little bitty guide whose humble purpose is to expedite front-end development b
   
   The styleguide uses iOS breakpoints as a starting point because they are convenient and tend to cover most use cases, but you should not feel compelled to stick to them.
     
-  Using U.S. Army ranks _maintains a relationship_ between the breakpoints (i.e., you can tell which breakpoint is larger or smaller than any other breakpoint by knowing your Army ranks).
+  Using U.S. Army ranks _maintains a relationship_ between the breakpoints (i.e., you can tell which breakpoint is larger or smaller than any other breakpoint by knowing your Army ranks). This is more helpful than, say `tablet-large` and `desktop`.
   
   **Note:** If you need to add additional breakpoints, consider adding <a href="http://www.militaryfactory.com/ranks/army_ranks.asp">additional ranks</a>.
 
   <a href="#table-of-contents">⬆ Back to Top</a>
 
-- **<a href="#3.2">3.2 Range of Breakpoints</a><a name="user-content-3.2"></a>** The upper limit of your breakpoints should be determined by your design. The default upper limit in the styleguide is `general`, which corresponds to 1200px, and the lower limit is `private`, which corresponds to 320px.
+- **<a href="#3.2">3.2 Range of Breakpoints</a><a name="user-content-3.2"></a>** The upper limit of your breakpoints should be determined by your design. The default upper limit in the styleguide is `general`, which corresponds to `1200px` or 125% of your default content width; the lower limit is `private`, which corresponds to `320px`.
 
   **Note:** While the upper limit can vary, there is not _currently_ any reason to worry about sizes below 320px, though this may change in the near future (durned smartwatches...).
 
   <a href="#table-of-contents">⬆ Back to Top</a>
   
-- **<a href="#3.3">3.3 Special Mixin (rename me)</a><a name="user-content-3.3"></a>** A special mixin called `respond-to` allows you to use the rank naming convention to write your media queries like:
+- **<a href="#3.3">3.3 The "Respond-to" Mixin</a><a name="user-content-3.3"></a>** A special mixin called `respond-to` allows you to use the Army rank naming convention to write your media queries a bit more concisely. The disadvantage is that it currently only supports `max-width`, so other media queries will need to be written the usual way.
 
   ```sass
   footer {
@@ -757,7 +757,7 @@ A little bitty guide whose humble purpose is to expedite front-end development b
   }
   ```
   
-- **<a href="#3.4">3.4 Placement of Media Queries</a><a name="user-content-3.4"></a>** For placement of responsive style rules (i.e., _Media Queries_), there are three options, which we've given colorful names:
+- **<a href="#3.4">3.4 Placement of Media Queries</a><a name="user-content-3.4"></a>** For placement of responsive style rules (i.e., _Media Queries_), there are three options, which we've given made-up names:
 
   - **Monolithic:** All media queries for the entire project are placed in a single SASS file
   - **Chunked:** Media queries for individual SASS files are placed at the end of each file
@@ -824,7 +824,7 @@ A little bitty guide whose humble purpose is to expedite front-end development b
   }
   ```
   
-  _A note on performance:_ The "inline" method can end up creating more selectors when the final CSS file is compiled; however, <a href="http://benfrain.com/inline-or-combined-media-queries-in-sass-fight/">tests have shown</a> that the effect on final file size is negligible.
+  **A note on performance:** The "inline" method can end up creating more selectors when the final CSS file is compiled; however, <a href="http://benfrain.com/inline-or-combined-media-queries-in-sass-fight/">tests have shown</a> that the effect on final file size is negligible.
   
   <a href="#table-of-contents">⬆ Back to Top</a>
 
@@ -863,9 +863,7 @@ A little bitty guide whose humble purpose is to expedite front-end development b
   <a href="#table-of-contents">⬆ Back to Top</a>
  
 ## <a name="boxes"></a>Boxes
-- **<a href="#4.1">4.1 Introduction</a><a name="user-content-4.1"></a>** "Boxes" is the creative term given to a stylized box of content. They are primarily used to jazz up an otherwise boring part of the page, and serve well to delineate repeating content, like blog posts.
-  
-  The markup of the box is important; be sure to follow it closely to reproduce the look in the demos (in other words, it's not as simple as adding `class="box"` to an empty `div`).
+- **<a href="#4.1">4.1 Introduction</a><a name="user-content-4.1"></a>** "Boxes" is the creative term given to a stylized box of content. They are primarily used to jazz up an otherwise boring part of the page, and serve to better delineate repeating content like blog posts.
   
   <a href="http://gospotcheck.com/link-to-demo"><img height="17" src="http://www.gospotcheck.com/images/github-demo-button.png" title="See it in action"></a>
 
@@ -873,30 +871,30 @@ A little bitty guide whose humble purpose is to expedite front-end development b
   ```html
   <article class="box">
   	<h3>What is GoSpotCheck?</h3>
-	  <p>GoSpotCheck is enterprise software for field-based teams.</p>
-	</article>
+  	<p>GoSpotcheck is enterprise software for field-based teams.</p>
+  </article>
 	```
 
   <a href="#table-of-contents">⬆ Back to Top</a>		
 
-- **<a href="#4.2">4.2 Post Box</a><a name="user-content-4.2"></a>** A variation on the theme of box is the "post box", which is intended to showcase blog posts. Drop in the markup below where you need blog posts.
+- **<a href="#4.2">4.2 Post Box</a><a name="user-content-4.2"></a>** A variation on the theme of _box_ is the "post box", which is intended to showcase blog posts.
 
   <a href="http://gospotcheck.com/link-to-demo"><img height="17" src="http://www.gospotcheck.com/images/github-demo-button.png" title="See it in action"></a>
 
   **Example**
 	```html
-  <article class="post box">
-			<div class="width-100 padding-none">
-				<figure>
-						<a href="#"><img src="box-sample.png"></a>
-				</figure>
-			</div>
-			<div class="width-100 padding">
-				<h3><a href="#">An Ode to Small Towns</a></h3>
-				<p class="meta">by <a href="#">Sam Adams</a> on September 2, 2015 in <a href="#">Urban Planning</a></p>
-				<p>Blog post synopsis goes here, yo.</p>
-				<a href="#" class="button outline">Full Article <i class="material-icons">chevron_right</i></a>
-			</div>
+	<article class="post box">
+		<div class="width-100 padding-none">
+			<figure>
+				<a href="#"><img src="box-sample.png"></a>
+			</figure>
+		</div>
+		<div class="width-100 padding">
+			<h3><a href="#">An Ode to Small Towns</a></h3>
+			<p class="meta">by <a href="#">Sam Adams</a> on September 2, 2015 in <a href="#">Urban Planning</a></p>
+			<p>Blog post synopsis goes here, yo.</p>
+			<a href="#" class="button outline">Full Article <i class="material-icons">chevron_right</i></a>
+		</div>
 	</article>
   ```
 
@@ -904,7 +902,7 @@ A little bitty guide whose humble purpose is to expedite front-end development b
 
   <a href="#table-of-contents">⬆ Back to Top</a>
 
-- **<a href="#4.3">4.3 Author Meta Box</a><a name="user-content-4.3"></a>** Another variation on the theme of box is the author meta box, which is intended to showcase an author at the end of a blog post.
+- **<a href="#4.3">4.3 Author Meta Box</a><a name="user-content-4.3"></a>** Another variation on the theme of _box_ is the author meta box, which is intended to showcase an author at the end of a blog post.
 
   <a href="http://gospotcheck.com/link-to-demo"><img height="17" src="http://www.gospotcheck.com/images/github-demo-button.png" title="See it in action"></a>
   
@@ -924,9 +922,9 @@ A little bitty guide whose humble purpose is to expedite front-end development b
   <a href="#table-of-contents">⬆ Back to Top</a>
 
 ## <a name="galleries"></a>Galleries
-- **<a href="#5.1">5.1 Introduction</a><a name="user-content-5.1"></a>** Galleries probably require no introduction. They're great for adding a grid of similar content, like a photo gallery or list of related blog posts. You can specify the number of items per row (between 2 and 5) by adjusting the class to be either `gallery-2`, `gallery-3`, `gallery-4`, or `gallery-5`.
+- **<a href="#5.1">5.1 Introduction</a><a name="user-content-5.1"></a>** Galleries are great for adding a grid of similar content, like photos or a list of related blog posts. You can specify the number of items per row (between 2 and 5) by adjusting the class to be either `gallery-2`, `gallery-3`, `gallery-4`, or `gallery-5`.
 
-	Special thanks to Eric Suzanne, creator of the <a href="http://susy.oddbird.net/">Susy framework</a>, for the basis of this code.
+	A special thanks goes to Eric Suzanne, creator of the <a href="http://susy.oddbird.net/">Susy framework</a>, for most of the styles used here.
 
   <a href="http://gospotcheck.com/link-to-demo"><img height="17" src="http://www.gospotcheck.com/images/github-demo-button.png" title="See it in action"></a>
   
@@ -945,7 +943,7 @@ A little bitty guide whose humble purpose is to expedite front-end development b
   
   <a href="#table-of-contents">⬆ Back to Top</a>
 
-- **<a href="#5.2">5.2 Captions Outside</a><a name="user-content-5.2"></a>** The example above had captions overlaying the photos. If you don't want this, you can have captions outside (or not at all).
+- **<a href="#5.2">5.2 Captions Outside</a><a name="user-content-5.2"></a>** The example above has captions overlaying the photos. If you don't want this, you can have captions outside, or exclude them entirely.
 
   <a href="http://gospotcheck.com/link-to-demo"><img height="17" src="http://www.gospotcheck.com/images/github-demo-button.png" title="See it in action"></a>
 
@@ -1000,6 +998,8 @@ A little bitty guide whose humble purpose is to expedite front-end development b
 
 - **<a href="#6.3">6.3 Required Fields</a><a name="user-content-6.3"></a>** If a field is required, use the HTML5 `required` flag to trigger browser validation. This will also give special styling to the field in webkit browers.
 
+	It's ok to just type `required` rather than `required="required"` since the former is more concise.
+
   <a href="http://gospotcheck.com/link-to-demo"><img height="17" src="http://www.gospotcheck.com/images/github-demo-button.png" title="See it in action"></a>
   
   **Example**
@@ -1010,9 +1010,9 @@ A little bitty guide whose humble purpose is to expedite front-end development b
   
 	<a href="#table-of-contents">⬆ Back to Top</a>
 	
-- **<a href="#6.4">6.4 Honeypots</a><a name="user-content-6.4"></a>** Spam bots are always out there harvesting emails and filling in forms, sending you useless data. A highly effective way to combat these bots is to include a special field called a **honeypot**. A honeypot is invisible to human users, but spam bots can't tell that it's a special field checked on the server side. If this field is filled out, the form submission fails.
+- **<a href="#6.4">6.4 Honeypots</a><a name="user-content-6.4"></a>** Spam bots are always out there harvesting emails and filling in forms, sending you useless data. A highly effective way to combat these bots is to include a special field called a **honeypot**. A honeypot is invisible to human users, but spam bots mindlessly fill it in. If this field is filled out, a server side script silently rejects the submission.
 
-	The standard markup for a honeypot is shown below. The only pieces that can't be changed are `class="contact-other"` and `name="other"`; otherwise, feel free to omit the label or add other classes, etc.
+	The standard markup for a honeypot is shown below. The only pieces that can't be changed are `class="contact-other"` and `name="other"`; otherwise, feel free to omit the label or add other classes, etc. Place the honeypot code anywhere in your form, as though it were a normal input field.
 	
 	**Example**
 	```html
@@ -1022,11 +1022,11 @@ A little bitty guide whose humble purpose is to expedite front-end development b
 	</div>
 	```
 
-	By itself, the honeypot does nothing. The magic happens on the server side, where PHP checks to see if a field by the name of "other" is filled out. If so, silently reject the submission. Spambots will be none the wiser.
+	By itself, the honeypot does nothing. The magic happens on the server side, where a PHP script checks to see if a field by the name of "other" is filled out. If so, the script silently reject the submission, and the spambot is none the wiser.
   
 	<a href="#table-of-contents">⬆ Back to Top</a>
 	
-- **<a href="#6.5">6.5 Search Forms</a><a name="user-content-6.5"></a>** Drop in a search form by adding the markup below to your page. The framework looks for a submit button following an input with `type="search"` and styles and positions it appropriately.
+- **<a href="#6.5">6.5 Search Forms</a><a name="user-content-6.5"></a>** Easily add a snazzy search form by dropping in the sample code in the example below. The framework looks for a submit button following an input with `type="search"` and styles and positions the input appropriately.
 
   <a href="http://gospotcheck.com/link-to-demo"><img height="17" src="http://www.gospotcheck.com/images/github-demo-button.png" title="See it in action"></a>
   
