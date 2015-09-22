@@ -18,7 +18,7 @@ A little bitty guide whose humble purpose is to expedite front-end development b
 13. [Typography](#typography)
 14. [Hyperlinks](#hyperlinks)
 15. [Animations](#animations)
-16. [Material Icons](#icons)
+16. [Material Icons](#material-icons)
 17. [Utility Classes](#utility)
 
 ## <a name="best-practices"></a>Best Practices
@@ -1424,3 +1424,94 @@ A little bitty guide whose humble purpose is to expedite front-end development b
 	```
 
 <a href="#table-of-contents">⬆ Back to Top</a>
+
+## <a name="utility"></a>Utility Classes
+- **<a href="#16.1">16.1 Utility Classes</a><a name="user-content-16.1"></a>** This framework comes with a handful of "utility" classes that can be applied pretty much anywhere to add a bit of extra ad hoc styling. Here is a current list:
+
+	- align-bottom
+	- align-center
+	- align-left
+	- align-middle
+	- align-right
+	- align-top
+	- bg-cover
+	- caps
+	- caption
+	- flex
+	- float-right
+	- hidden
+	- intro-p
+	- light-text
+	- relative
+	- subtitle
+	- subtle
+	- visible
+
+- **<a href="#17.1.1">17.1.1 Align Bottom</a><a name="user-content-17.1.1"></a>** Applies only to a flexbox (i.e., a container with `display: flex`). Aligns child content to the bottom of the parent.
+
+  <a href="http://gospotcheck.com/link-to-demo"><img height="17" src="http://www.gospotcheck.com/images/github-demo-button.png" title="See it in action"></a>
+  
+	<a href="#table-of-contents">⬆ Back to Top</a>
+
+- **<a href="#17.1.2">17.1.2 Align Center</a><a name="user-content-17.1.2"></a>** Aligns content (including images) to the center.
+
+  <a href="http://gospotcheck.com/link-to-demo"><img height="17" src="http://www.gospotcheck.com/images/github-demo-button.png" title="See it in action"></a>
+  
+	<a href="#table-of-contents">⬆ Back to Top</a>
+
+- **<a href="#17.1.3">17.1.3 Align Left</a><a name="user-content-17.1.3"></a>** This class has two applications: (1) for normal containers, aligns content to the left. (2) For flexbox containers such as `<div class="row">`, aligns child elements to the left (by default, if children of a flexbox parent don't take up the full width of the parent, they will stretch to fill the space).
+
+  <a href="http://gospotcheck.com/link-to-demo"><img height="17" src="http://www.gospotcheck.com/images/github-demo-button.png" title="See it in action"></a>
+  
+	<a href="#table-of-contents">⬆ Back to Top</a>
+
+- **<a href="#17.1.4">17.1.4 Align Middle</a><a name="user-content-17.1.4"></a>** Applies only to a flexbox. Aligns child content to the middle of the parent (i.e., vertical alignment).
+
+  <a href="http://gospotcheck.com/link-to-demo"><img height="17" src="http://www.gospotcheck.com/images/github-demo-button.png" title="See it in action"></a>
+  
+	<a href="#table-of-contents">⬆ Back to Top</a>
+
+- **<a href="#17.1.5">17.1.5 Align Right</a><a name="user-content-17.1.5"></a>** Just like `align-left`, this class has two applications: (1) for normal containers, aligns content to the right. (2) For flexbox containers such as `<div class="row">`, aligns child elements to the right.
+
+  <a href="http://gospotcheck.com/link-to-demo"><img height="17" src="http://www.gospotcheck.com/images/github-demo-button.png" title="See it in action"></a>
+  
+	<a href="#table-of-contents">⬆ Back to Top</a>
+
+- **<a href="#17.1.6">17.1.6 Align Top</a><a name="user-content-17.1.6"></a>** Applies only to a flexible box (i.e., a container with `display: flex`). Aligns child content to the top of the parent.
+
+  <a href="http://gospotcheck.com/link-to-demo"><img height="17" src="http://www.gospotcheck.com/images/github-demo-button.png" title="See it in action"></a>
+  
+	<a href="#table-of-contents">⬆ Back to Top</a>
+
+- **<a href="#17.1.7">17.1.7 Background Cover</a><a name="user-content-17.1.7"></a>** Background images on an element with this class will have `background-size: cover`.
+
+  <a href="http://gospotcheck.com/link-to-demo"><img height="17" src="http://www.gospotcheck.com/images/github-demo-button.png" title="See it in action"></a>
+  
+	<a href="#table-of-contents">⬆ Back to Top</a>
+
+- **<a href="#17.1.8">17.1.8 Capitalize</a><a name="user-content-17.1.8"></a>** Text inside an element with this class will be capitalized.
+
+  <a href="http://gospotcheck.com/link-to-demo"><img height="17" src="http://www.gospotcheck.com/images/github-demo-button.png" title="See it in action"></a>
+  
+	<a href="#table-of-contents">⬆ Back to Top</a>
+
+- **<a href="#17.1.9">17.1.9 Caption</a><a name="user-content-17.1.9"></a>** Text inside an element with this class is lightly grayed and italicized to mimic a photo caption.
+
+  <a href="http://gospotcheck.com/link-to-demo"><img height="17" src="http://www.gospotcheck.com/images/github-demo-button.png" title="See it in action"></a>
+  
+	<a href="#table-of-contents">⬆ Back to Top</a>
+
+
+
+
+
+
+- **<a href="#17.1.1">17.1.1 Align Bottom</a><a name="user-content-17.1.1"></a>** Applies only to a flexible box (i.e., a container with `display: flex`). Aligns child content to the bottom of the parent.
+
+  <a href="http://gospotcheck.com/link-to-demo"><img height="17" src="http://www.gospotcheck.com/images/github-demo-button.png" title="See it in action"></a>
+  
+	<a href="#table-of-contents">⬆ Back to Top</a>
+	
+	
+	
+	
