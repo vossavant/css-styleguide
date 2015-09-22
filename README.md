@@ -591,6 +591,10 @@ A little bitty guide whose humble purpose is to expedite front-end development b
   These are the overwhelming majority of cases, but we may add responsive support for other columns pairs (e.g., 15/85) if required. You can, of course, always add your own rules on a per-project basis. Speaking of responsive...
 
   <a href="#table-of-contents">⬆ Back to Top</a>
+
+- **<a href="#2.2.5">2.2.5 Gutters</a><a name="user-content-2.2.5"></a>** Columns are spaced apart by "gutters", the width of which can be set in the SASS variables file (defaults to `20px`).
+
+  <a href="#table-of-contents">⬆ Back to Top</a>
   
 ## <a name="responsive"></a>Responsive
 - **<a href="#3.1">3.1 Naming Conventions for Breakpoints</a><a name="user-content-3.1"></a>** The styleguide currently comes stocked with 8 breakpoints, which are named after U.S. Army ranks. Most of the breakpoints coincide with iOS device widths:
@@ -1549,7 +1553,56 @@ A little bitty guide whose humble purpose is to expedite front-end development b
   <a href="http://gospotcheck.com/link-to-demo"><img height="17" src="http://www.gospotcheck.com/images/github-demo-button.png" title="See it in action"></a>
   
 	<a href="#table-of-contents">⬆ Back to Top</a>
+
+- **<a href="#17.2">17.2 Additional Spacing</a><a name="user-content-17.2"></a>** In addition to the utility classes above, the framework includes a number of special "spacing" classes that allow you to apply incremental amounts of margin and padding to any element. There are also some classes that remove margin and padding from elements that have them by default.
+
+	While this will be changed in the next version to be more sensible, for now, the base unit is twice the <a href="#2.2.5">gutter width</a> (defaults to `40px`). That is, `margin-top` will apply `margin-top: 40px`, while `margin-half-top` will apply `margin-top: 20px`.
+
+	A complete list of available classes:
 	
+	**Apply the Gutter Width to Any Element**
+	- margin-half-bottom
+	- margin-half-left
+	- margin-half-right
+	- margin-half-top
+	- padding-half-bottom
+	- padding-half-left
+	- padding-half-right
+	- padding-half-top
 	
+	**Apply Twice the Gutter Width to Any Element**
+	- margin-bottom
+	- margin-left
+	- margin-right
+	- margin-top
+	- padding-bottom
+	- padding-left
+	- padding-right
+	- padding-top
 	
+	**Apply 4x the Gutter Width to Any Element**
+	- margin-double-bottom
+	- margin-double-left
+	- margin-double-right
+	- margin-double-top
+	- padding-double-bottom
+	- padding-double-left
+	- padding-double-right
+	- padding-double-top
 	
+	**Remove Spacing From Any Element**
+	- margin-none
+	- margin-none-bottom
+	- margin-none-left
+	- margin-none-right
+	- margin-none-top
+	- padding-none
+	- padding-none-bottom
+	- padding-none-left
+	- padding-none-right
+	- padding-none-top
+	
+	**Example**
+	```html
+	<div class="padding-double-top margin-none-right">...</div>
+	```
