@@ -22,7 +22,7 @@ A little bitty guide whose humble purpose is to expedite front-end development b
 17. [Utility Classes](#utility)
 
 ## <a name="best-practices"></a>Best Practices
-- **<a href="#1.1">1.1 Indentation<a><a name="user-content-1.1"></a>** Call it a personal preference, but the primary author of this styleguide really adores tabs. The commonly-used double space, when combined with nested SASS selectors, can really make it hard to follow what is nested within what. The greater white space of a tab (4 spaces) is preferred.
+- **<a href="#1.1">1.1 Indentation<a><a name="user-content-1.1"></a>** Call it a personal preference, but the primary author of this styleguide really adores tabs. The commonly-used double space, when combined with nested SASS selectors, can make it difficult to follow nested selectors. The larger white space of a tab (4 spaces) is preferred.
 
   **Less Than Ideal**
   ```sass
@@ -48,13 +48,11 @@ A little bitty guide whose humble purpose is to expedite front-end development b
   
   <a href="#table-of-contents">⬆ Back to Top</a>
 
-- **<a href="#1.2">1.2 Line Breaks<a><a name="user-content-1.2"></a>** To improve legibility, always add a line break after a comma-separated list of selectors.
+- **<a href="#1.2">1.2 Line Breaks<a><a name="user-content-1.2"></a>** To improve legibility, always add a line break after a comma-separated list of selectors. For legibility's sake, each selector should also be on its own line.
 
   **Muy Mal**
   ```sass
-  h1, h2, h3 {
-      color: red;
-  }
+  h1, h2, h3 { color: red; margin: 0; }
   ```
   
   **Excellente**
@@ -63,12 +61,13 @@ A little bitty guide whose humble purpose is to expedite front-end development b
   h2,
   h3 {
       color: red;
+      margin: 0;
   }
   ```
   
   <a href="#table-of-contents">⬆ Back to Top</a>
 
-- **<a href="#1.3">1.3 Order of Selectors<a><a name="user-content-1.3"></a>** When writing good SASS, ordering selectors is of paramount importance. It makes things easier to find, which saves oodles of time. The preferred order of selectors is as follows:
+- **<a href="#1.3">1.3 Order of Selectors<a><a name="user-content-1.3"></a>** When writing good SASS, ordering selectors is of paramount importance. Ordering your selectors gives them a predictable location, thus making them easier to find and saving time. The preferred order of selectors is as follows:
 
   - Standard HTML selectors
   - Responsive styles
@@ -165,7 +164,7 @@ A little bitty guide whose humble purpose is to expedite front-end development b
   ```
 
   **Standard HTML Elements**  
-  Should always come first, either in alphabetical order (80% of use cases), or in the order they naturally appear in the markup (as with tables, where `thead` comes first in the markup but after `tbody` in the alphabet).
+  Should always come first, either in alphabetical order (90% of use cases), or in the order they naturally appear in the markup (as with tables, where `thead` comes first in the markup but after `tbody` in the alphabet).
   
   **Responsive Styles**  
   Should immediately follow any styles on the parent element, and be listed from largest breakpoint to smallest (see <a href="#responsive">Responsive</a> for a more detailed discussion).
@@ -203,7 +202,7 @@ A little bitty guide whose humble purpose is to expedite front-end development b
 
   - Always add a brief comment at the top of your SASS file describing the purpose of the file
   - Use comments to organize your SASS; e.g., as headings to blocks of style rules
-  - Use common sense and add comments when the purpose of a selector may not be clear
+  - Use common sense and add comments when the purpose of a selector may be unclear
   - Comments should be preceded with `//` and two line breaks
   - A line break should follow every comment
   
@@ -236,6 +235,98 @@ A little bitty guide whose humble purpose is to expedite front-end development b
 
   <a href="#table-of-contents">⬆ Back to Top</a>
 
+- **<a href="#1.6">1.6 Nesting Selectors<a><a name="user-content-1.6"></a>** While SASS allows you to nest your selectors as deep as that trench in _The Abyss_, you should - for the sake of others - limit your nested levels to no more than 4. If you need to nest beyond that, repeat the selector (see example below).
+
+	**Horible**
+	```sass
+	.outer {
+		margin: 0;
+		
+			.inner {
+					background: #eee;
+					padding: 20px;
+					
+					&.special {
+							display: inherit;
+							
+							&:first-of-type {
+									background: red;
+									
+									&:hover {
+											background: pink;
+											
+											&:after {
+													background: url(arrow.gif);
+													content: "";
+											}
+									}
+							}
+					}
+			}
+	}
+	```
+	
+	**Estupendo**
+	```sass
+	.outer {
+		margin: 0;
+		
+			.inner {
+					background: #eee;
+					padding: 20px;
+					
+					&.special {
+							display: inherit;
+							
+							&:first-of-type {
+									background: red;
+							}
+							
+							&:first-of-type:hover {
+									background: pink;
+							}
+							
+							&:first-of-type:hover:after {
+									background: url(arrow.gif);
+									content: "";
+							}
+					}
+			}
+	}
+	```
+
+  <a href="#table-of-contents">⬆ Back to Top</a>
+  
+- **<a href="#1.7">1.7 Other Best Practices<a><a name="user-content-1.7"></a>** Writing good SASS is also about saving space and being concise where possible. Some other guidelines to follow:
+
+	- Don't include units if the measure is 0; e.g., type `0` and not `0px`
+	- Use shorthand whenever possible (e.g., `margin: 0 0 5px`, `background` vs `background-color`)
+	- Use SASS functions whenever possible (e.g., `transparentize($white-100, 0.5)` vs `rgba(255, 255, 255, 0.5)`)
+	- Don't repeat browser defaults (e.g., there is no need to set `background-repeat: repeat` unless you are overwriting another rule)
+	
+	**Bad**
+	```sass
+	.sunshine {
+		background-color: rgba(255, 175, 35, 0.5);
+		background-image: url(sunshine.png);
+		background-repeat: repeat;
+		border: none;
+		margin-top: 20px;
+		margin-right: 20px;
+	}
+	```
+	
+	**Good**
+	```sass
+	.sunshine {
+		background: transparentize($gsc-yellow, 0.5) url(sunshine.png);
+		border: 0;
+		margin: 20px 20px 0 0;
+	}
+	```
+
+  <a href="#table-of-contents">⬆ Back to Top</a>
+  
 ## <a name="framework"></a>The Framework
 - **<a href="#2.1">2.1 Introduction</a><a name="user-content-2.1"></a>** To ease development, we created our own humble CSS framework. A CSS framework is, at its core, a small set of rules that lets you create columns of content that fit nicely inside a wider parent, which ultimately lets you easily create an endless number of layouts.
 
