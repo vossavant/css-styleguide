@@ -1155,14 +1155,46 @@ A little bitty guide whose humble purpose is to expedite front-end development b
 	<a href="#table-of-contents">⬆ Back to Top</a>
 
 ## <a name="pagers"></a>Pagers
-- **<a href="#12.1">12.1 Introduction</a><a name="user-content-12.1"></a>** Pagers
+- **<a href="#12.1">12.1 Previous / Next Pager</a><a name="user-content-12.1"></a>** This pager is most commonly used on the marketing site (specifically, within the blog) to navigate between pages of blog posts. Aesthetically, they are identical to buttons, but rely instead on a default WordPress class for styling.
+
+  <a href="http://gospotcheck.com/link-to-demo"><img height="17" src="http://www.gospotcheck.com/images/github-demo-button.png" title="See it in action"></a>
+  
+  **Example**
+  ```html
+  <div class="post-links">
+		<a href="#">
+			<i class="material-icons left">chevron_left</i> Older 
+		</a>
+		<a href="#">
+			<i class="material-icons">chevron_right</i> Newer
+		</a>
+	</div>
+  ```
+  
+	<a href="#table-of-contents">⬆ Back to Top</a>
+
+- **<a href="#12.2">12.2 Hero / Carousel Pager</a><a name="user-content-12.1"></a>** Used primarily in hero section on the marketing site (currently, to navigate between features). The style is also used on homepage carousels, but the markup is quite different from the demo linked to below since those carousels rely on a 3rd party JS plugin and are not strictly CSS.
+
+	**Example**
+	```html
+	<div class="width-100">
+		<h3>Sample Pager Section</h3>
+		<p>Nothing to see here, just filling in empty space.</p>
+		<a class="arrow-nav prev" href="#">
+			<i class="material-icons">chevron_left</i>
+		</a>
+		<div class="width-50">
+			<img src="filler.jpg">
+		</div>
+		<a class="arrow-nav next" href="#">
+			<i class="material-icons">chevron_right</i>
+		</a>
+	</div> <!-- // width-100 -->
+	```
 
   <a href="http://gospotcheck.com/link-to-demo"><img height="17" src="http://www.gospotcheck.com/images/github-demo-button.png" title="See it in action"></a>
   
 	<a href="#table-of-contents">⬆ Back to Top</a>
-
-
-
 
 
 
