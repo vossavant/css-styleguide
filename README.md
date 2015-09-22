@@ -235,7 +235,7 @@ A little bitty guide whose humble purpose is to expedite front-end development b
 
   <a href="#table-of-contents">⬆ Back to Top</a>
 
-- **<a href="#1.6">1.6 Nesting Selectors<a><a name="user-content-1.6"></a>** While SASS allows you to nest your selectors as deep as that trench in _The Abyss_, you should - for the sake of others - limit your nested levels to no more than 4. If you need to nest beyond that, repeat the selector (see example below).
+- **<a href="#1.6">1.6 Nesting Selectors<a><a name="user-content-1.6"></a>** While SASS allows you to nest your selectors as deep as that trench in _The Abyss_, you should - for the sake of others - limit your nested levels to no more than 4. If you need to nest beyond that, repeat the selector (see example below). This improves legibility and makes code easier to maintain.
 
 	**Horible**
 	```sass
@@ -299,7 +299,7 @@ A little bitty guide whose humble purpose is to expedite front-end development b
   
 - **<a href="#1.7">1.7 Other Best Practices<a><a name="user-content-1.7"></a>** Writing good SASS is also about saving space and being concise where possible. Some other guidelines to follow:
 
-	- Don't include units if the measure is 0; e.g., type `0` and not `0px`
+	- Don't include units if the measure is 0 (e.g., `0` vs `0px`)
 	- Use shorthand whenever possible (e.g., `margin: 0 0 5px`, `background` vs `background-color`)
 	- Use SASS functions whenever possible (e.g., `transparentize($white-100, 0.5)` vs `rgba(255, 255, 255, 0.5)`)
 	- Don't repeat browser defaults (e.g., there is no need to set `background-repeat: repeat` unless you are overwriting another rule)
@@ -328,11 +328,11 @@ A little bitty guide whose humble purpose is to expedite front-end development b
   <a href="#table-of-contents">⬆ Back to Top</a>
   
 ## <a name="framework"></a>The Framework
-- **<a href="#2.1">2.1 Introduction</a><a name="user-content-2.1"></a>** To ease development, we created our own humble CSS framework. A CSS framework is, at its core, a small set of rules that lets you create columns of content that fit nicely inside a wider parent, which ultimately lets you easily create an endless number of layouts.
+- **<a href="#2.1">2.1 Introduction</a><a name="user-content-2.1"></a>** To ease development, we created our own humble CSS framework. A CSS framework is, at its core, a small set of rules that lets you create columns of content that fit nicely inside a wider parent. Ultimately, this setup allows you to easily create an endless number of layouts.
 
   The framework is admittedly heavy on `<div>` tags, but no more so than other frameworks (I'm looking at _you_, Bootstrap). Ultimately, the extra `<div>` wrappers end up making it easier to create layouts; even though there is more markup than there would be in a custom layout, there is far less custom CSS.
   
-  **Note:** The framework utilizes CSS flexbox vs. floats, so is not compatible with IE < 10.
+  **Note: The framework is heavily dependent on CSS flexbox, which is not compatible with IE < 10.**
 
 - **<a href="#2.2">2.2 Anatomy</a><a name="user-content-2.2"></a>** When building layouts with the framework, you will use three types of wrappers:
   
@@ -340,7 +340,7 @@ A little bitty guide whose humble purpose is to expedite front-end development b
   - An inner "row" wrapper
   - Column wrappers
 
-  There is also an optional fourth "section" wrapper, which lets you create full-width bands of content.
+  There is an optional fourth "section" wrapper, which lets you create full-width bands of content.
   
   **Example**
   ```html
@@ -362,7 +362,7 @@ A little bitty guide whose humble purpose is to expedite front-end development b
   
   <a href="#table-of-contents">⬆ Back to Top</a>
 
-- **<a href="#2.2.1">2.2.1 Sections</a><a name="user-content-2.2.1"></a>** The outermost wrapper, while not required for the framework to do its thing, is widely used on the current GSC marketing site. It will take a class of `section` and, by itself, just adds some top and bottom padding:
+- **<a href="#2.2.1">2.2.1 Sections</a><a name="user-content-2.2.1"></a>** The outermost wrapper, while not required for the framework to do its thing, is widely used on the current GSC marketing site. Standing alone, this wrapper just adds some top and bottom padding:
 
   ```html
   <div class="section"> ... </div>
@@ -378,7 +378,7 @@ A little bitty guide whose humble purpose is to expedite front-end development b
   - <a href="#user-content-2.2.1.7">primary-cta</a>
   - <a href="#user-content-2.2.1.8">topo</a>
 
-- **<a href="#2.2.1.1">2.2.1.1 Angled Sections</a><a name="user-content-2.2.1.1"></a>** While somewhat buggy (text can appear blurry in some browsers), this type of section yields some cool visual effects. If you're tired of straight lines, try some angles.
+- **<a href="#2.2.1.1">2.2.1.1 Angled Sections</a><a name="user-content-2.2.1.1"></a>** While somewhat buggy (in some browsers, text within angled sections can appear blurry), this type of section yields some unusual visuals. If you're tired of straight lines, try some angles.
 
   **Examples**
   ```html
@@ -426,7 +426,7 @@ A little bitty guide whose humble purpose is to expedite front-end development b
 
   <a href="#table-of-contents">⬆ Back to Top</a>
   
-- **<a href="#2.2.1.3">2.2.1.3 Gradient Section</a><a name="user-content-2.2.1.3"></a>** Creates a section with a subtle, gray gradient background. Can also be combined with `class="dark"` to create a dark gradient.
+- **<a href="#2.2.1.3">2.2.1.3 Gradient Section</a><a name="user-content-2.2.1.3"></a>** Creates a section with a subtle gray gradient background. Can also be combined with `class="dark"` to create a dark gradient.
 
   **Examples**
   ```html
@@ -445,7 +445,7 @@ A little bitty guide whose humble purpose is to expedite front-end development b
 
   <a href="#table-of-contents">⬆ Back to Top</a>
   
-- **<a href="#2.2.1.4">2.2.1.4 Hero Sections</a><a name="user-content-2.2.1.4"></a>** Creates a hero section, which should be used to introduce a page. The default hero takes up the full height of the viewport, though you can specify varying heights (as a % of the viewport):
+- **<a href="#2.2.1.4">2.2.1.4 Hero Sections</a><a name="user-content-2.2.1.4"></a>** Creates a hero section. A hero is an introductory section that typically takes up a large portion of the screen, and is used to say "Hey! This is what this page is about!" The default hero takes up the full height of the viewport, but you can specify varying heights (as a % of the viewport):
 
   - three-quarter
   - two-third
@@ -570,7 +570,7 @@ A little bitty guide whose humble purpose is to expedite front-end development b
   <div class="wrap"> ... </div>
   ```
   
-  This will center your content and give it a maximum width (default is 960px but can be adjusted in your SASS variables file). You can extend this width to 125% of the default by adding a class of `wide`, like so:
+  This will center your content and give it a maximum width (the default is `960px` but can be adjusted in your SASS variables file). You can extend this width to 125% of the default by adding a class of `wide`, like so:
   
   ```html
   <div class="wrap wide"> ... </div>
@@ -597,7 +597,7 @@ A little bitty guide whose humble purpose is to expedite front-end development b
   </div>
   ```
   
-  The example above uses the `align-center` utility class, which is discussed in <a href="#">Utility Classes</a>.
+  The example above uses the `align-center` utility class, which is discussed in <a href="#utility">Utility Classes</a>.
 
   <a href="http://gospotcheck.com/link-to-demo"><img height="17" src="http://www.gospotcheck.com/images/github-demo-button.png" title="See it in action"></a>
 
@@ -672,18 +672,18 @@ A little bitty guide whose humble purpose is to expedite front-end development b
   <a href="http://gospotcheck.com/link-to-demo"><img height="17" src="http://www.gospotcheck.com/images/github-demo-button.png" title="See it in action"></a>
 
   <a href="#table-of-contents">⬆ Back to Top</a>
+
+- **<a href="#2.2.4.2">2.2.4.2 Gutters</a><a name="user-content-2.2.4.2"></a>** Rather than have columns butting right up next to each other, the framework provides for some space between them. This space, called the _gutter_, defaults to `20px` and can be adjusted in your SASS variables file.
+
+  <a href="#table-of-contents">⬆ Back to Top</a>
   
-- **<a href="#2.2.4.2">2.2.4.2 Responsive</a><a name="user-content-2.2.4.2"></a>** A word of caution to those who want to use what I'll call "non-standard" column widths together. The columns will probably look bad on smaller screens. Presently, the framework only supports responsive for the following column "pairs":
+- **<a href="#2.2.4.3">2.2.4.3 Responsive</a><a name="user-content-2.2.4.3"></a>** A word of caution to those who want to use what I'll call "non-standard" column widths together. The columns will probably look bad on smaller screens. Presently, the framework only supports responsive for the following column "pairs":
 
   - 25/75
   - 33/66
   - 50/50
 
   These are the overwhelming majority of cases, but we may add responsive support for other columns pairs (e.g., 15/85) if required. You can, of course, always add your own rules on a per-project basis. Speaking of responsive...
-
-  <a href="#table-of-contents">⬆ Back to Top</a>
-
-- **<a href="#2.2.5">2.2.5 Gutters</a><a name="user-content-2.2.5"></a>** Columns are spaced apart by "gutters", the width of which can be set in the SASS variables file (defaults to `20px`).
 
   <a href="#table-of-contents">⬆ Back to Top</a>
   
