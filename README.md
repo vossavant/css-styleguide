@@ -242,27 +242,27 @@ A little bitty guide whose humble purpose is to expedite front-end development b
 	.outer {
 		margin: 0;
 		
-			.inner {
-					background: #eee;
-					padding: 20px;
+		.inner {
+			background: #eee;
+			padding: 20px;
+			
+			&.special {
+				display: inherit;
+				
+				&:first-of-type {
+					background: red;
 					
-					&.special {
-							display: inherit;
-							
-							&:first-of-type {
-									background: red;
-									
-									&:hover {
-											background: pink;
-											
-											&:after {
-													background: url(arrow.gif);
-													content: "";
-											}
-									}
-							}
+					&:hover {
+						background: pink;
+						
+						&:after {
+							background: url(arrow.gif);
+							content: "";
+						}
 					}
+				}
 			}
+		}
 	}
 	```
 	
@@ -271,27 +271,27 @@ A little bitty guide whose humble purpose is to expedite front-end development b
 	.outer {
 		margin: 0;
 		
-			.inner {
-					background: #eee;
-					padding: 20px;
-					
-					&.special {
-							display: inherit;
-							
-							&:first-of-type {
-									background: red;
-							}
-							
-							&:first-of-type:hover {
-									background: pink;
-							}
-							
-							&:first-of-type:hover:after {
-									background: url(arrow.gif);
-									content: "";
-							}
-					}
+		.inner {
+			background: #eee;
+			padding: 20px;
+			
+			&.special {
+				display: inherit;
+				
+				&:first-of-type {
+					background: red;
+				}
+				
+				&:first-of-type:hover {
+					background: pink;
+				}
+				
+				&:first-of-type:hover:after {
+					background: url(arrow.gif);
+					content: "";
+				}
 			}
+		}
 	}
 	```
 
