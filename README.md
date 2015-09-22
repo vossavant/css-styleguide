@@ -1196,35 +1196,8 @@ A little bitty guide whose humble purpose is to expedite front-end development b
   
 	<a href="#table-of-contents">⬆ Back to Top</a>
 
-
-
-
-
-
-- **<a href="#6.1">6.1 Introduction</a><a name="user-content-6.1"></a>** Blah
-
-  <a href="http://gospotcheck.com/link-to-demo"><img height="17" src="http://www.gospotcheck.com/images/github-demo-button.png" title="See it in action"></a>
-  
-	<a href="#table-of-contents">⬆ Back to Top</a>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 ## <a name="typography"></a>Typography
-- **<a href="#3.1">3.1 Headings</a><a name="user-content-3.1"></a>** GoSpotCheck utilizes `<h1>` to `<h5>` tags. The `<h6>` tag isn’t used because it’s the HTML equivalent of a dewclaw. Generally speaking, each heading should be used as such:
+- **<a href="#13.1">13.1 Headings</a><a name="user-content-13.1"></a>** GoSpotCheck utilizes `<h1>` to `<h5>` tags. The `<h6>` tag isn’t used because it’s the HTML equivalent of a dewclaw. Generally speaking, each heading should be used as such:
 
   - `<h1>` Introduces the entire page. There should only be one `<h1>` per page.
   - `<h2>` Introduces a major section of content.
@@ -1255,7 +1228,7 @@ A little bitty guide whose humble purpose is to expedite front-end development b
   
   <a href="#table-of-contents">⬆ Back to Top</a>
 
-- **<a href="#3.2">3.2 Body Text</a><a name="user-content-3.2"></a>** Body text includes any non-heading text (e.g., paragraphs and lists).
+- **<a href="#13.2">13.2 Body Text</a><a name="user-content-13.2"></a>** Body text includes any non-heading text (e.g., paragraphs and lists).
 
   **Default Styling**
   - Unless body text appears on a dark background, it should be `#666`.
@@ -1264,8 +1237,10 @@ A little bitty guide whose humble purpose is to expedite front-end development b
   
   <a href="http://gospotcheck.com/link-to-demo"><img height="17" src="http://www.gospotcheck.com/images/github-demo-button.png" title="See it in action"></a>
 
+<a href="#table-of-contents">⬆ Back to Top</a>
+
 ## <a name="hyperlinks"></a>Hyperlinks
-- **<a href="#7.1">7.1 Linked Text</a><a name="user-content-7.1"></a>** When adding a hyperlink to the page, be sure to highlight the appropriate text in your link. A link should make sense by itself; that is, if you only knew the link text and did not have any of the surrounding sentence, you could guess where the link would take you.
+- **<a href="#14.1">14.1 Linked Text</a><a name="user-content-14.1"></a>** When adding a hyperlink to the page, be sure to highlight the appropriate text in your link. A link should make sense by itself; that is, if you only knew the link text and did not have any of the surrounding sentence, you could guess where the link would take you.
 
   **Bad** _(standing alone, the linked text is vague)_
   ```html
@@ -1278,13 +1253,15 @@ A little bitty guide whose humble purpose is to expedite front-end development b
   ```
   <a href="#table-of-contents">⬆ Back to Top</a>
   
-- **<a href="#7.2">7.2 Styling</a><a name="user-content-7.2"></a>** Links should always be **bold** and colored <a href="#1.2">GSC Blue</a> (`#00bdff`). On hover, links should darken to GSC Dark Blue (`#0097d4`) and be underlined.
+- **<a href="#14.2">14.2 Styling</a><a name="user-content-14.2"></a>** In general, links should be **bold** and colored GSC Blue (`#00bdff`). On hover, links should darken to GSC Dark Blue (`#0097d4`) and be underlined, or otherwise have some visible change that clearly indicates the text is a clickable link. One popular alternative is to give the link a subtle background color on hover.
+
+	These guidelines can be adjusted ad hoc; for example, sometimes you want to link a header, and it would look better to leave the header a dark color. This is fine, provided there is a clear hover effect. When in doubt, remember that it's best to only link things that users would expect to be linked (titles to blog posts, for instance).
 
   <a href="http://gospotcheck.com/link-to-demo"><img height="17" src="http://www.gospotcheck.com/images/github-demo-button.png" title="See it in action"></a>
 
   <a href="#table-of-contents">⬆ Back to Top</a>
   
-- **<a href="#7.3">7.3 Opening in a New Tab</a><a name="user-content-7.3"></a>** With few exceptions, **a link should never open in a new tab**. This behavior takes control away from the user, which is almost never a good idea. There are two allowed exceptions:
+- **<a href="#14.3">14.3 Opening in a New Tab</a><a name="user-content-14.3"></a>** With few exceptions, **a link should never open in a new tab**. This behavior takes control away from the user, which is usually not a good idea. There are two allowed exceptions:
   
   - When linking directly to a file (almost never applicable, since the browser handles file downloads).
   - When following the link would interrupt an ongoing process (e.g., linking to the privacy policy inside of a lightbox where a user is completing a form).
@@ -1299,17 +1276,12 @@ A little bitty guide whose humble purpose is to expedite front-end development b
 
   <a href="#table-of-contents">⬆ Back to Top</a>
 
-## <a name="alert-boxes"></a>Alert Boxes
-- **<a href="#9.1">9.1 Alert Boxes...</a><a name="user-content-9.1"></a>** Alert boxes are notification bars generally only used for contact forms and on the app dashboard...
+## <a name="animations"></a>Animations
+- **<a href="#15.1">15.1 Introduction</a><a name="user-content-15.1"></a>** A whole boatload of CSS animations are built into this framework, ready to use, by simply adding a couple of classes. The great majority of the animations are lifted from <a href="https://daneden.github.io/animate.css/">Daniel Eden's Animate.css</a>. Some of the less-likely-to-be-used animations are stripped out, and other custom animations added in, but the bulk of the _Animate.css_ animations are available.
 
   <a href="#table-of-contents">⬆ Back to Top</a>
 
-## <a name="animations"></a>CSS Animations
-- **<a href="#11.1">11.1 Introduction</a><a name="user-content-11.1"></a>** A whole boatload of CSS animations are built into this framework, ready to use, by simply adding a couple of classes. The great majority of the animations are lifted from Daniel Eden's <a href="https://daneden.github.io/animate.css/">Animate.css</a>. Some of the less-likely-to-be-used animations are stripped out, and other custom animations added in, but the bulk of the _Animate.css_ animations are available.
-
-  <a href="#table-of-contents">⬆ Back to Top</a>
-
-- **<a href="#11.2">11.2 Animations</a><a name="user-content-11.2"></a>** To animate anything, simply add the class `animated` to it, along with one of the following classes, which corresponds to a particular animation:
+- **<a href="#15.2">15.2 Animations</a><a name="user-content-15.2"></a>** To animate anything, simply add the class `animated` to it, along with one of the following classes, which corresponds to a particular animation:
 
   - `bounce`
   - `flash`
@@ -1375,10 +1347,12 @@ A little bitty guide whose humble purpose is to expedite front-end development b
   - `rollIn`
   - `rollOut`
   - `throb`
+
+  <a href="http://gospotcheck.com/link-to-demo"><img height="17" src="http://www.gospotcheck.com/images/github-demo-button.png" title="See it in action"></a>
   
   <a href="#table-of-contents">⬆ Back to Top</a>
 
-- **<a href="#11.2">11.2 Looping Animations</a><a name="user-content-11.2"></a>** By default, the animation will run once. You can set it to run endlessly by adding the `infinite` class.
+- **<a href="#15.3">15.3 Looping Animations</a><a name="user-content-15.3"></a>** By default, an animation will run once. You can set it to run endlessly by adding the `infinite` class.
 
   <a href="https://daneden.github.io/animate.css/"><img height="17" src="http://www.gospotcheck.com/images/github-demo-button.png" title="See it in action"></a>
   
@@ -1389,12 +1363,12 @@ A little bitty guide whose humble purpose is to expedite front-end development b
 
   <a href="#table-of-contents">⬆ Back to Top</a>
 
-- **<a href="#11.3">11.3 Animating on Scroll</a><a name="user-content-11.3"></a>** If you don't want your CSS animation to run right away, you can add a special class, `animate-on-scroll`, to any element, which will cause the animation to be delayed until the element is scrolled into view.
+- **<a href="#15.4">15.4 Animating on Scroll</a><a name="user-content-15.4"></a>** If you don't want your CSS animation to run right away, you can add a special class, `animate-on-scroll`, to any element. This will cause the animation to be delayed until the element is scrolled into view.
 
   <a href="https://daneden.github.io/animate.css/"><img height="17" src="http://www.gospotcheck.com/images/github-demo-button.png" title="See it in action"></a>
   
   **Specifying Animations**  
-  The element to be animated should _not_ have the `animated` class on it; this is added by JavaScript when the element is scrolled into view. You _will_, however, need to add a `data-animation` attribute, specifying which animation to run. The animation should be set to one of the animation names <a href="#11.1">listed above</a>
+  The element to be animated should _not_ have the `animated` class on it; this is added by JavaScript when the element is scrolled into view. You _will_, however, need to add a `data-animation` attribute, specifying which animation to run. The animation should be set to one of the animation names <a href="#15.2">listed above</a>
   
   **Delaying Animations**  
   If you want to delay the animation, you can add a `data-animation-delay` attribute. This attribute should be specified in milliseconds (1000ms = 1 second).
