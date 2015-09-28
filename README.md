@@ -1109,16 +1109,15 @@ A little bitty guide whose humble purpose is to expedite front-end development b
 	```html
 	<p class="message info visible">Be sure to enter your email to receive our special offers</p>
 	```
-
-  <a href="http://gospotcheck.com/link-to-demo"><img height="17" src="http://www.gospotcheck.com/images/github-demo-button.png" title="See it in action"></a>
   
 	<a href="#table-of-contents">⬆ Back to Top</a>
 
-- **<a href="#8.4">8.4 Other Styles</a><a name="user-content-8.4"></a>** Alerts are not only hidden, but also quite plain by default. Jazz 'em up by adding one of three classes:
+- **<a href="#8.4">8.4 Other Styles</a><a name="user-content-8.4"></a>** Alerts are not only hidden, but also quite plain by default. Jazz 'em up by adding one of four classes:
 
 	- gradient
 	- icon
 	- no-border
+	- rounded
 
   <a href="http://gospotcheck.com/link-to-demo"><img height="17" src="http://www.gospotcheck.com/images/github-demo-button.png" title="See it in action"></a>
   
@@ -1127,7 +1126,8 @@ A little bitty guide whose humble purpose is to expedite front-end development b
 	<p class="message gradient">I have a subtle gradient background</p>
 	<p class="message info icon">I have a snazzy info icon to the left</p>
 	<p class="message no-border">I don't have any border</p>
-	<p class="message no-border gradient">I am so totally jazzed up</p>
+	<p class="message rounded">I have rounded edges</p>
+	<p class="message no-border rounded gradient">I am so totally jazzed up</p>
 	```
 	
 	<a href="#table-of-contents">⬆ Back to Top</a>
@@ -1168,12 +1168,14 @@ A little bitty guide whose humble purpose is to expedite front-end development b
 
 - **<a href="#9.3">9.3 Animated Kicker</a><a name="user-content-9.3"></a>** You can animate your kicker by using any of the <a href="#user-content-15.2">supported animations</a>. Add the animation name you want to use as a `data-animation` attribute to your kicker.
 
+	**NOTE: This feature is buggy and still under development.**
+
   <a href="http://gospotcheck.com/link-to-demo"><img height="17" src="http://www.gospotcheck.com/images/github-demo-button.png" title="See it in action"></a>
   
 	<a href="#table-of-contents">⬆ Back to Top</a>
 
 ## <a name="lists"></a>Lists
-- **<a href="#10.1">10.1 Types of Lists</a><a name="user-content-3.1"></a>** Default lists are bulleted and have a bit of indentation, but are otherwise tragically un-sexy. Dress up your lists with one of three classes:
+- **<a href="#10.1">10.1 Types of Lists</a><a name="user-content-10.1"></a>** Default lists are bulleted and have a bit of indentation, but are otherwise tragically un-sexy. Dress up your lists with one of three classes:
 
 	- bulleted
 	- icon
