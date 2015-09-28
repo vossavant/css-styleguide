@@ -502,7 +502,7 @@ A little bitty guide whose humble purpose is to expedite front-end development b
 
   <a href="#table-of-contents">⬆ Back to Top</a>
 
-- **<a href="#2.2.1.6">2.2.1.6 Orance Section</a><a name="user-content-2.2.1.6"></a>** Creates a section with an orange background and light text. This name will eventually be changed to `secondary` since orange is the secondary GSC color (after blue).
+- **<a href="#2.2.1.6">2.2.1.6 Orange Section</a><a name="user-content-2.2.1.6"></a>** Creates a section with an orange background and light text. This name will eventually be changed to `secondary` since orange is the secondary GSC color (after blue).
 
   **Examples**
   ```html
