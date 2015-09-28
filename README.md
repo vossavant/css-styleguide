@@ -1270,7 +1270,7 @@ A little bitty guide whose humble purpose is to expedite front-end development b
   
 	<a href="#table-of-contents">⬆ Back to Top</a>
 
-- **<a href="#12.2">12.2 Hero / Carousel Pager</a><a name="user-content-12.1"></a>** Used primarily in the hero section on the marketing site (currently, to navigate between features).
+- **<a href="#12.2">12.2 Hero / Carousel Pager</a><a name="user-content-12.2"></a>** Used primarily in the hero section on the marketing site (currently, to navigate between features).
 
 	**Example**
 	```html
@@ -1445,7 +1445,7 @@ A little bitty guide whose humble purpose is to expedite front-end development b
   - `rollOut`
   - `throb`
 
-  <a href="http://gospotcheck.com/link-to-demo"><img height="17" src="http://www.gospotcheck.com/images/github-demo-button.png" title="See it in action"></a>
+  <a href="https://daneden.github.io/animate.css/"><img height="17" src="http://www.gospotcheck.com/images/github-demo-button.png" title="See it in action"></a>
   
   <a href="#table-of-contents">⬆ Back to Top</a>
 
@@ -1491,6 +1491,8 @@ A little bitty guide whose humble purpose is to expedite front-end development b
 
 - **<a href="#16.2">16.2 Implementation</a><a name="user-content-16.2"></a>** You can add an icon practically anywhere with a short bit of code. The wrapper need not be an `<i>` tag, but that is the standard. The icon font relies on the `material-icons` class to load up the base styles, and then uses jiggery pokery (i.e., <a href="http://google.github.io/material-design-icons/#using-the-icons-in-html">_ligatures_</a>) to convert the text within the `<i>` tags to a glyph.
 
+  <a href="https://daneden.github.io/animate.css/"><img height="17" src="http://www.gospotcheck.com/images/github-demo-button.png" title="See it in action"></a>
+  
 	**First, Load the Styles**
 	```html
 	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -1661,7 +1663,7 @@ A little bitty guide whose humble purpose is to expedite front-end development b
 	- padding-half-bottom
 	- padding-half-left
 	- padding-half-right
-	- padding-half-top
+	- padding-half-top  
 
 	**Apply Twice the Gutter Width to Any Element**
 	- margin-bottom
@@ -1671,7 +1673,7 @@ A little bitty guide whose humble purpose is to expedite front-end development b
 	- padding-bottom
 	- padding-left
 	- padding-right
-	- padding-top
+	- padding-top  
 
 	**Apply 4x the Gutter Width to Any Element**
 	- margin-double-bottom
@@ -1681,7 +1683,7 @@ A little bitty guide whose humble purpose is to expedite front-end development b
 	- padding-double-bottom
 	- padding-double-left
 	- padding-double-right
-	- padding-double-top
+	- padding-double-top  
 
 	**Remove Spacing From Any Element**
 	- margin-none
@@ -1693,7 +1695,7 @@ A little bitty guide whose humble purpose is to expedite front-end development b
 	- padding-none-bottom
 	- padding-none-left
 	- padding-none-right
-	- padding-none-top
+	- padding-none-top  
 
 	**Example**
 	```html
