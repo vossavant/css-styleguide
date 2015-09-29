@@ -1,0 +1,9 @@
+//
+// GSC Styleguide
+// Fonts
+//
+
+// params: font name, filename, SVG namespace
+@include fontFace("Gotham Book", "gothamhtf-book-webfont", "gothambook");
+@include fontFace("Gotham Medium", "gothamhtf-medium-webfont", "gothammedium");
+@include fontFace("Gotham Bold", "gotham_htf_bold-webfont", "gothambold");

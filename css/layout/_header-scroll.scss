@@ -1,0 +1,61 @@
+//
+//	GoSpotCheck Styleguide
+//	"Scroll Away" Header Styles
+//
+//	Styles the header to remain fixed at top of viewport, until scrolled down.
+//	Header reappears when user scrolls back up.
+//
+//	NOTE: right now, this is just a normal header - not fixed
+//	TO DO: make this actually scroll away
+//
+
+header.scroll {
+	@include midrange_gradient($white-0, $white-0, 10%, transparent);
+	box-sizing: border-box;
+	height: $headerHeight + 100px;
+	padding: 40px 4% 60px;
+	position: absolute;
+	// position: fixed;
+	width: 100%;
+	z-index: 3;
+
+	li {
+		float: left;
+		list-style: none;
+	}
+
+	nav {
+		float: right;
+	}
+}
+
+
+/**
+ *	Responsive
+ */
+
+// give header more breathing room
+@media screen and (max-width: $breakpoint-1024) {
+	header.scroll {
+		height: $headerHeight * 2;
+		padding: 20px 2% 40px;
+	}
+}
+
+//
+@media screen and (max-width: $breakpoint-768) {
+	header.open {
+		padding-bottom: 20px;
+	}
+
+	header.scroll {
+		height: 90px;
+		padding-bottom: 20px;
+		padding-top: 10px;
+
+		nav ul:not(.sub-menu) > li:last-of-type a:after {
+			font-size: 24px;
+			margin: 15px -2px 0px 5px;
+		}
+	}
+}

@@ -1,0 +1,300 @@
+/**
+ *	GoSpotCheck
+ *
+ *	Gallery Styles
+ */
+
+[class*="gallery-"] {
+	@include clearfix();
+
+	> * {
+		float: left;
+		margin-bottom: $gutter-width;
+	}
+
+
+	// Handling Images as Figures
+
+	figcaption {
+		@include transition();
+		background: transparentize($white-0, 0.25);
+		bottom: 0;
+		color: $white-100;
+		font: 12px "Gotham Book", sans-serif;
+		left: 0;
+		padding: $gutter-width / 2;
+		position: absolute;
+		width: 100%;
+
+		&.light {
+			background: transparentize($white-100, 0.25);
+			color: $white-0;
+		}
+
+
+		// If caption precedes an icon
+
+		&:nth-child(2):nth-last-child(2) {
+			float: left;
+			width: auto;
+		}
+
+
+		// Inside caption with icon
+
+		a {
+			display: block;
+			line-height: 18px;
+			padding-top: 2px;
+
+			i {
+				font-size: 18px;
+			}
+		}
+	}
+
+	figure {
+		border-radius: $border-radius;
+		// border-radius: $border-radius $border-radius 0 0;
+		position: relative;
+
+		&:hover {
+			figcaption {
+				padding-bottom: $gutter-width;
+			}
+		}
+	}
+
+
+	// Captions Beneath Images
+
+	&.captions-outside {
+		div {
+			border-radius: 0 0 $border-radius $border-radius;
+			overflow: hidden;
+		}
+
+		figcaption {
+			background: none;
+			color: $white-25;
+			padding: $gutter-width / 2 0 0;
+			position: static;
+		}
+
+		i {
+			font-size: 14px;
+			margin: 2px 0 0 5px;
+		}
+
+		p {
+			float: right;
+			font-size: 14px;
+			font-weight: bold;
+			margin: 8px 0 0;
+		}
+	}
+}
+
+
+// 2 items per row
+.gallery-2 {
+	> * {
+		width: 49.153%;;
+
+		&:nth-child(2n+1) {
+			margin-right: -100%;
+			clear: both;
+			margin-left: 0px;
+		}
+
+		&:nth-child(2n+2) {
+			margin-left: 50.8475%;
+			margin-right: -100%;
+			clear: none;
+		}
+	}
+
+	figcaption {
+		font-size: 14px;
+	}
+}
+
+
+// 3 items per row
+.gallery-3 {
+	> * {
+		margin-right: -100%;
+		width: 32.203%;
+
+		/**
+		 *	Unfortunately, SASS does not allow @extend within media queries,
+		 *	so we can't just write @extend .gallery-2 here. If SASS ever fixes this,
+		 *	you can modify the code here.
+		 */
+		@include respond-to('lieutenant') {
+			width: 49.153%;
+
+			&:nth-child(2n+1) {
+				clear: both;
+				margin-left: 0px;
+				margin-right: -100%;
+			}
+
+			&:nth-child(2n+2) {
+				clear: none;
+				margin-left: 50.8475%;
+				margin-right: -100%;
+			}
+		}
+
+		@include respond-to('sergeant') {
+			margin-left: 0 !important;
+			margin-right: 0 !important;
+			width: 100%;
+		}
+
+
+		// 3 across only on 769px or greater
+		@media screen and (min-width: 769px) {
+			&:nth-child(3n+1) {
+				clear: both;
+				margin-left: 0px;
+			}
+
+			&:nth-child(3n+2) {
+				clear: none;
+				margin-left: 33.8983%;
+			}
+
+			&:nth-child(3n+3) {
+				clear: none;
+				margin-left: 67.7966%;
+			}
+		}
+	}
+}
+
+
+// 4 items per row
+.gallery-4 {
+	> * {
+		margin-right: -100%;
+		width: 23.729%;
+
+		/**
+		 *	Unfortunately, SASS does not allow @extend within media queries,
+		 *	so we can't just write @extend .gallery-3 here. If SASS ever fixes this,
+		 *	you can modify the code here.
+		 */
+		@include respond-to('colonel') {
+			width: 32.203%;
+
+			&:nth-child(3n+1) {
+				clear: both;
+				margin-left: 0px;
+				margin-right: -100%;
+			}
+
+			&:nth-child(3n+2) {
+				clear: none;
+				margin-left: 33.8983%;
+				margin-right: -100%;
+			}
+
+			&:nth-child(3n+3) {
+				clear: none;
+				margin-left: 67.7966%;
+				margin-right: -100%;
+			}
+		}
+
+
+		/**
+		 *	Unfortunately, SASS does not allow @extend within media queries,
+		 *	so we can't just write @extend .gallery-2 here. If SASS ever fixes this,
+		 *	you can modify the code here.
+		 */
+		@include respond-to('lieutenant') {
+			width: 49.153%;
+
+			&:nth-child(2n+1) {
+				clear: both;
+				margin-left: 0px;
+				margin-right: -100%;
+			}
+
+			&:nth-child(2n+2) {
+				clear: none;
+				margin-left: 50.8475%;
+				margin-right: -100%;
+			}
+		}
+
+		@include respond-to('captain') {
+			margin-left: 0 !important;
+			margin-right: 0 !important;
+			width: 100%;
+		}
+
+		// 4 across only on 1025px or greater
+		@media screen and (min-width: 1025px) {
+			&:nth-child(4n+1) {
+				clear: both;
+				margin-left: 0px;
+			}
+
+			&:nth-child(4n+2) {
+				clear: none;
+				margin-left: 25.4237%;
+			}
+
+			&:nth-child(4n+3) {
+				clear: none;
+				margin-left: 50.8475%;
+			}
+
+			&:nth-child(4n+4) {
+				clear: none;
+				margin-left: 76.2712%;
+			}
+		}
+	}
+}
+
+
+// 5 items per row
+.gallery-5 {
+	> * {
+		width: 18.6441%;
+
+		&:nth-child(5n+1) {
+			margin-right: -100%;
+			clear: both;
+			margin-left: 0px;
+		}
+
+		&:nth-child(5n+2) {
+			margin-left: 20.339%;
+			margin-right: -100%;
+			clear: none;
+		}
+
+		&:nth-child(5n+3) {
+			margin-left: 40.678%;
+			margin-right: -100%;
+			clear: none;
+		}
+
+		&:nth-child(5n+4) {
+			margin-left: 61.0169%;
+			margin-right: -100%;
+			clear: none;
+		}
+
+		&:nth-child(5n+5) {
+			margin-left: 81.3559%;
+			margin-right: -100%;
+			clear: none;
+		}
+	}
+}

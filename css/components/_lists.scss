@@ -1,0 +1,175 @@
+/**
+ *	GoSpotCheck
+ *	List Styles
+ */
+
+ul {
+	&:last-child {
+		margin-bottom: 0;
+	}
+
+	
+	// Icon Over Text
+
+	&.icon {
+		font: 18px "Gotham Medium";
+		list-style: none;
+		padding: 0;
+
+		&[class*="gallery-"] > * {
+			margin-bottom: $gutter-width * 3;
+		}
+
+		&.gallery-2 > *:last-child,
+		&.gallery-2 > *:nth-last-child(2) {
+			margin-bottom: 0;
+		}
+
+		h4:after {
+			border-bottom: 3px solid $white-25;
+			content: "";
+			display: block;
+			margin: 0 auto $gutter-width / 1.25;
+			padding-top: $gutter-width / 1.25;
+			width: 25%;
+		}
+
+		i {
+			font-size: 48px;
+
+			+ h4 {
+				margin-top: $gutter-width / 2;
+			}
+		}
+
+		img {
+			@include transition(transform);
+			height: 64px;
+		}
+
+		li {
+			@include transition();
+			border-radius: $border-radius;
+			cursor: pointer;
+			display: inline-block;
+			line-height: normal;
+			padding: $gutter-width;
+
+			&:hover {
+				background: $white-100;
+
+				a {
+					background: $white-0;
+					color: $white-100;
+				}
+
+				img {
+					transform: scale(1.05);
+				}
+			}
+		}
+
+		p {
+			color: $white-50;
+			font: 14px/1.5 sans-serif;
+			margin: 1em 0;
+		}
+
+		// TO DO: the commented out bit here affects the solutions main page hero icon list - update
+		// a {
+		// 	&:hover i {
+		// 		transform: translateY(-5px);
+		// 	}
+		// }
+
+		// i {
+		// 	@include transition(transform);
+		// 	display: inline-block;
+		// 	font-size: 40px;
+		// 	margin-bottom: 5px;
+		// 	width: 100%;
+		// }
+
+		// p {
+		// 	font: 14px/1.333 sans-serif;
+		// 	margin: 1em 0 0;
+		// }
+	}
+
+
+	// Inline List Items
+
+	&.inline {
+		margin: 0 -1 * $gutter-width;
+
+		li {
+			display: inline-block;
+			padding: 0 $gutter-width;
+		}
+	}
+
+
+	// Lists with Underlined, Stacked Items
+
+	&.stacked {
+		padding-left: 0;
+
+		
+		// Add an arrow icon to each list item
+
+		&.bullet li {
+			&:before {
+				@include transition();
+				@include material_icons(18px, 'keyboard_arrow_right');
+				float: left;
+				margin: $gutter-width / 2 $gutter-width / 4 0 0;
+			}
+
+			&:hover {
+				&:before {
+					margin-left: $gutter-width / 4;
+					margin-right: 0;
+				}
+
+				a {
+					padding-left: $gutter-width / 4;
+				}
+			}
+		}
+
+		a {
+			@include clearfix();
+			@include flex();
+			align-items: center;
+			line-height: 1.25;
+			padding: $gutter-width / 2 0;
+		}
+
+		img {
+			width: 20%;
+
+			+ span {
+				padding-left: $gutter-width;
+				width: 80%;
+			}
+		}
+
+		li {
+			@include transition();
+			border-bottom: 1px solid $white-85;
+			list-style: none;
+
+			&:hover {
+				background: $white-100;
+				
+				a {
+					padding-left: $gutter-width / 2;
+				}
+			}
+
+			&:last-child {
+				border: 0;
+			}
+		}
+	}
+}

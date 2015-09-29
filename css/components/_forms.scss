@@ -1,0 +1,147 @@
+/**
+ *	GoSpotCheck
+ *
+ *	Form Styles - styles for forms and form elements
+ *	TO DO: inherited from old styles; update indentation, clean unused selectors
+ */
+
+
+form {
+	position: relative;
+
+	// honeypot
+	.contact-other {
+		display: none;
+	}
+
+	.row + .row {
+		margin-top: 0;
+	}
+}
+
+[disabled] {
+	opacity: 0.5;
+
+	&:hover {
+		cursor: default;
+	}
+}
+
+[required] {
+	position: relative;
+
+	&::-webkit-input-placeholder::after {
+		@include transition(opacity);
+		content: 'Required';
+		color: $gsc-red;
+		font-size: 10px;
+		opacity: 0.5;
+		position: absolute;
+		right: $gutter-width / 2;
+		text-transform: uppercase;
+	}
+
+	&:focus::-webkit-input-placeholder::after {
+		opacity: 0.85;
+	}
+}
+
+input,
+select,
+textarea {
+	@include transition(all, 0.3s, ease-in-out);
+	border-radius: 5px;
+	border: 1px solid $white-90;
+	box-sizing: border-box;
+	font: 16px "Helvetica Neue", sans-serif;
+	line-height: $height-button;
+	margin-bottom: $gutter-width;
+	max-width: 100%;
+	min-height: $height-button;
+	padding: 0 $gutter-width / 2;
+	width: 100%;
+
+	&::-webkit-input-placeholder {
+		@include transition(color);
+		color: $white-60;
+	}
+
+	&:focus {
+		// box-shadow: 0 0 5px #66dbff;
+		border-color: $gsc-blue;
+		outline: none;
+
+		&::-webkit-input-placeholder {
+			color: $white-25;
+		}
+	}
+
+	// &:invalid {
+	// 	background-color: lighten($gsc-red, 38%);
+	// 	border: 1px solid $gsc-red;
+	// }
+
+	&[type="search"] {
+		border-radius: $height-button / 2 + 1;
+		box-sizing: border-box;
+		padding: 0px 60px 0px 18px;
+
+		&:focus + .button {
+			font-size: inherit;
+
+			i {
+				font-size: 0;
+			}
+		}
+
+		+ .button {
+			border-radius: 0 $height-button / 2 + 1 $height-button / 2 + 1 0;
+			font-size: 0;
+			height: $height-button + 2;
+			line-height: $height-button + 2;
+			padding: 0px 15px 0 12px;
+			position: absolute;
+			right: 0;
+			top: 0;
+			width: auto;
+
+			i {
+				font-size: 24px;
+				line-height: 36px;
+				margin: 0;
+			}
+		}
+	}
+
+	&.button {
+		border: 0;
+	}
+}
+
+label {
+	display: block;
+	font-weight: bold;
+	margin-bottom: $gutter-width / 2;
+}
+
+select {
+	color: $white-60;
+	height: $height-button + 2;
+	padding-left: 7px;
+
+	option {
+		color: $white-0;
+	}
+}
+
+textarea {
+	height: 120px;
+}
+
+.validation-error {
+	color: $gsc-red;
+	display: none;
+	font-size: 14px;
+	font-style: italic;
+	margin: 0;
+}

@@ -1,0 +1,603 @@
+/**
+ *	GoSpotCheck
+ *	Page Structure
+ */
+
+// .wrapper {
+// 	background: $white-100;
+// 	margin-top: $header-height;
+// }
+
+
+// grid stuff
+
+.wrap {
+	@include clearfix();
+	margin: auto;
+	max-width: $content-width;
+	padding: 0 $gutter-width;
+
+	&.wide {
+		max-width: $content-width * 1.25;
+	}
+}
+
+.row {
+	@include clearfix();
+	display: flex;
+	flex-wrap: wrap;
+	margin: auto -1 * $gutter-width;
+
+	+ .row {
+		margin-top: $gutter-width * 2;
+	}
+}
+
+[class*="width-"] {
+	margin: 0 auto;
+	padding: 0 $gutter-width;
+}
+
+
+// create widths from 5 through 100 at 5 unit intervals
+
+@for $i from 1 through ceil(100/5) {
+	$value: $i * 5;
+	.width-#{$value} {
+		width: percentage(($value/100) - 0.001); // .001 is to make the columns fit in webkit browsers
+	}
+}
+
+
+// responsive
+
+.width-15 {
+	@include respond-to('corporal') {
+		&:first-child:nth-last-child(2) {
+			width: 100%;
+		}
+
+		+ .width-85 {
+			margin-top: $gutter-width;
+			width: 100%;
+		}
+	}
+}
+
+
+.width-20 {
+	@include respond-to('lieutenant') {
+		width: 25%;
+
+		&:last-of-type {
+			margin-top: $gutter-width * 2;
+			width: 50%;
+		}
+	}
+
+	@include respond-to('captain') {
+		width: 33.2%;
+
+		&:nth-last-of-type(2) {
+			margin-top: $gutter-width * 2;
+		}
+	}
+
+	@include respond-to('sergeant') {
+		width: 50%;
+
+		&:nth-child(3) {
+			margin-top: $gutter-width * 2;
+		}
+	}
+
+	@include respond-to('private') {
+		width: 100%;
+
+		&:nth-child(2) {
+			margin-top: $gutter-width * 2;
+		}
+
+		&:last-child {
+			width: 100%;
+		}
+	}
+}
+
+.width-25 {
+	@include respond-to('major') {
+		width: 33.2%;
+
+		&:nth-child(4):last-of-type {
+			margin-top: $gutter-width * 2;
+		}
+
+		+ .width-75 {
+			width: 66.5%;
+		}
+	}
+
+	@include respond-to('captain') {
+		width: 49.86%;
+
+		&:nth-last-of-type(2) {
+			margin-top: $gutter-width * 2;
+		}
+
+		// when this is the first of 2 elements, with the 2nd (presumably) being .width-75
+		&:first-child:nth-last-child(2) {
+			margin-top: 0;
+			width: 33.2%;
+		}
+	}
+
+	@include respond-to('sergeant') {
+		&:first-child:nth-last-child(2) {
+			width: 50%;
+		}
+
+		+ .width-75 {
+			width: 50%;
+		}
+	}
+
+	@include respond-to('corporal') {
+		width: 100%;
+
+		&:nth-child(2) {
+			margin-top: $gutter-width * 2;
+		}
+
+		&:first-child:nth-last-child(2) {
+			width: 100%;
+		}
+
+		+ .width-75 {
+			margin-top: $gutter-width * 2;
+			width: 100%;
+		}
+	}
+}
+
+// fill in the gaps
+
+.width-33 {
+	width: 33.2%; // webkit browsers choke on 33.333
+
+	@include respond-to('major') {
+		.width-75 {
+			width: 100%;
+		}
+	}
+
+	// @include respond-to('captain') {
+	// 	width: 50%;
+
+	// 	&:last-of-type {
+	// 		margin-top: $gutter-width * 2;
+	// 	}
+
+	// 	// when this is the first of 2 elements, with the 2nd (presumably) being .width-66
+	// 	&:first-child:nth-last-child(2) {
+	// 		width: 33.333%;
+	// 	}
+	// }
+
+	// @include respond-to('sergeant') {
+	// 	&:first-child:nth-last-child(2) {
+	// 		width: 50%;
+	// 	}
+
+	// 	+ .width-66 {
+	// 		width: 50%;
+	// 	}
+	// }
+
+	@include respond-to('captain') {
+		width: 100%;
+
+		&:nth-child(2),
+		&:last-child {
+			margin-top: $gutter-width * 2;
+		}
+
+		&:first-child:nth-last-child(2) {
+			width: 100%;
+		}
+
+		+ .width-66 {
+			margin-top: $gutter-width * 2;
+			width: 100%;
+		}
+	}
+}
+
+.width-50 {
+	@include respond-to('captain') {
+		width: 100%;
+
+		&:last-of-type {
+			margin-top: $gutter-width * 2;
+		}
+	}
+}
+
+.width-66 {
+	width: 66.5%; // webkit browsers choke on 66.666
+
+	@include respond-to('captain') {
+		+ .width-33 {
+			margin-top: 0;
+			width: 33.2%;
+		}
+	}
+
+	@include respond-to('sergeant') {
+		// when this is the first of 2 elements, with the 2nd (presumably) being .width-33
+		&:first-child:nth-last-child(2) {
+			width: 49.8%;
+		}
+
+		+ .width-33 {
+			width: 49.8%;
+		}
+	}
+
+	@include respond-to('corporal') {
+		width: 100%;
+
+		&:first-child:nth-last-child(2) {
+			width: 100%;
+		}
+
+		+ .width-33 {
+			margin-top: $gutter-width * 2;
+			width: 100%;
+		}
+	}
+}
+
+.width-75 {
+	@include respond-to('major') {
+		width: 100%;
+		
+		// when this is the first of 2 elements, with the 2nd (presumably) being .width-25
+		&:first-child:nth-last-child(2) {
+			width: 66.5%;
+		}
+
+		+ .width-25 {
+			margin-top: 0;
+			width: 33.2%;
+		}
+	}
+
+	@include respond-to('sergeant') {
+		&:first-child:nth-last-child(2) {
+			width: 50%;
+		}
+
+		+ .width-25 {
+			width: 50%;
+		}
+	}
+
+	@include respond-to('corporal') {
+		&:first-child:nth-last-child(2) {
+			width: 100%;
+		}
+
+		+ .width-25 {
+			margin-top: $gutter-width * 2;
+			width: 100%;
+		}
+	}
+}
+
+.width-80 {
+	@include respond-to('major') {
+		width: 100%;
+	}
+}
+
+.width-125 {
+	margin-left: -12.5%;
+	width: 125%;
+
+	@media screen and (max-width: $content-width * 1.25) {
+		margin-left: 0;
+		width: 100%;
+	}
+}
+
+
+// sections
+
+.section {
+	background: $white-100;
+	padding: $gutter-width * 4 0 $gutter-width * 4 + $gutter-width * 0.4; // add 10% to bottom of section to make it appear evenly spaced
+	position: relative;
+
+	// &:not(.off-white) + .section:not(.off-white) {
+	// 	background: $white-95;
+	// }
+
+
+	// Hero (Banner) Styles
+
+	&.hero {
+		background: url(../images/dev/hero-3.jpg) no-repeat;
+		background-size: cover;
+		height: 100vh;
+		// margin-top: -$header-height;
+
+		@media screen and (max-height: 768px) {
+			min-height: 768px;
+		}
+
+		&.three-quarter {
+			height: 75vh;
+			margin-top: 0;
+
+			@media screen and (max-height: 768px) {
+				min-height: 576px;
+			}
+		}
+
+		&.two-thirds {
+			height: 66.666vh;
+			margin-top: 0;
+
+			@media screen and (max-height: 768px) {
+				min-height: 512px;
+			}
+		}
+
+		&.half {
+			height: 50vh;
+			margin-top: 0;
+
+			@media screen and (max-height: 768px) {
+				min-height: 384px;
+			}
+		}
+
+		&.third {
+			height: 33.333vh;
+			margin-top: 0;
+
+			@media screen and (max-height: 768px) {
+				min-height: 256px;
+			}
+		}
+
+		&.quarter {
+			height: 25vh;
+			margin-top: 0;
+
+			@media screen and (max-height: 768px) {
+				min-height: 192px;
+			}
+		}
+
+		&.fifth {
+			height: 20vh;
+			margin-top: 0;
+
+			@media screen and (max-height: 768px) {
+				min-height: 180px;
+			}
+		}
+
+		img,
+		iframe {
+			max-height: 100%;
+		}
+
+		p {
+			font-size: 20px;
+			line-height: 1.333;
+			margin-top: 0.75em;
+
+			@include respond-to('sergeant') {
+				font-size: 4vw;
+			}
+
+			@include respond-to('private') {
+				font-size: 14px;
+			}
+		}
+
+		.wrap,
+		.row {
+			align-items: center;
+			height: 100%;
+		}
+	}
+
+
+	// Black Background and White Text
+
+	&.dark {
+		background: $white-0;
+		color: $white-100;
+
+		p {
+			color: $white-75;
+		}
+
+		.arrow-nav {
+			color: $white-100;
+		}
+
+		.icon h4 {
+			color: $white-100;
+		}
+
+		.icon li:hover {
+			background: $white-25;
+		}
+	}
+
+
+	// Opposite (probably not necessary)
+
+	// &.light {
+	// 	background-color: $white-100;
+	// }
+
+
+	// Light Gray
+
+	&.off-white {
+		background: $white-95;
+
+		+ .off-white {
+			background: $white-100;
+		}
+	}
+
+
+	// Side-by-side Testimonials
+	
+	&.section-quotes {
+		background: $white-95 !important;
+	}
+
+
+	// Orange
+
+	&.orange {
+		background-color: $gsc-orange;
+		color: $white-100;
+
+		p {
+			color: $white-100;
+		}
+	}
+
+
+	// Subtle Gradient
+	
+	&.gradient {
+		@include midrange_gradient($white-97, $white-97, 30%, $white-90);
+
+		&.dark {
+			@include midrange_gradient($white-25, $white-25, 30%, $white-0);
+		}
+	}
+
+
+	// Topographic Pattern Background
+
+	&.topo {
+		background: transparent;
+		border: 1px solid $white-90;
+		border-width: 1px 0;
+
+		&:before {
+			background: url(../images/topo.svg);
+			background-size: 75%;
+			bottom: 0;
+			content: "";
+			left: 0;
+			opacity: 0.02;
+			position: absolute;
+			right: 0;
+			top: 0;
+			z-index: -1;
+		}
+
+		&[class*="angled"] {
+			background: $white-100;
+		}
+
+		.icon li:hover {
+			background: $white-95;
+		}
+	}
+
+	
+	// Call to Action
+	
+	&.primary-cta {
+		@include simple_gradient(lighten($gsc-blue, 5%), darken($gsc-blue, 5%));
+		color: $white-100;
+		z-index: 3;
+
+		&:not(.light) p {
+			color: $white-100;
+		}
+
+		@include respond-to('major') {
+			padding: $sectionPadding 0;
+		}
+
+		@include respond-to('sergeant') {
+			padding: 40px 0;
+		}
+	}
+
+
+	// Section with Angled Top or Bottom Edge
+
+	&[class*="angled"] {
+		-webkit-backface-visibility: hidden;
+		// background: $white-100;
+		margin: -$sectionOffset 0;
+		// overflow: hidden;
+		// padding: $sectionOffset * 3 0 $sectionOffset * 4.25;
+		padding: $sectionPadding 0;
+
+
+		// Angle Slopes Down (Left > Right)
+
+		&[class*="-down"] {
+			@include skew();
+			padding-bottom: $sectionPadding * 1.5;
+		}
+
+		
+		// Angle Slopes Up (Right > Left)
+		
+		&[class*="-up"] {
+			@include skew(-$sectionAngle);
+			padding: $sectionPadding * 1.5 0;
+
+			&:before {
+				@include skew(3deg);
+			}
+
+			> * {
+				@include skew();
+			}
+
+			@include respond-to('sergeant') {
+				padding: 60px 0;
+			}
+		}
+
+		
+		// Unskew Contents of Angled Section
+		
+		> * {
+			@include skew(-$sectionAngle);
+		}
+	}
+}
+
+
+
+// Special Section for Testimonials
+
+.testimonial {
+	@include midrange_gradient($white-97, $white-97, 30%, $white-90);
+	overflow: visible;
+	padding: 30px 0;
+	z-index: 1;
+
+	img {
+		bottom: 0;
+		position: absolute;
+	}
+}

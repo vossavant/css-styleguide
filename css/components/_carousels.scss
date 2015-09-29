@@ -1,0 +1,161 @@
+//
+//	GoSpotCheck Marketing Site
+//	Carousel Styles
+//
+//	TO DO: inherited from old - update indentation, clean unused selectors
+//
+
+// slick carousel buttons (data flyout and testimonials)
+
+.slick-next,
+.slick-prev {
+	background: none;
+	color: $white-25;
+	font-size: 0 !important;
+	margin: 0;
+	min-width: 0;
+	position: absolute;
+	top: 0;
+
+	&:before {
+		@include material_icons(60px, "keyboard_arrow_down");
+	}
+
+	&:hover {
+		color: $white-50;
+	}
+}
+
+.slick-next {
+	transform: rotate(-90deg);
+}
+
+.slick-prev {
+	transform: rotate(90deg);
+}
+
+
+/* display none until init */
+.owl-carousel {
+	display: none;
+	position: relative;
+	width: 100%;
+	-ms-touch-action: pan-y;
+	.owl-wrapper {
+		display: none;
+		position: relative;
+		-webkit-transform: translate3d(0px, 0px, 0px);
+		&:after {
+			content: ".";
+			display: block;
+			clear: both;
+			visibility: hidden;
+			line-height: 0;
+			height: 0;
+		}
+	}
+	.owl-wrapper-outer {
+		overflow: hidden;
+		position: relative;
+		width: 100%;
+		&.autoHeight { @include transition(height, 500ms, ease-in-out); }
+	}
+	.owl-item {
+		float: left;
+		&.loading{ min-height: 150px; background: url(../images/carousel-loader.gif) center no-repeat; }
+	}
+	.owl-item, .owl-wrapper {
+		-webkit-backface-visibility: hidden;
+		-moz-backface-visibility:    hidden;
+		-ms-backface-visibility:     hidden;
+		-webkit-transform: translate3d(0,0,0);
+		-moz-transform: translate3d(0,0,0);
+		-ms-transform: translate3d(0,0,0);
+		text-align: center;
+	}
+}	
+.owl-controls {
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+	.owl-page, .owl-buttons div { cursor: pointer; }
+}
+
+/* mouse grab icon */
+.grabbing { cursor:url(../images/carousel-grabbing.png) 8 8, move; }
+
+
+/**
+ * 	GSC custom overrides begin here
+ */
+
+.owl-theme .owl-pagination {
+	position: absolute;
+	text-align: center;
+	top: 2%;
+	visibility: visible;
+	width: 100%;
+
+	@media screen and (max-width: $breakpoint-1024) {
+		bottom: initial;
+		visibility: visible;
+		top: 2%;
+	}
+	@media screen and (max-width: $breakpoint-568) {
+		visibility: hidden;
+	}
+}
+
+/* Styling Next and Prev buttons */
+.owl-theme .owl-controls .owl-buttons div {
+	color: $white-100;
+	display: inline-block;
+	font-size: 80px;
+	font-weight: normal;
+	height: 100%;
+	margin: 0;
+	opacity: 0.5;
+	padding: 11% 20px;
+	position: absolute;
+	top: 0;
+	zoom: 1;
+	@media screen and (max-width: $breakpoint-1024) {
+		height: 40%;
+	}
+}
+.owl-next { right: 0; }
+.owl-prev { left: 0; }
+
+
+/* Clickable class fix problem with hover on touch devices */
+/* Use it for non-touch hover action */
+.owl-theme .owl-controls.clickable .owl-buttons div:hover{
+	opacity: 1;
+	text-decoration: none;
+}
+
+/* Styling Pagination*/
+
+.owl-theme .owl-controls .owl-page {
+	display: inline-block;
+	z-index: 9;
+	zoom: 1;
+	span {
+		border-radius: 20px;
+		background: $white-100;
+		display: block;
+		width: 12px;
+		height: 12px;
+		margin: 5px 7px;
+		opacity: 0.5;
+	}
+}
+
+.owl-theme .owl-controls .owl-page.active span,
+.owl-theme .owl-controls.clickable .owl-page:hover span{
+	opacity: 1;
+	z-index: 99;
+}

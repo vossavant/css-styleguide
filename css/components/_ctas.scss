@@ -1,0 +1,71 @@
+/**
+ *	GoSpotCheck
+ *	CTA Styles
+ */
+
+
+// Blocks within a section with icon, heading, text, and CTA button
+
+.cta-text {
+	padding-top: 20px;
+
+	i {
+		color: $white-100;
+		font-size: 32px;
+		position: relative;
+
+		&:before {
+			background: $white-0;
+			border-radius: 50%;
+			content: "";
+			height: 60px;
+			left: -14px;	// (width - fontsize) / 2 ==> (60 - 32) / 2
+			position: absolute;
+			top: 0;
+			width: 60px;
+		}
+
+		span {
+			display: inline-block;
+			padding-top: 14px;
+			position: relative;
+		}
+	}
+}
+
+.black-cta {
+	border-radius: 4px;
+	background-color: $white-10;
+	clear: both;
+	color: $white-100;
+	overflow: hidden;
+
+	img {
+		@include respond-to('sergeant') {
+			display: none;
+		}
+	}
+
+	p {
+		color: $white-75;
+		margin: 10px 0 20px;
+	}
+
+	[class*="width-"] {
+		padding-bottom: $gutter-width;
+		padding-top: $gutter-width;
+	}
+
+	.width-25 {
+		@include respond-to('sergeant') {
+			display: none;
+		}
+	}
+
+	.width-75 {
+		@include respond-to('sergeant') {
+			margin-top: 0;
+			width: 100%;
+		}
+	}
+}

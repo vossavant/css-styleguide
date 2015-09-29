@@ -1,0 +1,96 @@
+//
+//	GoSpotCheck Careers Page
+//	SASS Variables
+//
+
+//// Colors ////
+
+$white-0			: hsl(0,0,0);		// #000000
+$white-10			: hsl(0,0,10%);		// #1a1a1a
+$white-15			: hsl(0,0,15%);		// #
+$white-20			: hsl(0,0,20%);		// #
+$white-25			: hsl(0,0,25%);		// #404040
+$white-40			: hsl(0,0,40%);		// #
+$white-50			: hsl(0,0,50%);		// #808080
+$white-60			: hsl(0,0,60%);		// #
+$white-65			: hsl(0,0,65%);		// #
+$white-67			: hsl(0,0,67%);		// #ababab
+$white-70			: hsl(0,0,70%);		// #b3b3b3
+$white-75			: hsl(0,0,75%);		// #bbbdbf
+$white-80			: hsl(0,0,80%);		// #
+$white-85			: hsl(0,0,85%);		// #
+$white-90			: hsl(0,0,90%);		// #e5e5e5
+$white-95			: hsl(0,0,95%);		// #f2f2f2
+$white-97			: hsl(0,0,97%);		// #f7f7f7
+$white-100			: hsl(0,0,100%);	// #ffffff
+
+$gsc-orange			: #ff9800;
+$gsc-orange-dark	: #ff7900;
+$gsc-orange-light	: #ffb600;
+$gsc-blue			: #00bdff;
+$gsc-blue-dark		: #0097d4;
+$gsc-blue-light		: #39daff;
+$gsc-green			: #00d833;
+$gsc-red 			: #ef5223;
+
+$gsc-primary		: $gsc-blue;
+$gsc-secondary		: $gsc-orange;
+$gsc-tertiary		: $gsc-green;
+$gsc-quaternary		: $gsc-red;
+
+
+//// Sizes ////
+
+// TO DO: use maps for content and gutter
+
+$content-width		: 960px;
+$gutter-width		: 20px;
+$table-header-height: 34px;
+$table-fixed-height	: 721px;
+
+$border-radius		: 5px;
+$height-button		: 34px;
+$height-input		: 40px;
+$header-height		: 60px;
+$footer-height		: 48px;
+
+
+//// Shadows ////
+
+$box-shadow			: 1px 1px 1px transparentize($white-0, 0.65);
+$box-shadow-hover	: 1px 1px 1px transparentize($white-0, 0.35);
+$text-shadow		: 1px 1px 2px transparentize($white-0, 0.5);
+
+
+//// Angled Section Stuff ////
+
+$sectionAngle		: 3deg;
+$sectionOffset		: 100vw * (36/1390);	// Determined by the base case, where I developed at screen width of 1390px and 36px magically worked. Math.
+$sectionPadding		: 6.4748vw;				// Equivalent to 90px at vw of 1390px
+
+
+//// Responsive Breakpoints ////
+
+$breakpoints : (
+	'private'		: (max-width: 320px),	// iPhone 5 portrait
+	'corporal'		: (max-width: 375px),	// iPhone 6 portrait
+	'sergeant'		: (max-width: 480px),
+	'captain'		: (max-width: 568px),	// iPhone 5 landscape
+	'major'			: (max-width: 667px),	// iPhone 6 landscape
+	'lieutenant'	: (max-width: 768px),
+	'custom'		: (max-width: 915px),
+	'colonel'		: (max-width: 1024px),
+	'general'		: (max-width: $content-width * 1.25 - 1)
+);
+
+
+// TO DO: remove
+
+$breakpoint-max		: $content-width * 1.25 - 1;
+$breakpoint-1024	: 1024px;			// tablet landscape
+$breakpoint-768		: 768px;			// tablet portrait
+$breakpoint-667		: 667px;			// iPhone 6 landscape
+$breakpoint-568		: 568px;			// iPhone 5 landscape
+$breakpoint-480		: 480px;			// custom
+$breakpoint-375		: 375px;			// iPhone 6 portrait
+$breakpoint-320		: 320px;			// iPhone 5 portrait

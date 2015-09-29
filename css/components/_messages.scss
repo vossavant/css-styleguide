@@ -1,0 +1,92 @@
+/**
+ *	GoSpotCheck
+ *
+ *	Message Boxes
+ */
+
+.message {
+	border-radius: $border-radius;
+	background-color: $white-95;
+	border: 1px solid $white-75;
+	color: $white-50;
+	display: none;
+	padding: $gutter-width / 2 $gutter-width * 0.9;
+
+	&:before {
+		float: left;
+		margin-right: $gutter-width / 2;
+	}
+
+	&.gradient {
+		@include simple_gradient($white-95, $white-85);
+	}
+
+	&.icon:before {
+		@include material_icons(22px, 'textsms');
+	}
+
+	&.no-border {
+		border: 0;
+	}
+
+	&.rounded {
+		border-radius: $gutter-width * 1.1;
+	}
+
+	&.error {
+		background-color: lighten($gsc-red, 38%);
+		border-color: transparentize($gsc-red, 0.5);
+		color: $gsc-red;
+
+		&.gradient {
+			@include simple_gradient(lighten($gsc-red, 38%), lighten($gsc-red, 25%));
+		}
+
+		&.icon:before {
+			@include material_icons(22px, 'error');
+		}
+	}
+
+	&.info {
+		background-color: lighten($gsc-blue, 45%);
+		border-color: transparentize(darken($gsc-blue, 10%), 0.5);
+		color: darken($gsc-blue, 10%);
+
+		&.gradient {
+			@include simple_gradient(lighten($gsc-blue, 45%), lighten($gsc-blue, 32%));
+		}
+
+		&.icon:before {
+			@include material_icons(22px, 'info');
+		}
+	}
+
+	&.success {
+		background-color: lighten($gsc-green, 53%);
+		border-color: transparentize(darken($gsc-green, 10%), 0.5);
+		color: darken($gsc-green, 10%);
+
+		&.gradient {
+			@include simple_gradient(lighten($gsc-green, 53%), lighten($gsc-green, 28%));
+			color: darken($gsc-green, 12%);
+		}
+
+		&.icon:before {
+			@include material_icons(22px, 'verified_user');
+		}
+	}
+
+	&.warning {
+		background-color: lighten($gsc-orange, 43%);
+		border-color: transparentize(darken($gsc-orange, 5%), 0.5);
+		color: darken($gsc-orange, 5%);
+
+		&.gradient {
+			@include simple_gradient(lighten($gsc-orange, 43%), lighten($gsc-orange, 30%));
+		}
+
+		&.icon:before {
+			@include material_icons(22px, 'warning');
+		}
+	}
+}

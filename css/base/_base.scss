@@ -1,0 +1,316 @@
+/**
+ *	GoSpotCheck
+ *	Base Styles (Standard HTML Selectors)
+ */
+
+* {
+	box-sizing: border-box;
+}
+
+a {
+	@include transition();
+	color: $gsc-blue-dark;
+	font-weight: bold;
+	text-decoration: none;
+
+	&:hover {
+		color: $gsc-blue;
+		text-decoration: underline;
+	}
+
+	&[target="_blank"] {
+		padding-right: $gutter-width;
+		position: relative;
+
+		&:after {
+			@include material_icons(15px, 'open_in_new');
+			content: "open_in_new";
+			height: 15px;
+			position: absolute;
+			right: 0;
+			top: 0;
+			width: 15px;
+		}
+	}
+}
+
+blockquote {
+	border: 1px solid $gsc-orange;
+	border-width: 1px 0;
+	color: $gsc-orange;
+	font: italic 24px Georgia serif;
+	margin: $gutter-width 0;
+	padding: $gutter-width 0;
+
+	&.classic {
+		// same as default; goes on blog posts
+	}
+
+	&.modern { // on solutions detail on GSC
+		border: 0;
+		color: $white-50;
+		font: 22px/1.5 "Gotham Book",sans-serif;
+		margin: $gutter-width * 2 0;
+		padding: $gutter-width 0px $gutter-width * 1.2;
+
+		cite {
+			display: inline-block;
+			font-size: 12px;
+			margin-top: 20px;
+			text-align: left;
+			text-transform: uppercase;
+
+			&:before {
+				border-top: 2px solid $white-90;
+				content: "";
+				display: block;
+				margin: 0px 0px $gutter-width / 2;
+			}
+
+			span {
+				display: block;
+				text-transform: none;
+			}
+		}
+
+		p {
+			color: inherit;
+		}
+	}
+
+	cite {
+		margin-top: $gutter-width / 2;
+		text-align: right;
+	}
+
+	p {
+		color: $gsc-orange;
+		line-height: 1.25;
+		margin: 0;
+	}
+}
+
+body {
+	font: 300 16px Helvetica, Arial, sans-serif;
+
+	&.fixed-footer {
+		// height: 100%;	// this breaks the demos that rely on scroll
+
+		> footer {
+			height: $footer-height;
+			margin-top: -$footer-height;
+		}
+
+		main {
+			height: 100%;
+			padding-bottom: 48px;
+		}
+	}
+}
+
+button {
+	border: 0;
+	cursor: pointer;
+	outline: none;
+}
+
+canvas {
+	display: block;
+}
+
+cite {
+	display: block;
+	font: 14px "Gotham Medium";
+
+	span {
+		display: block;
+		font-family: "Gotham Book";
+	}
+}
+
+code {
+    background-color: $white-100;
+    border: 1px dotted $white-80;
+    color: $gsc-red;
+    font-size: 14px;
+    padding: 2px 5px;
+}
+
+figure {
+	margin: 0;
+	overflow: hidden;
+
+	&:hover img {
+		opacity: 0.95;
+		transform: scale(1.02);
+	}
+
+	img {
+		@include transition();
+		border-bottom: 1px solid $white-90;
+		border-radius: $border-radius $border-radius 0 0;
+	}
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+	font: normal 42px/1.25 "Gotham Book";
+	margin: 0;
+}
+
+h1 {
+	font-family: "Gotham Medium";
+
+	@include respond-to('sergeant') {
+		font-size: 8.75vw
+	}
+
+	@include respond-to('corporal') {
+		font-size: 32px;
+	}
+}
+
+h2 {
+	font-size: 36px;
+
+	@include respond-to('sergeant') {
+		font-size: 7.5vw
+	}
+
+	@include respond-to('corporal') {
+		font-size: 28px;
+	}
+}
+
+h3 {
+	font-size: 24px;
+
+	@include respond-to('sergeant') {
+		font-size: 5vw
+	}
+
+	@include respond-to('corporal') {
+		font-size: 19px;
+	}
+}
+
+h4 {
+	font-size: 18px;
+}
+
+h5 {
+	font-size: 14px;
+	line-height: 1.333;
+}
+
+* + h2,
+* + h3,
+* + h4,
+* + h5 {
+	margin-top: 1.5em;
+}
+
+html {
+	height: 100%;
+	-webkit-text-size-adjust: 100%;
+}
+
+iframe {
+	display: block;
+	margin: auto;
+	max-width: 100%;
+}
+
+img {
+	border: 0;
+	display: block;
+	height: auto;
+	max-width: 100%;
+	width: auto;
+
+	&.round {
+		border-radius: 50%;
+	}
+
+	&.rounded {
+		border-radius: $border-radius;
+	}
+}
+
+li {
+	color: $white-50;
+	line-height: 2.25;
+
+	h1,
+	h2,
+	h3,
+	h4,
+	h5 {
+		color: $white-0;
+	}
+}
+
+main {
+	// border-top: $header-height solid;
+	overflow-x: hidden;
+
+	li {
+		line-height: 1.5;
+	}
+	
+	ol,
+	ul {
+		list-style: disc;
+		margin: $gutter-width 0;
+		padding-left: $gutter-width * 2;
+	}
+
+	ol {
+		list-style: decimal;
+	}
+}
+
+ol {
+	margin: 1em 0;
+	padding: 0 0 0 1em;
+}
+
+p {
+	color: $white-40;
+	line-height: 1.5;
+	margin: 0.75em auto 1.5em;
+
+	b,
+	strong {
+		font-family: Helvetica, sans-serif;
+		font-weight: bold;
+	}
+
+	&:last-child {
+		margin-bottom: 0;
+	}
+
+	// &:only-child {
+	// 	margin: 0;
+	// }
+}
+
+pre {
+	margin: 0;
+}
+
+strong, b {
+	-moz-osx-font-smoothing: grayscale;
+	 -webkit-font-smoothing: antialiased;
+	font-family: "Gotham Bold";
+	font-weight: normal;
+}
+
+ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}

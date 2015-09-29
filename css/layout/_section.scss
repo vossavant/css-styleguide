@@ -1,0 +1,251 @@
+//
+//	GSC Styleguide
+//	Full Width Section Styles
+//
+
+// TO DO: makes more sense that specific sections (angled, parallax) be moved to components/xxx.scss
+
+body > section,
+.wrapper > section {
+	background-size: cover !important;
+	padding: $sectionPadding 0 $sectionPadding * 1.1;
+	position: relative; // may be superfluous
+
+
+	
+
+	@include respond-to('sergeant') {
+		padding: 40px 0;
+	}
+}
+
+
+// Section with Height Relative to Viewport
+
+[class*="height-"] {
+	background-size: cover;
+
+	&[class*="-full"] {
+		height: 100vh;
+	}
+
+	&[class*="-half"] {
+		height: 50vh;
+	}
+
+	&[class*="-third"] {
+		height: 33.333vh;
+	}
+
+	&[class*="-quarter"] {
+		height: 25vh;
+	}
+
+	p {
+		font-size: 20px;
+		margin: 1em auto;
+	}
+}
+
+
+// Section with Angled Top or Bottom Edge
+
+[class*="angled"] {
+	background: $white-100;
+	margin: -$sectionOffset 0;
+
+
+	// Angle Slopes Down (Left > Right)
+
+	&[class*="-down"] {
+		@include skew();
+	}
+
+	
+	// Angle Slopes Up (Right > Left)
+	
+	&[class*="-up"] {
+		@include skew(-$sectionAngle);
+		padding: $sectionPadding * 1.5 0;
+
+		&:before {
+			@include skew(3deg);
+		}
+
+		> * {
+			@include skew();
+		}
+
+		@include respond-to('sergeant') {
+			padding: 60px 0;
+		}
+	}
+
+	
+	// Unskew Contents of Angled Section
+	
+	> * {
+		@include skew(-$sectionAngle);
+	}
+
+	> [class*="parallax-layer"] {
+		transform: skewY(-$sectionAngle) translateZ(0px) !important;
+	}
+}
+
+
+// Section with Extra Padding
+
+.extra-padding {
+	padding: $sectionPadding * 2 0 !important;
+}
+
+.extra-padding-bottom {
+	padding-bottom: $sectionPadding * 2 !important;
+}
+
+.extra-padding-top {
+	padding-top: $sectionPadding * 2 !important;
+}
+
+
+// Section with Padding Removed
+.no-padding {
+	padding: 0 !important;
+}
+
+.no-padding-bottom {
+	padding-bottom: 0 !important;
+}
+
+.no-padding-top {
+	padding-top: 0 !important;
+}
+
+.no-padding-left {
+	padding-left: 0 !important;
+}
+
+.no-padding-right {
+	padding-right: 0 !important;
+}
+
+
+// Special Section for Testimonials
+
+.testimonial {
+	@include midrange_gradient($white-97, $white-97, 30%, $white-85);
+	overflow: visible;
+	padding: 30px 0;
+	z-index: 1;
+
+	img {
+		bottom: 0;
+		position: absolute;
+	}
+}
+
+
+// keep background image from looking too big at small screen sizes
+
+#hero {
+	@media screen and (max-width: 568px), (max-height: 568px) {
+		background-color: $white-0;
+		background-position: center 10vh;
+		background-size: 100% !important;
+		background-repeat: no-repeat;
+	}
+}
+
+
+// Section that will be parallaxed with pure CSS
+// thanks to: http://keithclark.co.uk/articles/pure-css-parallax-websites/
+.parallax {
+	height: 500px; /* fallback for older browsers */
+	height: 100vh;
+	overflow-x: hidden;
+	overflow-y: auto;
+	-webkit-perspective: 300px;
+	perspective: 300px;
+}
+
+.parallax-group {
+	position: relative;
+	height: 500px; /* fallback for older browsers */
+	height: 100vh;
+	-webkit-transform-style: preserve-3d;
+	transform-style: preserve-3d;
+	-webkit-transition: -webkit-transform 0.5s;
+	transition: transform 0.5s;
+}
+
+[class*="parallax-layer"] {
+	bottom: 0;
+	left: 0;
+	position: absolute;
+	right: 0;
+	top: 0;
+
+	&[class*="fore"] {
+		-webkit-transform: translateZ(90px) scale(.7);
+		transform: translateZ(90px) scale(.7);
+		z-index: 1;
+	}
+
+	&[class*="base"] {
+		-webkit-transform: translateZ(0);
+		transform: translateZ(0);
+		z-index: 4;
+	}
+
+	&[class*="back"] {
+		-webkit-transform: translateZ(-300px) scale(2);
+		transform: translateZ(-300px) scale(2);
+		z-index: 3;
+	}
+
+	&[class*="deep"] {
+		-webkit-transform: translateZ(-600px) scale(3);
+		transform: translateZ(-600px) scale(3);
+		z-index: 2;
+	}
+}
+
+
+/**
+ *	Responsive
+ */
+
+// remove parallax for small landscape screens, since it looks bad
+@media screen and (max-height: $breakpoint-768 - 1) and (orientation: landscape) {
+	.parallax {
+		height: 100%;
+		perspective: none;
+	}
+
+	.parallax-group {
+		height: auto;
+	}
+
+	[class*="parallax-layer"] {
+		// position: relative;
+		transform: none !important;
+	}
+
+	// set hero to full height
+	// #hero {
+	// 	box-sizing: border-box;
+	// 	min-height: 100%;
+	// 	padding-top: $headerHeight * 1.5 - 54; //54 is equiv. to the "old" header height - can remove this once header is updated
+
+	// 	[class*="parallax-layer"] {
+	// 		position: relative;
+	// 	}
+	// }
+}
+
+@media screen and (max-height: 568px) and (orientation: landscape) {
+	#hero {
+		height: auto;
+	}
+}

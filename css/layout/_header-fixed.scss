@@ -1,0 +1,174 @@
+//
+//	GoSpotCheck Styleguide
+//	Fixed Header Styles
+//
+//	Styles the fixed header (remains affixed to top of viewport even as user scrolls)
+//
+
+header.fixed {
+	background: transparentize($white-0, 0.15);
+	min-height: $header-height;
+
+
+	// Current Page
+
+	li.current-menu-item {
+		@include respond-to('colonel') {
+			font-weight: bold;
+		}
+
+		a:before {
+			height: 2px;
+
+			@include respond-to('colonel') {
+				height: 0;
+			}
+		}
+	}
+
+
+	// General Navigation Styles
+
+	nav {
+		a {
+			padding: 0 20px;
+			position: relative;
+
+			&:before {
+				@include transition(height);
+				background: $gsc-blue;
+				bottom: 0;
+				content: "";
+				height: 0;
+				left: 0;
+  				padding: 0 20px;
+  				position: absolute;
+  				right: 0;
+
+  				@include respond-to('major') {
+  					display: none;
+  				}
+			}
+
+			&:hover:before {
+				height: 2px;
+			}
+		}
+	}
+
+
+	// Main Navigation (first <nav> element)
+
+	nav:first-of-type {
+		@include respond-to('colonel') {
+			@include transition();
+			clear: both;
+			font-size: 16px;
+			overflow: hidden;
+			max-height: 0;
+			padding: 0 20px;
+		}
+
+		@include respond-to('captain') {
+			max-height: none;
+		}
+
+		a {
+			@include respond-to('colonel') {
+				border: 1px solid $white-25;
+				border-width: 0 0 1px;
+				display: block;
+				padding: 0;
+
+				&:hover:before {
+					height: 0;
+				}
+			}
+		}
+
+
+		li {
+			@include respond-to('colonel') {
+				@include transition(opacity);
+				float: none;
+				opacity: 0;
+			}
+		}
+
+		> ul > li {
+			@include respond-to('colonel') {
+				&:first-child a {
+					border-width: 3px 0 1px;
+				}
+
+				&:last-child a {
+					border-bottom-width: 0;
+				}
+			}
+
+			@include respond-to('captain') {
+				&:last-child a {
+					border-bottom-width: 1px;
+				}
+			}
+		}
+	}
+
+	
+	// CTAs (second <nav> element - request demo, sign in)
+	
+	nav:last-of-type {
+		float: right;
+
+		@include respond-to('colonel') {
+			position: absolute;
+			right: $gutter-width * 3;
+			top: 0;
+		}
+
+		@include respond-to('captain') {
+			float: none;
+			padding: 0 $gutter-width;
+			position: static;
+
+			a {
+				padding: 0;
+				width: 100%;
+			}
+
+			li {
+				float: none;
+			}
+		}
+
+
+		// Request a Demo
+
+		li:first-child a {
+			border-top-width: 1px;
+			color: $gsc-orange;
+
+			@include respond-to('captain') {
+				border-bottom: 1px solid $white-25;
+			}
+
+			&:before {
+				background: $gsc-orange;
+			}	
+
+			&:hover {
+				color: $white-100;
+			}		
+		}
+
+
+		// Sign In
+
+		li:last-child a:after {
+			@include material_icons(20px, "get_app");
+			float: right;
+			margin: 20px 0 0 5px;
+			transform: rotate(270deg);
+		}
+	}
+}

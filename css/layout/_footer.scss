@@ -1,0 +1,244 @@
+//
+//	GoSpotCheck Benefits Page
+//	Footer Styles
+//
+
+footer {
+	background: $white-0;
+	position: relative;
+	// padding: 30px 0 0;
+
+	@media screen and (max-width: 767px) {
+		padding-bottom: 0 !important;
+	}
+
+	// footer with collapsible sections (small screens only)
+	&.collapsible {
+		@include respond-to('sergeant') {
+			h4 {
+				margin-top: 0;
+			}
+
+			h4:after {
+				@include transition();
+				@include material_icons(24px, "expand_more");
+				float: right;
+			}
+
+			h4 + div ul {
+				@include transition(max-height);
+				max-height: 0;
+				overflow: hidden;
+			}
+
+			.open {
+				h4:after {
+					transform: rotate(180deg);
+				}
+
+				ul {
+					// padding-bottom: 20px;
+					max-height: 500px;
+				}
+			}
+
+			.social {
+				margin-bottom: 20px;
+			}
+		}
+	}
+
+	a:hover {
+		color: $white-100;
+	}
+
+	h4 {
+		border-bottom: 1px solid $white-25;
+		color: $white-100;
+		margin-bottom: 20px;
+		padding-bottom: 20px;
+		text-transform: none;
+
+		// responsive
+		@include respond-to('lieutenant') {
+			font-size: 20px;
+		}
+
+		@include respond-to('sergeant') {
+			margin-top: 20px;
+		}
+	}
+
+	li {
+		float: none;
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+
+		&.current-menu-item a,
+		&.current_page_parent a {
+			color: $white-100;
+			cursor: default;
+		}
+
+		a {
+			display: block;
+			font-size: 14px;
+			margin-bottom: 20px;
+		}
+	}
+
+	p {
+		clear: left;
+		font-size: 14px;
+		line-height: 18px;
+		margin: 0;
+		padding: 15px 0;
+	}
+
+	ul {
+		list-style: none;
+		margin: 0;
+		overflow: auto;
+		padding: 0;
+	}
+
+	.logo {
+		margin: 0;
+	}
+
+	.width-full {
+		@include respond-to('general') {
+			max-width: none;
+			padding: 0;
+		}
+
+		.width-125 > div {
+			@include respond-to('general') {
+				// padding-left: 2%;
+				// padding-right: 2%;
+
+				&:first-child {
+					padding-left: 0;
+				}
+
+				&:last-child {
+					padding-right: 0;
+				}
+			}
+
+			@include respond-to('lieutenant') {
+				width: 50%;
+
+				&:nth-child(even) {
+					padding-right: 0;
+				}
+
+				&:nth-child(odd) {
+					padding-left: 0;
+				}
+			}
+
+			@include respond-to('captain') {
+				padding-left: 20px !important;
+				padding-right: 20px !important;
+			}
+
+			@include respond-to('sergeant') {
+				width: 100%;
+			}
+		}
+	}
+}
+
+.social {
+	a {
+		font-size: 0;
+	}
+
+	i {
+		@include transition();
+		border: 1px solid $white-50;
+		border-radius: 50%;
+		color: $white-50;
+		display: block;
+		font-size: 19px;
+		line-height: 38px;
+		width: 38px;
+
+		&:hover {
+			background: $white-100;
+			border-color: $white-100;
+			color: $white-0;
+		}
+
+		&.icon-facebook:before {
+			margin-left: -2px;
+		}
+
+		&.icon-linkedin:before {
+			margin-left: 2px;
+		}
+	}
+
+	li {
+		float: left;
+		font-size: 0;
+		margin-right: 10px;
+		text-align: center;
+	}
+}
+
+.copyright {
+	box-sizing: border-box;
+	overflow: auto;
+	padding: 20px 40px;
+
+	a {
+		margin-left: 20px;
+
+		@include respond-to('sergeant') {
+			margin: 0;
+			padding: 10px;
+		}
+	}
+
+	p,
+	ul {
+		border-top: 1px solid $white-25;
+		float: left;
+		font-size: 14px;
+		margin: 0;
+		padding: 15px 0;
+		width: 50%;
+
+		@include respond-to('sergeant') {
+			border: 0;
+			float: none;
+			text-align: center;
+			width: 100%;
+		}
+	}
+
+	ul {
+		float: right;
+		text-align: right;
+
+		li {
+			display: inline;
+			margin: 0 0 0 15px;
+		}
+
+		@include respond-to('sergeant') {
+			overflow: visible;
+			padding-top: 0;
+			text-align: center;
+		}
+	}
+
+	// responsive
+	@include respond-to('general') {
+		padding: 20px;
+	}
+}

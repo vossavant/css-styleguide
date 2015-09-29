@@ -1,0 +1,93 @@
+/**
+ *	GoSpotCheck
+ *
+ *	Sidebar Styles - controls styling for random stuff in the sidebar
+ */
+
+aside {
+	> div {
+		clear: both;
+		margin-bottom: $gutter-width * 2 !important;
+
+		&:last-child {
+			margin-bottom: 0 !important;
+		}
+	}
+
+	h3 {
+		margin: 0 0 5px;
+	}
+
+	// .button {
+	// 	text-align: center;
+	// 	width: 100%;
+	// }
+
+	.popular-posts {
+		clear: left;
+		float: left;
+
+		a {
+			@include clearfix();
+			@include transition();
+			color: initial;
+			display: block;
+			padding: $gutter-width / 2 0;
+
+			img {
+				border: 1px solid $white-90;
+				border-radius: 50%;
+				float: left;
+			}
+
+			span {
+				display: block;
+				margin-left: 60px;
+				padding: $gutter-width / 2;
+			}
+		}
+
+		li {
+			border-bottom: 1px solid $white-90;
+			float: left;
+			line-height: 1.25;
+			margin-bottom: 0;
+			width: 100%;
+
+			&:hover {
+				background-color: $white-100;
+			}
+
+			&:hover a {
+				color: $white-25;
+				padding-left: 15px;
+			}
+
+			&:last-of-type {
+				margin-bottom: 1em;
+			}
+		}
+
+		ul {
+			border-top: 1px solid $white-90;
+			list-style: none;
+			padding: 0;
+		}
+		
+		&.categories {
+			a {
+				display: block;
+				float: none;
+			}
+
+			.current-cat {
+				background: $white-100;
+			}
+
+			.current-cat a {
+				cursor: default;
+				padding-left: 15px;
+			}
+		}
+	}
+}

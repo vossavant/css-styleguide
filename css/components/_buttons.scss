@@ -1,0 +1,448 @@
+/**
+ *	GoSpotCheck
+ *
+ *	Button Styles - controls styling for all CTA buttons
+ *	TO DO: contains old styles that should be merged (scroll to bottom)
+ */
+
+
+button.button {
+	padding-bottom: ($gutter-width - 2) / 2;
+}
+
+.button {
+	@include transition();
+	background: $gsc-primary;
+	border-radius: $height-button / 2 + 1;
+	color: $white-100;
+	cursor: pointer;
+	display: inline-block;
+	font: 14px "Gotham Bold";
+	max-width: 100%;
+	// overflow: hidden;
+	padding: ($gutter-width - 2) / 2 + 1 $gutter-width ($gutter-width - 2) / 2;
+	position: relative;
+	// text-overflow: ellipsis;
+	text-transform: uppercase;
+	// white-space: nowrap;
+
+	@include respond-to('corporal') {
+		display: block;
+		text-align: center;
+	}
+
+
+	&:hover {
+		background: darken($gsc-primary, 10%);
+		color: $white-100;
+		text-decoration: none;
+
+		i {
+			margin-left: 8px;
+			margin-right: -8px;
+
+			&.left {
+				margin-left: -8px;
+				margin-right: 8px;
+			}
+		}
+	}
+
+
+	// Using Secondary Color
+
+	&.secondary {
+		background: $gsc-secondary;
+
+		&:hover {
+			background: darken($gsc-secondary, 10%);
+		}
+	}
+
+
+	// Using Tertiary Color
+
+	&.tertiary {
+		background: $gsc-tertiary;
+
+		&:hover {
+			background: darken($gsc-tertiary, 10%);
+		}
+	}
+
+
+	// Using Quaternary Color
+
+	&.quaternary {
+		background: $gsc-quaternary;
+
+		&:hover {
+			background: darken($gsc-quaternary, 10%);
+		}
+	}
+
+
+	// Gradient with Hover Transition
+
+	&.gradient {
+		@include simple_gradient($gsc-primary, darken($gsc-primary, 10%));
+		z-index: 1;
+
+		&:before {
+			@include simple_gradient(darken($gsc-primary, 10%), darken($gsc-primary, 10%));
+			@include transition();
+			border-radius: inherit;
+			content: "";
+			height: 100%;
+			left: 0;
+			opacity: 0;
+			position: absolute;
+			top: 0;
+			width: 100%;
+			z-index: -1;
+		}
+
+		&:hover {
+			&:before {
+				opacity: 1;
+			}
+		}
+
+
+		// With Secondary Color
+
+		&.secondary {
+			@include simple_gradient($gsc-secondary, darken($gsc-secondary, 10%));
+
+			&:before {
+				@include simple_gradient(darken($gsc-secondary, 10%), darken($gsc-secondary, 10%));
+			}
+		}
+
+
+		// With Tertiary Color
+
+		&.tertiary {
+			@include simple_gradient($gsc-tertiary, darken($gsc-tertiary, 10%));
+
+			&:before {
+				@include simple_gradient(darken($gsc-tertiary, 10%), darken($gsc-tertiary, 10%));
+			}
+		}
+
+
+		// With Quaternary Color
+
+		&.quaternary {
+			@include simple_gradient($gsc-quaternary, darken($gsc-quaternary, 10%));
+
+			&:before {
+				@include simple_gradient(darken($gsc-quaternary, 10%), darken($gsc-quaternary, 10%));
+			}
+		}
+	}
+
+
+	// Dark Button
+
+	&.dark {
+		background: $white-0;
+		color: $white-100;
+
+		&:hover {
+			background: $white-100;
+			color: $white-0;
+		}
+	}
+
+
+	// Light Button
+
+	&.light {
+		background: $white-100;
+		color: $white-0;
+
+		&:hover {
+			background: $white-0;
+			color: $white-100;
+		}
+	}
+
+
+	// Clear Button (no border, white background)
+
+	&.clear {
+		background: $white-100;
+		color: $gsc-primary;
+
+		&:hover {
+			background: darken($gsc-primary, 10%);
+			color: $white-100;
+		}
+
+
+		// With Secondary Color
+
+		&.secondary {
+			color: $gsc-secondary;
+
+			&:hover {
+				background: darken($gsc-secondary, 10%);
+				color: $white-100;
+			}
+		}
+
+
+		// With Tertiary Color
+
+		&.tertiary {
+			color: $gsc-tertiary;
+
+			&:hover {
+				background: darken($gsc-tertiary, 10%);
+				color: $white-100;
+			}
+		}
+
+
+		// With Quaternary Color
+
+		&.quaternary {
+			color: $gsc-quaternary;
+
+			&:hover {
+				background: darken($gsc-quaternary, 10%);
+				color: $white-100;
+			}
+		}
+	}
+
+
+	// Outlined Button
+
+	&.outline {
+		background: $white-100;
+		box-shadow: inset 0 0 0 1px $gsc-primary;
+		color: $gsc-primary;
+
+		&:hover {
+			background: darken($gsc-primary, 10%);
+			box-shadow: inset 0 0 0 1px darken($gsc-primary, 10%);
+			color: $white-100;
+		}
+
+
+		// With Secondary Color
+		
+		&.secondary {
+			box-shadow: inset 0 0 0 1px $gsc-secondary;
+			color: $gsc-secondary;
+
+			&:hover {
+				background: darken($gsc-secondary, 10%);
+				box-shadow: inset 0 0 0 1px darken($gsc-secondary, 10%);
+				color: $white-100;
+			}
+		}
+
+
+
+		// With Tertiary Color
+		
+		&.tertiary {
+			box-shadow: inset 0 0 0 1px $gsc-tertiary;
+			color: $gsc-tertiary;
+
+			&:hover {
+				background: darken($gsc-tertiary, 10%);
+				box-shadow: inset 0 0 0 1px darken($gsc-tertiary, 10%);
+				color: $white-100;
+			}
+		}
+
+
+		// With Quaternary Color
+		
+		&.quaternary {
+			box-shadow: inset 0 0 0 1px $gsc-quaternary;
+			color: $gsc-quaternary;
+
+			&:hover {
+				background: darken($gsc-quaternary, 10%);
+				box-shadow: inset 0 0 0 1px darken($gsc-quaternary, 10%);
+				color: $white-100;
+			}
+		}
+	}
+
+
+	// Larger Button
+
+	&.large {
+		border-radius: 24px;
+		font-size: 18px;
+		line-height: 48px;
+		padding: 0 30px;
+
+		+ .button {
+			margin-left: 20px;
+		}
+
+		i {
+			line-height: 48px;
+		}
+	}
+
+
+	// Smaller Button
+
+	&.small {
+		border-radius: 16px;
+		font-size: 12px;
+		line-height: 32px;
+		padding: 0 15px;
+
+		&:hover {
+			i {
+				margin-left: 4px;
+				margin-right: -4px;
+
+				&.left {
+					margin-left: -4px;
+					margin-right: 4px;
+				}
+			}
+		}
+
+		i {
+			font-size: 14px;
+			line-height: 32px;
+			margin: 0 -2px 0 2px;
+		}
+	}
+
+
+	// Button with Box Shadow
+
+	&.shadow {
+		box-shadow: $box-shadow;
+
+		&:hover {
+			box-shadow: $box-shadow-hover;
+		}
+
+		&:active {
+			box-shadow: none;
+			padding: 10px 19px 8px 21px;
+		}
+	}
+
+
+	// Button with Text Shadow
+
+	&.text-shadow {
+		text-shadow: $text-shadow;
+
+		&:hover {
+			text-shadow: none;
+		}
+	}
+
+
+	// Disabled Button
+
+	&.disabled,
+	&:disabled,
+	&.disabled:hover,
+	&:disabled:hover {
+		background: lighten($gsc-blue, 28%);
+		color: $white-95;
+		cursor: default;
+
+		&.secondary {
+			background: lighten($gsc-secondary, 28%);
+		}
+
+		&.tertiary {
+			background: lighten($gsc-tertiary, 32%);
+		}
+
+		&.quaternary {
+			background: lighten($gsc-quaternary, 28%);
+		}
+	}
+
+
+	// Adjacent Buttons
+
+	+ .button {
+		margin-left: $gutter-width / 2;
+
+		@include respond-to('corporal') {
+			margin: $gutter-width 0 0;
+		}
+	}
+
+
+	// Material Icons
+
+	i {
+		@include transition();
+		float: right;
+		font-size: 18px;
+		margin: 0 -5px 0 5px;
+
+		@include respond-to('corporal') {
+			display: block;
+		}
+
+		&.left {
+			float: left;
+			margin: 0 5px 0 -5px;
+		}
+	}
+}
+
+// Hovering over light button in dark section makes the button invisible, so we add a subtle shadow
+.dark .button.clear {
+	background: $white-100;
+	color: $white-0;
+
+	&:hover {
+		background: $white-0;
+		box-shadow: inset 0 0 0 1px $white-100;
+		color: $white-100;
+	}
+}
+
+
+
+
+
+
+//// OLD STYLES - TO DO: merge and eliminate ////
+// these styles are being used in some parts of the marketing site, but should be phased out in favor of the styles above
+
+
+/** Round Buttons **/
+.post-links {
+	a {
+		@extend .button;
+		float: left;
+
+		&:hover {
+			background: $gsc-blue-dark;
+			color: $white-100;
+		}
+
+		+ a {
+			float: right;
+			margin: 0;
+			white-space: normal;
+		}
+	}
+
+	&.clear a {
+		@extend .button.clear;
+	}
+}

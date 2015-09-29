@@ -1,0 +1,68 @@
+/**
+ *	GoSpotCheck
+ *
+ *	Box Styles - controls styling for all CTA buttons
+ */
+
+.box {
+	@include flex();
+	border-radius: 5px;
+	border: 3px solid $white-90;
+	border-width: 0 3px 3px 0;
+	background-color: $white-100;
+	padding: $gutter-width;
+	position: relative;
+
+
+	// Author Meta Box
+
+	&.meta {
+		background: $white-95;
+		border: 0;
+		padding: $gutter-width 0;
+
+		h4 {
+			color: $white-0;
+		}
+	}
+
+
+	// Blog Post Box
+
+	&.post {
+		padding: 0;
+		margin-bottom: $gutter-width;
+
+		div:last-child {
+			padding: $gutter-width;
+		}
+	}
+
+	h5 {
+		background: transparentize($white-0, 0.25);
+		bottom: 0;
+		color: $white-100;
+		padding: 12px;
+		position: absolute;
+		width: 100%;
+		z-index: 1;
+
+		&:hover {
+			color: $white-75;
+		}
+	}
+
+	p:last-child {
+		margin-bottom: 0;
+	}
+
+	.footer p {
+		color: $white-67;
+		line-height: 1;
+		margin: 0;
+
+		@include respond-to('sergeant') {
+			display: none;
+		}
+	}
+}

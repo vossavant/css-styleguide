@@ -1,0 +1,207 @@
+/**
+ *	GoSpotCheck
+ *	Table Styles
+ */
+
+table {
+	background: $white-100;
+	color: $white-25;
+	width: 100%;
+
+	// .material-icons {
+	// 	display: block;
+	// 	font-size: 16px;
+	// }
+}
+
+thead {
+	th {
+		@include simple_gradient($white-25, $white-0);
+		color: $white-100;
+		line-height: $table-header-height + 7;
+
+		&:first-child {
+			border-top-left-radius: $border-radius;
+		}
+
+		&:last-child {
+			border-top-right-radius: $border-radius;
+		}
+	}
+}
+
+tbody {
+	th {
+		background: $white-85;
+		color: $white-100;
+		display: block;
+		position: relative !important;
+	}
+
+	tr {
+		&:hover {
+			background: $gsc-blue;
+			color: $white-100;
+
+			th {
+				background: $gsc-blue-dark;
+
+				&:after {
+					border-left-color: $gsc-blue-dark;
+				}
+			}
+		}
+
+		&:nth-child(even) {
+			background: $white-90;
+
+			&:hover {
+				background: $gsc-blue;
+
+				th {
+					background: $gsc-blue-dark;
+
+					&:after {
+						border-left-color: $gsc-blue-dark;
+					}
+				}
+			}
+
+			th {
+				background: $white-70;
+
+				&:after {
+					border-left-color: $white-70;
+				}
+			}
+		}
+	}
+}
+
+th {
+	text-align: left;
+}
+
+td,
+th {
+	font-size: 14px;
+	line-height: $table-header-height;
+	padding: 0px $gutter-width / 1.5;
+}
+
+
+// Table with Fixed Header
+
+.fixed-table-wrap {
+	border-bottom: 1px solid $white-90;
+	height: $table-fixed-height;
+	padding-top: $table-header-height + 7;
+	position: relative;
+
+	th {
+		&:first-child {
+			padding-left: 0;
+
+			span {
+				padding-left: 15px;
+			}
+		}
+
+		span {
+			color: $white-100;
+			line-height: $table-header-height;
+			position: absolute;
+			top: 0px;
+		}
+	}
+
+	thead th span {
+		line-height: $table-header-height + 7;
+	}
+
+	tbody {
+		th {
+			background: none;
+		}
+
+		th span {
+			background: $white-85;
+			color: $white-100;
+			display: block;
+			position: relative !important;
+		}
+
+		th span:after {
+			left: 100%;
+			top: 50%;
+			border-style: solid;
+			border-image: none;
+			content: "";
+			height: 0px;
+			width: 0px;
+			position: absolute;
+			border-color: transparent transparent transparent $white-85;
+			border-width: 17px 0px 17px 7px;
+			margin-top: -17px;
+		}
+
+		tr:hover {
+			th {
+				background: none;
+			}
+			
+			span {
+				background: $gsc-blue-dark;
+
+				&:after {
+					border-left-color: $gsc-blue-dark;
+				}
+			}
+		}
+
+		tr:nth-child(even) {
+			th {
+				background: none;
+			}
+			span {
+				background: $white-70;
+
+				&:after {
+					border-left-color: $white-70;
+				}
+			}
+		}
+
+		tr:nth-child(even):hover {
+			span {
+				background: $gsc-blue-dark;
+
+				&:after {
+					border-left-color: $gsc-blue-dark;
+				}
+			}
+		}
+	}
+
+
+	// Fixed Header
+
+	.header-bg {
+		@include simple_gradient($white-25, $white-0);
+		border-radius: $border-radius $border-radius 0px 0px;
+		height: $table-header-height + 7;
+		left: 0px;
+		position: absolute;
+		right: 0px;
+		top: 0px;
+	}
+
+
+	// Table Wrapper
+
+	.inner {
+		height: 100%;
+		overflow-x: hidden;
+		overflow-y: auto;
+	}
+}

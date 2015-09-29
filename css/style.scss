@@ -1,0 +1,57 @@
+/**
+ *	GoSpotCheck
+ *
+ *	Master Stylesheet - loads all required SASS files
+ */
+
+// these SASS files are REQUIRED for all modules
+@import "helpers/variables";
+@import "helpers/mixins";
+@import "base/normalize";
+@import "base/base";
+
+// these SASS files are OPTIONAL - remove or comment out those you don't need
+@import "helpers/animate";
+@import "helpers/fonts";
+@import "helpers/utility";
+
+@import "layout/footer";
+@import "layout/header";
+@import "layout/header-fixed";
+@import "layout/section";
+// @import "layout/sidebar";
+@import "layout/structure";
+
+@import "components/boxes";
+@import "components/buttons";
+@import "components/ctas";
+@import "components/forms";
+@import "components/gallery";
+@import "components/kicker";
+@import "components/lists";
+@import "components/messages";
+@import "components/pagers";
+@import "components/tables";
+
+// if you need custom styles, include them
+// TO DO: only load some of these on the appropriate pages - otherwise the base CSS is too large
+// @import "pages/404";
+// @import "pages/about";
+// @import "pages/alc-bev";
+// @import "pages/blog";
+// @import "pages/careers";
+// @import "pages/contact";
+// @import "pages/faqs";
+// @import "pages/features";
+// // @import "pages/free-tshirt";
+// @import "pages/home";
+// @import "pages/how-it-works";
+// @import "pages/resources";
+// @import "pages/single";
+// @import "pages/solutions";
+// @import "pages/testimonials";
+// @import "pages/thanks";
+// @import "pages/values";
+
+// import vendor styles
+// @import "vendor/fancybox";
