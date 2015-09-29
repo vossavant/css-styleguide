@@ -358,7 +358,7 @@ A little bitty guide whose humble purpose is to expedite front-end development b
   </div> <!-- // section -->
   ```
 
-  <a href="http://gospotcheck.com/link-to-demo"><img height="17" src="http://www.gospotcheck.com/images/github-demo-button.png" title="See it in action"></a>
+  <a href="http://www.gospotcheck.com/styleguide/examples/2.2_anatomy.php"><img height="17" src="http://www.gospotcheck.com/images/github-demo-button.png" title="See it in action"></a>
   
   <a href="#table-of-contents">⬆ Back to Top</a>
 
@@ -403,7 +403,7 @@ A little bitty guide whose humble purpose is to expedite front-end development b
   </div> <!-- // angled-up -->
   ```
   
-  <a href="http://gospotcheck.com/link-to-demo"><img height="17" src="http://www.gospotcheck.com/images/github-demo-button.png" title="See it in action"></a>
+  <a href="http://www.gospotcheck.com/styleguide/examples/2.2.1.1_section-angled.php"><img height="17" src="http://www.gospotcheck.com/images/github-demo-button.png" title="See it in action"></a>
 
   <a href="#table-of-contents">⬆ Back to Top</a>
 
@@ -422,7 +422,7 @@ A little bitty guide whose humble purpose is to expedite front-end development b
   </div> <!-- // dark -->
   ```
   
-  <a href="http://gospotcheck.com/link-to-demo"><img height="17" src="http://www.gospotcheck.com/images/github-demo-button.png" title="See it in action"></a>
+  <a href="http://www.gospotcheck.com/styleguide/examples/2.2.1.2_section-dark.php"><img height="17" src="http://www.gospotcheck.com/images/github-demo-button.png" title="See it in action"></a>
 
   <a href="#table-of-contents">⬆ Back to Top</a>
   
@@ -441,7 +441,7 @@ A little bitty guide whose humble purpose is to expedite front-end development b
   </div> <!-- // gradient -->
   ```
   
-  <a href="http://gospotcheck.com/link-to-demo"><img height="17" src="http://www.gospotcheck.com/images/github-demo-button.png" title="See it in action"></a>
+  <a href="http://www.gospotcheck.com/styleguide/examples/2.2.1.3_section-gradient.php"><img height="17" src="http://www.gospotcheck.com/images/github-demo-button.png" title="See it in action"></a>
 
   <a href="#table-of-contents">⬆ Back to Top</a>
   
@@ -479,7 +479,7 @@ A little bitty guide whose humble purpose is to expedite front-end development b
   </div> <!-- // hero third -->
   ```
   
-  <a href="http://gospotcheck.com/link-to-demo"><img height="17" src="http://www.gospotcheck.com/images/github-demo-button.png" title="See it in action"></a>
+  <a href="http://www.gospotcheck.com/styleguide/examples/2.2.1.4_section-hero.php"><img height="17" src="http://www.gospotcheck.com/images/github-demo-button.png" title="See it in action"></a>
 
   <a href="#table-of-contents">⬆ Back to Top</a>
   
@@ -498,7 +498,7 @@ A little bitty guide whose humble purpose is to expedite front-end development b
   </div> <!-- // off-white -->
   ```
   
-  <a href="http://gospotcheck.com/link-to-demo"><img height="17" src="http://www.gospotcheck.com/images/github-demo-button.png" title="See it in action"></a>
+  <a href="http://www.gospotcheck.com/styleguide/examples/2.2.1.5_section-offwhite.php"><img height="17" src="http://www.gospotcheck.com/images/github-demo-button.png" title="See it in action"></a>
 
   <a href="#table-of-contents">⬆ Back to Top</a>
 
@@ -517,7 +517,7 @@ A little bitty guide whose humble purpose is to expedite front-end development b
   </div> <!-- // dark -->
   ```
   
-  <a href="http://gospotcheck.com/link-to-demo"><img height="17" src="http://www.gospotcheck.com/images/github-demo-button.png" title="See it in action"></a>
+  <a href="http://www.gospotcheck.com/styleguide/examples/2.2.1.6_section-orange.php"><img height="17" src="http://www.gospotcheck.com/images/github-demo-button.png" title="See it in action"></a>
 
   <a href="#table-of-contents">⬆ Back to Top</a>
   
@@ -541,7 +541,7 @@ A little bitty guide whose humble purpose is to expedite front-end development b
   </div> <!-- // primary-cta -->
   ```
   
-  <a href="http://gospotcheck.com/link-to-demo"><img height="17" src="http://www.gospotcheck.com/images/github-demo-button.png" title="See it in action"></a>
+  <a href="http://www.gospotcheck.com/styleguide/examples/2.2.1.7_section-primary.php"><img height="17" src="http://www.gospotcheck.com/images/github-demo-button.png" title="See it in action"></a>
 
   <a href="#table-of-contents">⬆ Back to Top</a>
   
@@ -560,7 +560,7 @@ A little bitty guide whose humble purpose is to expedite front-end development b
   </div> <!-- // topo -->
   ```
   
-  <a href="http://gospotcheck.com/link-to-demo"><img height="17" src="http://www.gospotcheck.com/images/github-demo-button.png" title="See it in action"></a>
+  <a href="http://www.gospotcheck.com/styleguide/examples/2.2.1.8_section-topo.php"><img height="17" src="http://www.gospotcheck.com/images/github-demo-button.png" title="See it in action"></a>
 
   <a href="#table-of-contents">⬆ Back to Top</a>
   
@@ -576,7 +576,7 @@ A little bitty guide whose humble purpose is to expedite front-end development b
   <div class="wrap wide"> ... </div>
   ```
 
-  <a href="http://gospotcheck.com/link-to-demo"><img height="17" src="http://www.gospotcheck.com/images/github-demo-button.png" title="See it in action"></a>
+  <a href="http://www.gospotcheck.com/styleguide/examples/2.2.2_wrappers.php"><img height="17" src="http://www.gospotcheck.com/images/github-demo-button.png" title="See it in action"></a>
 
   <a href="#table-of-contents">⬆ Back to Top</a>
   
@@ -599,7 +599,7 @@ A little bitty guide whose humble purpose is to expedite front-end development b
   
   The example above uses the `align-center` utility class, which is discussed in <a href="#utility">Utility Classes</a>.
 
-  <a href="http://gospotcheck.com/link-to-demo"><img height="17" src="http://www.gospotcheck.com/images/github-demo-button.png" title="See it in action"></a>
+  <a href="http://www.gospotcheck.com/styleguide/examples/2.2.3_rows.php"><img height="17" src="http://www.gospotcheck.com/images/github-demo-button.png" title="See it in action"></a>
 
   <a href="#table-of-contents">⬆ Back to Top</a>
   
@@ -643,7 +643,7 @@ A little bitty guide whose humble purpose is to expedite front-end development b
   </div>
   ```
   
-  <a href="http://gospotcheck.com/link-to-demo"><img height="17" src="http://www.gospotcheck.com/images/github-demo-button.png" title="See it in action"></a>
+  <a href="http://www.gospotcheck.com/styleguide/examples/2.2.4_columns.php"><img height="17" src="http://www.gospotcheck.com/images/github-demo-button.png" title="See it in action"></a>
 
   <a href="#table-of-contents">⬆ Back to Top</a>
   
@@ -669,7 +669,7 @@ A little bitty guide whose humble purpose is to expedite front-end development b
   </div>
   ```
   
-  <a href="http://gospotcheck.com/link-to-demo"><img height="17" src="http://www.gospotcheck.com/images/github-demo-button.png" title="See it in action"></a>
+  <a href="http://www.gospotcheck.com/styleguide/examples/2.2.4.1_columns-nested.php"><img height="17" src="http://www.gospotcheck.com/images/github-demo-button.png" title="See it in action"></a>
 
   <a href="#table-of-contents">⬆ Back to Top</a>
 
@@ -865,7 +865,7 @@ A little bitty guide whose humble purpose is to expedite front-end development b
 ## <a name="boxes"></a>Boxes
 - **<a href="#4.1">4.1 Introduction</a><a name="user-content-4.1"></a>** "Boxes" is the creative term given to a stylized box of content. They are primarily used to jazz up an otherwise boring part of the page, and serve to better delineate repeating content like blog posts.
   
-  <a href="http://gospotcheck.com/link-to-demo"><img height="17" src="http://www.gospotcheck.com/images/github-demo-button.png" title="See it in action"></a>
+  <a href="http://www.gospotcheck.com/styleguide/examples/4.1_box.php"><img height="17" src="http://www.gospotcheck.com/images/github-demo-button.png" title="See it in action"></a>
 
   **Behold, an Example**
   ```html
@@ -879,7 +879,7 @@ A little bitty guide whose humble purpose is to expedite front-end development b
 
 - **<a href="#4.2">4.2 Post Box</a><a name="user-content-4.2"></a>** A variation on the theme of _box_ is the "post box", which is intended to showcase blog posts.
 
-  <a href="http://gospotcheck.com/link-to-demo"><img height="17" src="http://www.gospotcheck.com/images/github-demo-button.png" title="See it in action"></a>
+  <a href="http://www.gospotcheck.com/styleguide/examples/4.2_box-post.php"><img height="17" src="http://www.gospotcheck.com/images/github-demo-button.png" title="See it in action"></a>
 
   **Example**
 	```html
@@ -904,7 +904,7 @@ A little bitty guide whose humble purpose is to expedite front-end development b
 
 - **<a href="#4.3">4.3 Author Meta Box</a><a name="user-content-4.3"></a>** Another variation on the theme of _box_ is the author meta box, which is intended to showcase an author at the end of a blog post.
 
-  <a href="http://gospotcheck.com/link-to-demo"><img height="17" src="http://www.gospotcheck.com/images/github-demo-button.png" title="See it in action"></a>
+  <a href="http://www.gospotcheck.com/styleguide/examples/4.3_box-meta.php"><img height="17" src="http://www.gospotcheck.com/images/github-demo-button.png" title="See it in action"></a>
   
   **Example**
   ```html
@@ -926,7 +926,7 @@ A little bitty guide whose humble purpose is to expedite front-end development b
 
 	A special thanks goes to Eric Suzanne, creator of the <a href="http://susy.oddbird.net/">Susy framework</a>, for most of the styles used here.
 
-  <a href="http://gospotcheck.com/link-to-demo"><img height="17" src="http://www.gospotcheck.com/images/github-demo-button.png" title="See it in action"></a>
+  <a href="http://www.gospotcheck.com/styleguide/examples/5.1_gallery.php"><img height="17" src="http://www.gospotcheck.com/images/github-demo-button.png" title="See it in action"></a>
   
 	**Example**
 	```html
@@ -945,7 +945,7 @@ A little bitty guide whose humble purpose is to expedite front-end development b
 
 - **<a href="#5.2">5.2 Captions Outside</a><a name="user-content-5.2"></a>** The example above has captions overlaying the photos. If you don't want this, you can have captions outside, or exclude them entirely.
 
-  <a href="http://gospotcheck.com/link-to-demo"><img height="17" src="http://www.gospotcheck.com/images/github-demo-button.png" title="See it in action"></a>
+  <a href="http://www.gospotcheck.com/styleguide/examples/5.2_gallery-caption-outside.php"><img height="17" src="http://www.gospotcheck.com/images/github-demo-button.png" title="See it in action"></a>
 
 	**Por Ejemplo**
 	```html
@@ -967,7 +967,7 @@ A little bitty guide whose humble purpose is to expedite front-end development b
 ## <a name="forms"></a>Forms
 - **<a href="#6.1">6.1 Introduction</a><a name="user-content-6.1"></a>** Neither forms nor their inputs require any special classes to look good; simply drop in your fields and go. You can easily have side-by-side inputs by using the framework rows and columns.
 
-  <a href="http://gospotcheck.com/link-to-demo"><img height="17" src="http://www.gospotcheck.com/images/github-demo-button.png" title="See it in action"></a>
+  <a href="http://www.gospotcheck.com/styleguide/examples/6.1_form.php"><img height="17" src="http://www.gospotcheck.com/images/github-demo-button.png" title="See it in action"></a>
   
 	**Example**
 	```html
@@ -1000,7 +1000,7 @@ A little bitty guide whose humble purpose is to expedite front-end development b
 
 	It's ok to just type `required` rather than `required="required"` since the former is more concise.
 
-  <a href="http://gospotcheck.com/link-to-demo"><img height="17" src="http://www.gospotcheck.com/images/github-demo-button.png" title="See it in action"></a>
+  <a href="http://www.gospotcheck.com/styleguide/examples/6.3_form-required.php"><img height="17" src="http://www.gospotcheck.com/images/github-demo-button.png" title="See it in action"></a>
   
   **Example**
   ```html
@@ -1028,7 +1028,7 @@ A little bitty guide whose humble purpose is to expedite front-end development b
 	
 - **<a href="#6.5">6.5 Search Forms</a><a name="user-content-6.5"></a>** Easily add a snazzy search form by dropping in the sample code in the example below. The framework looks for a submit button following an input with `type="search"` and styles and positions the input appropriately.
 
-  <a href="http://gospotcheck.com/link-to-demo"><img height="17" src="http://www.gospotcheck.com/images/github-demo-button.png" title="See it in action"></a>
+  <a href="http://www.gospotcheck.com/styleguide/examples/6.5_form-search.php"><img height="17" src="http://www.gospotcheck.com/images/github-demo-button.png" title="See it in action"></a>
   
   **Example**
   ```html
@@ -1066,7 +1066,7 @@ A little bitty guide whose humble purpose is to expedite front-end development b
 	- small
 	- text-shadow
 
-  <a href="http://gospotcheck.com/link-to-demo"><img height="17" src="http://www.gospotcheck.com/images/github-demo-button.png" title="See it in action"></a>
+  <a href="http://www.gospotcheck.com/styleguide/examples/7.2_buttons.php"><img height="17" src="http://www.gospotcheck.com/images/github-demo-button.png" title="See it in action"></a>
   
   **Note:** you can also combine multiple styles; here is an extreme example:
   ```html
@@ -1090,7 +1090,7 @@ A little bitty guide whose humble purpose is to expedite front-end development b
 	- **Warning** (something could go wrong)
 	- **Error** (something went poorly)
 
-  <a href="http://gospotcheck.com/link-to-demo"><img height="17" src="http://www.gospotcheck.com/images/github-demo-button.png" title="See it in action"></a>
+  <a href="http://www.gospotcheck.com/styleguide/examples/8.2_alerts.php"><img height="17" src="http://www.gospotcheck.com/images/github-demo-button.png" title="See it in action"></a>
   
   **Examples**
   ```html
@@ -1119,7 +1119,7 @@ A little bitty guide whose humble purpose is to expedite front-end development b
 	- no-border
 	- rounded
 
-  <a href="http://gospotcheck.com/link-to-demo"><img height="17" src="http://www.gospotcheck.com/images/github-demo-button.png" title="See it in action"></a>
+  <a href="http://www.gospotcheck.com/styleguide/examples/8.4_alerts-styled.php"><img height="17" src="http://www.gospotcheck.com/images/github-demo-button.png" title="See it in action"></a>
   
   **Example**
 	```html
@@ -1135,7 +1135,7 @@ A little bitty guide whose humble purpose is to expedite front-end development b
 ## <a name="kickers"></a>Kickers
 - **<a href="#9.1">9.1 Introduction</a><a name="user-content-9.1"></a>** A **kicker** is a promotional CTA that appears in the bottom right of the viewport when a user scrolls to a point on the page. The idea is to appeal to visitors once they're nearing the end of a page, and compel them to further explore the site.
 
-  <a href="http://gospotcheck.com/link-to-demo"><img height="17" src="http://www.gospotcheck.com/images/github-demo-button.png" title="See it in action"></a>
+  <a href="http://www.gospotcheck.com/styleguide/examples/9.1_kicker.php"><img height="17" src="http://www.gospotcheck.com/images/github-demo-button.png" title="See it in action"></a>
   
   **Example**
   ```html
@@ -1162,7 +1162,7 @@ A little bitty guide whose humble purpose is to expedite front-end development b
 	<div data-animation="fadeIn" id="kicker"> ... </div>
 	```
 
-  <a href="http://gospotcheck.com/link-to-demo"><img height="17" src="http://www.gospotcheck.com/images/github-demo-button.png" title="See it in action"></a>
+  <a href="http://www.gospotcheck.com/styleguide/examples/9.2_kicker-persistent.php"><img height="17" src="http://www.gospotcheck.com/images/github-demo-button.png" title="See it in action"></a>
 
 	<a href="#table-of-contents">⬆ Back to Top</a>
 
@@ -1170,7 +1170,7 @@ A little bitty guide whose humble purpose is to expedite front-end development b
 
 	**NOTE: This feature is buggy and still under development.**
 
-  <a href="http://gospotcheck.com/link-to-demo"><img height="17" src="http://www.gospotcheck.com/images/github-demo-button.png" title="See it in action"></a>
+  <a href="http://www.gospotcheck.com/styleguide/examples/9.3_kicker-animated.php"><img height="17" src="http://www.gospotcheck.com/images/github-demo-button.png" title="See it in action"></a>
   
 	<a href="#table-of-contents">⬆ Back to Top</a>
 
@@ -1181,7 +1181,7 @@ A little bitty guide whose humble purpose is to expedite front-end development b
 	- icon
 	- stacked
 
-  <a href="http://gospotcheck.com/link-to-demo"><img height="17" src="http://www.gospotcheck.com/images/github-demo-button.png" title="See it in action"></a>
+  <a href="http://www.gospotcheck.com/styleguide/examples/10.1_lists.php"><img height="17" src="http://www.gospotcheck.com/images/github-demo-button.png" title="See it in action"></a>
   
   **Example**
   ```html
@@ -1203,7 +1203,7 @@ A little bitty guide whose humble purpose is to expedite front-end development b
 	- Use `<th>` instead of `<td>` in the first cell of a row in the `<tbody>`
 	- Keep columns to a minimum (preferably less than 7)
 
-  <a href="http://gospotcheck.com/link-to-demo"><img height="17" src="http://www.gospotcheck.com/images/github-demo-button.png" title="See it in action"></a>
+  <a href="http://www.gospotcheck.com/styleguide/examples/11.1_table.php"><img height="17" src="http://www.gospotcheck.com/images/github-demo-button.png" title="See it in action"></a>
   
   **Example**
   ```html
@@ -1230,7 +1230,7 @@ A little bitty guide whose humble purpose is to expedite front-end development b
 
 - **<a href="#11.2">11.2 Table with Fixed Header</a><a name="user-content-11.2"></a>** For all but the smallest tables, you'll probably want a header that doesn't scroll with the page. A fixed header makes it easier to read the data and know what columns are what.
 
-  <a href="http://gospotcheck.com/link-to-demo"><img height="17" src="http://www.gospotcheck.com/images/github-demo-button.png" title="See it in action"></a>
+  <a href="http://www.gospotcheck.com/styleguide/examples/11.2_table-fixed.php"><img height="17" src="http://www.gospotcheck.com/images/github-demo-button.png" title="See it in action"></a>
   
   **Example**
   ```html
@@ -1254,7 +1254,7 @@ A little bitty guide whose humble purpose is to expedite front-end development b
 ## <a name="pagers"></a>Pagers
 - **<a href="#12.1">12.1 Previous / Next Pager</a><a name="user-content-12.1"></a>** Most commonly used on the marketing site (specifically, within the blog) to navigate between pages of blog posts. Aesthetically, they are identical to buttons, but rely instead on a default WordPress class for styling.
 
-  <a href="http://gospotcheck.com/link-to-demo"><img height="17" src="http://www.gospotcheck.com/images/github-demo-button.png" title="See it in action"></a>
+  <a href="http://www.gospotcheck.com/styleguide/examples/12.1_pager.php"><img height="17" src="http://www.gospotcheck.com/images/github-demo-button.png" title="See it in action"></a>
   
   **Example**
   ```html
@@ -1289,7 +1289,7 @@ A little bitty guide whose humble purpose is to expedite front-end development b
 	</div> <!-- // width-100 -->
 	```
 
-  <a href="http://gospotcheck.com/link-to-demo"><img height="17" src="http://www.gospotcheck.com/images/github-demo-button.png" title="See it in action"></a>
+  <a href="http://www.gospotcheck.com/styleguide/examples/12.2_pager-hero.php"><img height="17" src="http://www.gospotcheck.com/images/github-demo-button.png" title="See it in action"></a>
   
 	<a href="#table-of-contents">⬆ Back to Top</a>
 
@@ -1307,7 +1307,7 @@ A little bitty guide whose humble purpose is to expedite front-end development b
   - On dark backgrounds, headings should be pure white (`#fff`)
   - Headings should always be set in **Gotham**
   
-  <a href="http://gospotcheck.com/link-to-demo"><img height="17" src="http://www.gospotcheck.com/images/github-demo-button.png" title="See it in action"></a>
+  <a href="http://www.gospotcheck.com/styleguide/examples/13.1_typography.php"><img height="17" src="http://www.gospotcheck.com/images/github-demo-button.png" title="See it in action"></a>
     
   **Margins**  
   Since the default margins are usually overkill, we remove them and add them back in using the sibling selector, such that headings always gain a top margin:
@@ -1320,8 +1320,6 @@ A little bitty guide whose humble purpose is to expedite front-end development b
       margin-top: 1.5em;
   }
   ```
-
-  <a href="http://gospotcheck.com/link-to-demo"><img height="17" src="http://www.gospotcheck.com/images/github-demo-button.png" title="See it in action"></a>
   
   <a href="#table-of-contents">⬆ Back to Top</a>
 
@@ -1332,7 +1330,7 @@ A little bitty guide whose humble purpose is to expedite front-end development b
   - On dark backgrounds, body text should be pure white (`#fff`)
   - Body text should always be set in **Helvetica** with a weight of `300`
   
-  <a href="http://gospotcheck.com/link-to-demo"><img height="17" src="http://www.gospotcheck.com/images/github-demo-button.png" title="See it in action"></a>
+  <a href="http://www.gospotcheck.com/styleguide/examples/13.2_typography-body.php"><img height="17" src="http://www.gospotcheck.com/images/github-demo-button.png" title="See it in action"></a>
 
 <a href="#table-of-contents">⬆ Back to Top</a>
 
@@ -1354,7 +1352,7 @@ A little bitty guide whose humble purpose is to expedite front-end development b
 
 	These guidelines can be adjusted ad hoc; e.g., sometimes you want to link a header, and it would look better to leave the header a dark color. This is fine, provided there is a clear hover effect. When in doubt, remember that it's best to only link things that users would expect to be linked (titles to blog posts, for instance).
 
-  <a href="http://gospotcheck.com/link-to-demo"><img height="17" src="http://www.gospotcheck.com/images/github-demo-button.png" title="See it in action"></a>
+  <a href="http://www.gospotcheck.com/styleguide/examples/14.2_link.php"><img height="17" src="http://www.gospotcheck.com/images/github-demo-button.png" title="See it in action"></a>
 
   <a href="#table-of-contents">⬆ Back to Top</a>
   
@@ -1369,7 +1367,7 @@ A little bitty guide whose humble purpose is to expedite front-end development b
   <p>For sarcastic remarks, <a href="..." target="_blank">send Chris Kampfe an email</a>.</p>
   ```
   
-  <a href="http://gospotcheck.com/link-to-demo"><img height="17" src="http://www.gospotcheck.com/images/github-demo-button.png" title="See it in action"></a>
+  <a href="http://www.gospotcheck.com/styleguide/examples/14.3_link-newtab.php"><img height="17" src="http://www.gospotcheck.com/images/github-demo-button.png" title="See it in action"></a>
 
   <a href="#table-of-contents">⬆ Back to Top</a>
 
@@ -1445,13 +1443,13 @@ A little bitty guide whose humble purpose is to expedite front-end development b
   - `rollOut`
   - `throb`
 
-  <a href="https://daneden.github.io/animate.css/"><img height="17" src="http://www.gospotcheck.com/images/github-demo-button.png" title="See it in action"></a>
+  <a href="http://www.gospotcheck.com/styleguide/examples/15.2_animations.php"><img height="17" src="http://www.gospotcheck.com/images/github-demo-button.png" title="See it in action"></a>
   
   <a href="#table-of-contents">⬆ Back to Top</a>
 
 - **<a href="#15.3">15.3 Looping Animations</a><a name="user-content-15.3"></a>** By default, an animation will run once. You can set it to run endlessly by adding the `infinite` class.
 
-  <a href="https://daneden.github.io/animate.css/"><img height="17" src="http://www.gospotcheck.com/images/github-demo-button.png" title="See it in action"></a>
+  <a href="http://www.gospotcheck.com/styleguide/examples/15.3_animations-infinite.php"><img height="17" src="http://www.gospotcheck.com/images/github-demo-button.png" title="See it in action"></a>
   
   **Example**
   ```html
@@ -1462,7 +1460,7 @@ A little bitty guide whose humble purpose is to expedite front-end development b
 
 - **<a href="#15.4">15.4 Animating on Scroll</a><a name="user-content-15.4"></a>** If you don't want your CSS animation to run right away, you can add a special class, `animate-on-scroll`, to any element. This will cause the animation to be delayed until the element is scrolled into view (with the help of JavaScript, of course).
 
-  <a href="https://daneden.github.io/animate.css/"><img height="17" src="http://www.gospotcheck.com/images/github-demo-button.png" title="See it in action"></a>
+  <a href="http://www.gospotcheck.com/styleguide/examples/15.4_animations-scroll.php"><img height="17" src="http://www.gospotcheck.com/images/github-demo-button.png" title="See it in action"></a>
   
   **Specifying Animations**  
   The element to be animated should _not_ have the `animated` class on it; this is added by JavaScript when the element is scrolled into view. You _will_, however, need to add a `data-animation` attribute, specifying which animation to run. The animation should be set to one of the animation names <a href="#15.2">listed above</a>.
@@ -1491,7 +1489,7 @@ A little bitty guide whose humble purpose is to expedite front-end development b
 
 - **<a href="#16.2">16.2 Implementation</a><a name="user-content-16.2"></a>** You can add an icon practically anywhere with a short bit of code. The wrapper need not be an `<i>` tag, but that is the standard. The icon font relies on the `material-icons` class to load up the base styles, and then uses jiggery pokery (i.e., <a href="http://google.github.io/material-design-icons/#using-the-icons-in-html">_ligatures_</a>) to convert the text within the `<i>` tags to a glyph.
 
-  <a href="https://daneden.github.io/animate.css/"><img height="17" src="http://www.gospotcheck.com/images/github-demo-button.png" title="See it in action"></a>
+  <a href="http://www.gospotcheck.com/styleguide/examples/16.2_icons.php"><img height="17" src="http://www.gospotcheck.com/images/github-demo-button.png" title="See it in action"></a>
   
 	**First, Load the Styles**
 	```html
@@ -1549,109 +1547,109 @@ A little bitty guide whose humble purpose is to expedite front-end development b
 
 - **<a href="#17.1.1">17.1.1 Align Bottom</a><a name="user-content-17.1.1"></a>** Applies only to a flexbox (i.e., a container with `display: flex`). Aligns child content to the bottom of the parent.
 
-  <a href="http://gospotcheck.com/link-to-demo"><img height="17" src="http://www.gospotcheck.com/images/github-demo-button.png" title="See it in action"></a>
+  <a href="http://www.gospotcheck.com/styleguide/examples/17.1.1_utility-align-bottom.php"><img height="17" src="http://www.gospotcheck.com/images/github-demo-button.png" title="See it in action"></a>
   
 	<a href="#table-of-contents">⬆ Back to Top</a>
 
 - **<a href="#17.1.2">17.1.2 Align Center</a><a name="user-content-17.1.2"></a>** Aligns content (including images) to the center.
 
-  <a href="http://gospotcheck.com/link-to-demo"><img height="17" src="http://www.gospotcheck.com/images/github-demo-button.png" title="See it in action"></a>
+  <a href="http://www.gospotcheck.com/styleguide/examples/17.1.2_utility-align-center.php"><img height="17" src="http://www.gospotcheck.com/images/github-demo-button.png" title="See it in action"></a>
   
 	<a href="#table-of-contents">⬆ Back to Top</a>
 
 - **<a href="#17.1.3">17.1.3 Align Left</a><a name="user-content-17.1.3"></a>** This class has two applications: (1) for normal containers, aligns content to the left; (2) for flexbox containers such as `<div class="row">`, pulls child elements to the left (by default, if children of a flexbox don't take up the full width of the parent, they will stretch to fill the space).
 
-  <a href="http://gospotcheck.com/link-to-demo"><img height="17" src="http://www.gospotcheck.com/images/github-demo-button.png" title="See it in action"></a>
+  <a href="http://www.gospotcheck.com/styleguide/examples/17.1.3_utility-align-left.php"><img height="17" src="http://www.gospotcheck.com/images/github-demo-button.png" title="See it in action"></a>
   
 	<a href="#table-of-contents">⬆ Back to Top</a>
 
 - **<a href="#17.1.4">17.1.4 Align Middle</a><a name="user-content-17.1.4"></a>** Applies only to a flexbox. Aligns child content to the middle of the parent (i.e., vertical alignment).
 
-  <a href="http://gospotcheck.com/link-to-demo"><img height="17" src="http://www.gospotcheck.com/images/github-demo-button.png" title="See it in action"></a>
+  <a href="http://www.gospotcheck.com/styleguide/examples/17.1.4_utility-align-middle.php"><img height="17" src="http://www.gospotcheck.com/images/github-demo-button.png" title="See it in action"></a>
   
 	<a href="#table-of-contents">⬆ Back to Top</a>
 
 - **<a href="#17.1.5">17.1.5 Align Right</a><a name="user-content-17.1.5"></a>** Just like `align-left`, this class has two applications: (1) for normal containers, aligns content to the right; (2) for flexbox containers such as `<div class="row">`, pulls child elements to the right.
 
-  <a href="http://gospotcheck.com/link-to-demo"><img height="17" src="http://www.gospotcheck.com/images/github-demo-button.png" title="See it in action"></a>
+  <a href="http://www.gospotcheck.com/styleguide/examples/17.1.5_utility-align-right.php"><img height="17" src="http://www.gospotcheck.com/images/github-demo-button.png" title="See it in action"></a>
   
 	<a href="#table-of-contents">⬆ Back to Top</a>
 
 - **<a href="#17.1.6">17.1.6 Align Top</a><a name="user-content-17.1.6"></a>** Applies only to a flexbox (i.e., a container with `display: flex`). Aligns child content to the top of the parent.
 
-  <a href="http://gospotcheck.com/link-to-demo"><img height="17" src="http://www.gospotcheck.com/images/github-demo-button.png" title="See it in action"></a>
+  <a href="http://www.gospotcheck.com/styleguide/examples/17.1.6_utility-align-top.php"><img height="17" src="http://www.gospotcheck.com/images/github-demo-button.png" title="See it in action"></a>
   
 	<a href="#table-of-contents">⬆ Back to Top</a>
 
 - **<a href="#17.1.7">17.1.7 Background Cover</a><a name="user-content-17.1.7"></a>** Gives an element `background-size: cover`.
 
-  <a href="http://gospotcheck.com/link-to-demo"><img height="17" src="http://www.gospotcheck.com/images/github-demo-button.png" title="See it in action"></a>
+  <a href="http://www.gospotcheck.com/styleguide/examples/17.1.7_utility-bg-cover.php"><img height="17" src="http://www.gospotcheck.com/images/github-demo-button.png" title="See it in action"></a>
   
 	<a href="#table-of-contents">⬆ Back to Top</a>
 
 - **<a href="#17.1.8">17.1.8 Capitalize</a><a name="user-content-17.1.8"></a>** Capitalizes text within an element.
 
-  <a href="http://gospotcheck.com/link-to-demo"><img height="17" src="http://www.gospotcheck.com/images/github-demo-button.png" title="See it in action"></a>
+  <a href="http://www.gospotcheck.com/styleguide/examples/17.1.8_utility-caps.php"><img height="17" src="http://www.gospotcheck.com/images/github-demo-button.png" title="See it in action"></a>
   
 	<a href="#table-of-contents">⬆ Back to Top</a>
 
 - **<a href="#17.1.9">17.1.9 Caption</a><a name="user-content-17.1.9"></a>** Italicizes and lightly grays text within an element, to mimic a photo caption.
 
-  <a href="http://gospotcheck.com/link-to-demo"><img height="17" src="http://www.gospotcheck.com/images/github-demo-button.png" title="See it in action"></a>
+  <a href="http://www.gospotcheck.com/styleguide/examples/17.1.9_utility-caption.php"><img height="17" src="http://www.gospotcheck.com/images/github-demo-button.png" title="See it in action"></a>
   
 	<a href="#table-of-contents">⬆ Back to Top</a>
 
 - **<a href="#17.1.10">17.1.10 Flex</a><a name="user-content-17.1.10"></a>** Gives an element `display: flex`. Rarely needed, but occasionally very helpful.
 
-  <a href="http://gospotcheck.com/link-to-demo"><img height="17" src="http://www.gospotcheck.com/images/github-demo-button.png" title="See it in action"></a>
+  <a href="http://www.gospotcheck.com/styleguide/examples/17.1.10_utility-flex.php"><img height="17" src="http://www.gospotcheck.com/images/github-demo-button.png" title="See it in action"></a>
   
 	<a href="#table-of-contents">⬆ Back to Top</a>
 
 - **<a href="#17.1.11">17.1.11 Float Right</a><a name="user-content-17.1.11"></a>** Floats an element to the right.
 
-  <a href="http://gospotcheck.com/link-to-demo"><img height="17" src="http://www.gospotcheck.com/images/github-demo-button.png" title="See it in action"></a>
+  <a href="http://www.gospotcheck.com/styleguide/examples/17.1.11_utility-float-right.php"><img height="17" src="http://www.gospotcheck.com/images/github-demo-button.png" title="See it in action"></a>
   
 	<a href="#table-of-contents">⬆ Back to Top</a>
 
 - **<a href="#17.1.12">17.1.12 Hidden</a><a name="user-content-17.1.12"></a>** Hides an element by giving it `display: none`. Opposite of <a href="#17.1.17">visible</a>.
 
-  <a href="http://gospotcheck.com/link-to-demo"><img height="17" src="http://www.gospotcheck.com/images/github-demo-button.png" title="See it in action"></a>
+  <a href="http://www.gospotcheck.com/styleguide/examples/17.1.12_utility-hidden-visible.php"><img height="17" src="http://www.gospotcheck.com/images/github-demo-button.png" title="See it in action"></a>
   
 	<a href="#table-of-contents">⬆ Back to Top</a>
 	
 - **<a href="#17.1.13">17.1.13 Intro Paragraph</a><a name="user-content-17.1.13"></a>** Gives the first paragraph within an element a larger font-size.
 
-  <a href="http://gospotcheck.com/link-to-demo"><img height="17" src="http://www.gospotcheck.com/images/github-demo-button.png" title="See it in action"></a>
+  <a href="http://www.gospotcheck.com/styleguide/examples/17.1.13_utility-intro-p.php"><img height="17" src="http://www.gospotcheck.com/images/github-demo-button.png" title="See it in action"></a>
   
 	<a href="#table-of-contents">⬆ Back to Top</a>
 	
 - **<a href="#17.1.14">17.1.14 Light Text</a><a name="user-content-17.1.14"></a>** Changes the text color of an element to white. When applied to a parent element, changes the text color of headings and paragraphs within to white, and adds a subtle text shadow.
 
-  <a href="http://gospotcheck.com/link-to-demo"><img height="17" src="http://www.gospotcheck.com/images/github-demo-button.png" title="See it in action"></a>
+  <a href="http://www.gospotcheck.com/styleguide/examples/17.1.14_utility-light-text.php"><img height="17" src="http://www.gospotcheck.com/images/github-demo-button.png" title="See it in action"></a>
   
 	<a href="#table-of-contents">⬆ Back to Top</a>
 	
 - **<a href="#17.1.15">17.1.15 Relative Positioning</a><a name="user-content-17.1.15"></a>** Gives an element `position: relative`.
 
-  <a href="http://gospotcheck.com/link-to-demo"><img height="17" src="http://www.gospotcheck.com/images/github-demo-button.png" title="See it in action"></a>
+  <a href="http://www.gospotcheck.com/styleguide/examples/17.1.15_utility-relative.php"><img height="17" src="http://www.gospotcheck.com/images/github-demo-button.png" title="See it in action"></a>
   
 	<a href="#table-of-contents">⬆ Back to Top</a>
 
 - **<a href="#17.1.16">17.1.16 Subtitle</a><a name="user-content-17.1.16"></a>** Enlarges the font of an element. Useful for giving visual emphasis to a paragraph following a main heading.
 
-  <a href="http://gospotcheck.com/link-to-demo"><img height="17" src="http://www.gospotcheck.com/images/github-demo-button.png" title="See it in action"></a>
+  <a href="http://www.gospotcheck.com/styleguide/examples/17.1.16_utility-subtitle.php"><img height="17" src="http://www.gospotcheck.com/images/github-demo-button.png" title="See it in action"></a>
   
 	<a href="#table-of-contents">⬆ Back to Top</a>
 
 - **<a href="#17.1.17">17.1.17 Visible</a><a name="user-content-17.1.17"></a>** Shows an element by giving it `display: inherit`. Opposite of <a href="#17.1.12">hidden</a>.
 
-  <a href="http://gospotcheck.com/link-to-demo"><img height="17" src="http://www.gospotcheck.com/images/github-demo-button.png" title="See it in action"></a>
+  <a href="http://www.gospotcheck.com/styleguide/examples/17.1.12_utility-hidden-visible.php"><img height="17" src="http://www.gospotcheck.com/images/github-demo-button.png" title="See it in action"></a>
   
 	<a href="#table-of-contents">⬆ Back to Top</a>
 
 - **<a href="#17.2">17.2 Additional Spacing</a><a name="user-content-17.2"></a>** In addition to the utility classes above, the framework includes a number of special "spacing" classes that allow you to apply incremental amounts of margin and padding to any element. There are also some classes that remove margin and padding from elements that have them by default.
 
-  <a href="http://gospotcheck.com/link-to-demo"><img height="17" src="http://www.gospotcheck.com/images/github-demo-button.png" title="See it in action"></a>
+  <a href="http://www.gospotcheck.com/styleguide/examples/17.2_utility-spacing.php"><img height="17" src="http://www.gospotcheck.com/images/github-demo-button.png" title="See it in action"></a>
   
 	While this will be changed in the next version to be more sensible, for now, the base unit is twice the <a href="#2.2.4.2">gutter width</a> (instead of equal to it). That is, `margin-top` will apply `margin-top: 40px`, while `margin-half-top` will apply `margin-top: 20px`.
 	
