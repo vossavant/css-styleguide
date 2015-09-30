@@ -17,6 +17,10 @@ form {
 	.row + .row {
 		margin-top: 0;
 	}
+
+	.width-50:last-of-type {
+		margin-top: 0;
+	}
 }
 
 [disabled] {
