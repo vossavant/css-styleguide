@@ -56,7 +56,6 @@ textarea {
 	@include transition(all, 0.3s, ease-in-out);
 	border-radius: 5px;
 	border: 1px solid $white-90;
-	box-sizing: border-box;
 	font: 16px "Helvetica Neue", sans-serif;
 	line-height: $height-button;
 	margin-bottom: $gutter-width;
@@ -88,6 +87,7 @@ textarea {
 	&[type="search"] {
 		border-radius: $height-button / 2 + 1;
 		box-sizing: border-box;
+		min-height: $height-button + 2;
 		padding: 0px 60px 0px 18px;
 
 		&:focus + .button {

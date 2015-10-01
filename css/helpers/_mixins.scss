@@ -73,6 +73,7 @@
 	-webkit-font-smoothing: antialiased;
 	content: $icon_name;
 	font: #{$font_size}/1 "Material Icons";
+	font-feature-settings: "liga" 1;
 }
 
 // converts breakpoints in map (see helpers/variables)

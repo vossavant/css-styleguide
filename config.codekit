@@ -1221,6 +1221,28 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/images\/examples\/post-box-1.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 61931,
+		"inputAbbreviatedPath": "\/images\/examples\/post-box-1.jpg",
+		"outputAbbreviatedPath": "\/images\/examples\/post-box-1.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/images\/examples\/post-box-2.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 68684,
+		"inputAbbreviatedPath": "\/images\/examples\/post-box-2.jpg",
+		"outputAbbreviatedPath": "\/images\/examples\/post-box-2.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/index.php": {
 		"fileType": 8192,
 		"ignore": 0,

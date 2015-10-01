@@ -5,7 +5,7 @@
             <div class="row">
                 <div class="width-100">
                     <h1>Lists</h1>
-                    <p>Here are examples of the premade lists that are available to you.</p>
+                    <p>Here are examples of the premade lists that are available to you. Note that these lists do not look as intended in IE 10.</p>
                     <a class="button" href="https://github.com/gospotcheck/styleguide/#10.1"><i class="material-icons left">chevron_left</i> Back to Readme</a>
                 </div>
             </div>

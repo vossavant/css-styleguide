@@ -19,8 +19,8 @@
                     <article class="post box">
                         <div class="width-100 padding-none">
                             <figure>
-                                <a href="http://localhost/~ryanburney/gsc-mktg/2015/08/12/presentation-real-time-data-precedes-collaboration/">
-                                    <img src="http://localhost/~ryanburney/gsc-mktg/wp-content/themes/gospotcheck/includes/timthumb.php?src=http://localhost/~ryanburney/gsc-mktg/wp-content/uploads/2015/08/gsc-presentation-real_time_collaboration-I.jpg&amp;w=789&amp;h=350);">
+                                <a href="#">
+                                    <img src="http://www.gospotcheck.com/styleguide/images/examples/post-box-1.jpg">
                                 </a>
                             </figure>
                         </div>
